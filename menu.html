@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukianime</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <script>
+        function openNav() {
+            document.getElementById("sideNavigation").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+         
+        function closeNav() {
+            document.getElementById("sideNavigation").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        </script>
+    <section class="menu-nav">
+        <div id="sideNavigation" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Inicio</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Contacto </a>
+            <a href="#">genero </a>
+          </div>
+          
+         
+          <nav class="topnav">
+           
+            <a href="#" onclick="openNav()">
+              <svg width="30" height="25" id="icoOpen">
+                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                  
+              </svg>
+             
+            </a>
+            <div class="nombre">
+                <img src="https://i.imgur.com/bYacHHK.png" alt="" class="logo">
+               <h2>Ukianime</h2>
+                
+            </div>
+              
+          </nav>
+          <div id="main">
+           
+            </div>
+          
+    </section>
+    <section>
+        <img src="https://i.imgur.com/tdianQe.jpg" alt="" class="fondo-logo">
+    </section>
+</body>
+</html>
