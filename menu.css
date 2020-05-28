@@ -137,27 +137,35 @@ a svg{
      }
   }
 }
-h2{
-  color: coral;
-  font-size: medium;
-  float: left;
-
+.nombre{
+  padding-left: 400px;
 }
-
+.nombre img,.nombre h2,.nombre input,.nombre h4{
+  float: left;
+}
 .logo
 {
 width: 25px;
 height: 25px;
-float: left;
+
 padding-top: 10px;
 }
-.nombre{
-padding-left: 400px;
+h2{
+  color: coral;
+  font-size: medium;
 }
+
+
+.searchbtn {
+  float:left;
+padding-top: 10px;
+padding-left: 100px;
+}
+
+
 .fondo-logo{
   width: 100%;
   height: 800px;
 }
-.searchbtn input[type=text] {
-  border: 1px solid #ccc;
-}
+
+
