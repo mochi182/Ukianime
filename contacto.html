@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukianime</title>
+    <link rel="stylesheet" href="contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shojumaru&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        function openNav() {
+            document.getElementById("sideNavigation").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+         
+        function closeNav() {
+            document.getElementById("sideNavigation").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        </script>
+    <section class="menu-nav">
+        <div id="sideNavigation" class="sidenav">
+            <a href="javascript:void(1)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <a class= "textodemoculto" href="menu.html">Inicio</a>
+            <a class= "textodemoculto" href="acerca.html">Acerca de</a>
+            <a class= "textodemoculto" href="contacto.html">Contacto </a>
+            <a class= "textodemoculto" href="Género.html">Categorias </a>
+             <ul class="cuadrocategoria">
+                 <li  class="subtextmoculto">Shonen</li>
+                 <li  class="subtextmoculto">Seinen</li>
+                 <li  class="subtextmoculto">Slice of Life</li>
+                 <li  class="subtextmoculto">Drama</li>
+             </ul>
+         </div>
+   
+          <nav class="topnav">
+           
+            <a href="#" onclick="openNav()">
+              <svg width="30" height="25" id="icoOpen">
+                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                  
+              </svg>
+             
+            </a>
+            <div class="nombre">
+                <img src="https://i.imgur.com/bYacHHK.png" alt="mascara'lobo" class="logo">
+                <h2 class = "titulodepagina">Ukianime</h2>
+                
+            </div>
+            <div class="searchbtn">
+                <img src="https://icongr.am/clarity/search.svg?color=ffffff&size=15px" alt="lupa" class="lupita">
+                <input type="text" placeholder="Buscar.." class="search">
+                </div>
+                <div class="clase-texto">
+                <h3 class = "textoennav">Mi lista</h3>
+                <div class= "textoennav">
+                    <div class="user">
+                        <button class="boton-user"><img src="https://icongr.am/clarity/user.svg?color=ffffff" width="30" height="20" alt="user" class="logo-user"></button> 
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+                        
+            </div>  
+            </div>
+          </nav>
+          
+    </section>
+    <section class="contendio">
+        <div class="contenido">Contacto</div>
+        <div class="rayita"></div>
+        <div class="linea-atencion">
+            Panama
+            <br>
+            <br>
+            Línea de ayuda de Ukianime (507) 274–2042 <br>
+            Centro de actualización  (507) 250–8434 <br>
+            Linea comunicación email Ukianime@outlook.com</div>
+            <div class="mensaje">Mensaje</div>
+            <div class="notificacion">Escriba su notificación</div>
+            <input type="text" placeholder="" class="caja-de-comentarios">
+           <button class="btn-cancelar">cancelar</button>
+           <button class="btn-enviar">Enviar</button>
+            <div class="relleno"><br><br></div>
+    </section>
+    
+   
+</body>
+</html>

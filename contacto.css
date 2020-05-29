@@ -1,0 +1,367 @@
+/* menu oculto */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: grey; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+  color: #444;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+  overflow:hidden;
+  width:100%;
+}
+body {
+overflow-x: hidden;
+width: auto;
+height: auto;
+background-color: #fff8f8;
+}
+.menu-nav{
+width: auto;
+height: 50px;
+background-color: #343131;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #444;
+  text-align: center;
+  padding: 6px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: ;
+
+
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #444;
+  color: #444;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: #444;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+a svg{
+transition:all .5s ease;
+
+&:hover{
+  #transform:rotate(180deg);
+}
+}
+
+#ico{
+display: none;
+}
+
+.menu{
+background: #444;
+display: none;
+padding: 5px;
+width: 320px;
+@include border-radius(5px);
+
+#transition: all 0.5s ease;
+
+a {
+  display: block;
+  color: #444;
+  text-align: center;
+  padding: 10px 2px;
+  margin: 3px 0;
+  text-decoration: none;
+  background: #444;
+
+  &:nth-child(1){
+    margin-top: 0;
+    @include border-radius(3px 3px 0 0 );
+    }
+  &:nth-child(5){
+    margin-bottom: 0;
+    @include border-radius(0 0 3px 3px);
+  }
+
+  :hover{
+    background: #555;
+   }
+ }
+}
+/* menu-nav*/
+.nombre{
+padding-left: 400px;
+width: auto;
+height: auto;
+}
+.nombre img,.nombre h2,.nombre input,.nombre h4,.clase-texto .textoennav{
+float: left;
+}
+.logo
+{
+width: 25px;
+height: 25px;
+padding-top: 10px;
+}
+
+.textoennav {
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 15px;
+color: rgb(255, 255, 255);
+padding-left: 200px;
+margin-block-start: 0.7em;
+margin-block-end: 0em;
+
+}
+
+
+
+.subtextmoculto{
+margin: auto;
+width: 80%;
+color: white;
+font-size: 25px;
+text-align: left;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+background-color:grey;
+}
+.cuadrocategoria{
+list-style: none;
+text-decoration: none;
+background-color: rgba(0, 0, 0, 0.658)0, 0, 0, 0.658);
+}
+
+.subtextmoculto:hover{
+background-color: rgba(0, 0, 0, 0.322);
+}
+
+
+
+.textodemoculto{
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 30px;
+color: rgb(255, 255, 255);
+padding-left: 50px;
+margin-block-start: 0.8em;
+margin-block-end: 0em;
+}
+
+.boton-user{
+
+background:none;
+border: none;
+}
+
+.titulodepagina{
+font-family: 'Shojumaru', cursive;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+margin-block-start: 0em;
+margin-block-end: 0em;
+letter-spacing: 0.01em;
+backdrop-filter: blur(4px);
+color: coral;
+}
+.search{
+padding-right:55px ;
+padding-top: 5px;
+padding-bottom: 5px;
+
+}
+
+
+.searchbtn {
+float:left;
+padding-top: 10px;
+padding-left: 100px;
+width: auto;
+height: auto;
+}
+
+
+.fondo-uki{
+background-image: url("https://i.imgur.com/tdianQe.jpg");
+width:1200px;
+height: 800px;
+}
+.contenido{
+  
+  position: absolute;
+  width: 710px;
+  height: 109px;
+  left: 87px;
+  top: 195px;
+  font-family: Barlow Semi Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 86px;
+letter-spacing: 0.01em;
+
+color: #0A0000;
+
+}
+.contendio{
+
+}
+.rayita{
+  position: absolute;
+width: 1200px;
+height: 0px;
+left: 87px;
+top: 304px;
+
+border: 1px solid #000000;
+}
+.linea-atencion{
+  position: absolute;
+width: 1409px;
+height: 267px;
+left: 100px;
+top: 343px;
+
+font-family: Barlow Semi Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 28px;
+line-height: 52px;
+letter-spacing: 0.01em;
+
+color: #000000;
+}
+.mensaje{
+  position: absolute;
+width: 347px;
+height: 69px;
+left: 95px;
+top: 658px;
+
+font-family: Barlow Semi Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 52px;
+letter-spacing: 0.01em;
+
+color: #000000;
+}
+.notificacion{
+  position: absolute;
+width: 341px;
+height: 54px;
+left: 100px;
+top: 737px;
+
+font-family: Barlow Semi Condensed;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 31px;
+letter-spacing: 0.01em;
+
+color: #000000;
+
+}
+.caja-de-comentarios{
+  position: absolute;
+width: 1170px;
+height: 248px;
+left: 90px;
+top: 791px;
+
+background: #D1CFCF;
+}
+.btn-cancelar{
+  position: absolute;
+width: 115px;
+height: 45px;
+left: 1024px;
+top: 1052px;
+
+background: #F87878;
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 31px;
+letter-spacing: 0.01em;
+
+color: #FFFCFC;
+
+}
+.btn-enviar{
+  position: absolute;
+width: 115px;
+height: 45px;
+left: 1150px;
+top: 1052px;
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 31px;
+letter-spacing: 0.01em;
+color: #FFFCFC;
+background: #478CF3;
+}
+.relleno{
+  position:absolute;
+width: auto;
+height: 100px;
+top: 1200px;
+}
