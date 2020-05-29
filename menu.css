@@ -52,7 +52,7 @@ body {
 }
 .menu-nav{
   width: auto;
-  height: 50px;
+  height: 50px;s
 }
 /* Add a black background color to the top navigation */
 .topnav {
@@ -114,7 +114,7 @@ a svg{
  
   #transition: all 0.5s ease;
  
-  a{
+  a {
     display: block;
     color: #444;
     text-align: center;
@@ -126,47 +126,147 @@ a svg{
     &:nth-child(1){
       margin-top: 0;
       @include border-radius(3px 3px 0 0 );
-     }
+      }
     &:nth-child(5){
       margin-bottom: 0;
       @include border-radius(0 0 3px 3px);
     }
  
-    &:hover{
+    :hover{
       background: #555;
      }
-  }
+   }
 }
 /* menu-nav*/
 .nombre{
   padding-left: 400px;
+  width: auto;
+  height: auto;
 }
-.nombre img,.nombre h2,.nombre input,.nombre h4{
+.nombre img,.nombre h2,.nombre input,.nombre h4,.clase-texto .textoennav{
   float: left;
 }
 .logo
 {
 width: 25px;
 height: 25px;
-
 padding-top: 10px;
 }
-h2{
+
+.textoennav {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 15px;
+  color: rgb(255, 255, 255);
+  padding-left: 200px;
+  margin-block-start: 0.4em;
+  margin-block-end: 0em;
+ 
+}
+
+
+
+.subtextmoculto{
+  margin: auto;
+  width: 80%;
+  color: white;
+  font-size: 25px;
+  text-align: left;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  background-color:grey;
+}
+.cuadrocategoria{
+  list-style: none;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.658)0, 0, 0, 0.658);
+  display: none;
+}
+
+.subtextmoculto:hover{
+  background-color: rgba(0, 0, 0, 0.322);
+}
+
+
+
+.textodemoculto{
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  color: rgb(255, 255, 255);
+  padding-left: 50px;
+  margin-block-start: 0.8em;
+  margin-block-end: 0em;
+}
+
+.boton-user{
+  
+  background:none;
+  border: none;
+}
+
+.titulodepagina{
+  font-family: 'Shojumaru', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  letter-spacing: 0.01em;
+  backdrop-filter: blur(4px);
   color: coral;
-  font-size: medium;
+}
+.search{
+  padding-right:55px ;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
 }
 
 
 .searchbtn {
   float:left;
-padding-top: 10px;
+padding-top: 5px;
 padding-left: 100px;
+width: auto;
+height: auto;
 }
 
 
-.fondo-logo{
-  width: 100%;
+.fondo-uki{
+  background-image: url("https://i.imgur.com/tdianQe.jpg");
+  width:1200px;
   height: 800px;
 }
+ 
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
