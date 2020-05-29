@@ -370,6 +370,7 @@ footer{
   background-color:#252527;
   position:absolute;
   width: auto;
+  right: 0.1px;
   top: 1300px;
   height: 470px;
   padding-top: 50px;
