@@ -72,15 +72,14 @@ background-color: #343131;
   font-size: 17px;
   background-color: ;
 
-
-
+}
+.topnav a.inicio{
+  color: none;
+  text-decoration: none;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #444;
-  color: #444;
-}
+
 
 /* Add a color to the active/current link */
 .topnav a.active {
@@ -372,7 +371,7 @@ footer{
   position:absolute;
   width: auto;
   top: 1300px;
-  height: 380px;
+  height: 470px;
   padding-top: 50px;
   text-align: center;
 }
@@ -394,7 +393,7 @@ footer{
 }
 
 .divisionFooter2{
-  padding-left: 0%;
+  padding-top:40px;
   width: 25%;
   text-align: justify;
 }
@@ -404,6 +403,7 @@ footer{
   width: 10%;
   text-align:justify;
   padding-right: 5%; 
+  padding-bottom: 75px;
 }
 
 .divisionFooter4{
@@ -430,40 +430,14 @@ footer{
   text-align:center;
   font-size:x-small;
 }
-.h4{
-  color: #b4b4ba;
-}
-.h3{
-  color: #b4b4ba;
-  
-}
-.red{
+
+.red,.titulo-footer,.h3{
   color: #b4b4ba; 
 }
-.esp{
-  width: 90%;
-  color: #b4b4ba; 
-  border-bottom:2px solid grey;
-  padding-bottom: 15px;
-  padding-right: 57%;
-  text-align: right;
-}
+
 
 .espe{
   color: #b4b4ba; 
-  border-bottom:2px solid grey;
-  padding-bottom: 15px;
-  padding-right: 75%;
-  width: 100%;
-}
-
-.espc{
-  color:#b4b4ba; 
-  border-bottom:2px solid grey;
-  padding-bottom: 15px;
-  padding-right: 80%;
-  width: 100%;
-
 }
 
 .p{
