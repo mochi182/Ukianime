@@ -48,7 +48,7 @@ body {
 overflow-x: hidden;
 width: auto;
 height: auto;
-background-color: #fff8f8;
+background-color: #fff;
 }
 .menu-nav{
 width: auto;
@@ -160,7 +160,7 @@ font-weight: normal;
 font-size: 20px;
 line-height: 15px;
 color: rgb(255, 255, 255);
-padding-left: 200px;
+padding-left: 190px;
 margin-block-start: 0.7em;
 margin-block-end: 0em;
 
