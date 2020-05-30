@@ -47,7 +47,7 @@
   overflow-x: hidden;
   width: auto;
   height: auto;
-  background-color: #fff;
+  background-color:#252527
   }
   .menu-nav{
   width: auto;
@@ -303,7 +303,7 @@
   height: 800px;
   }
   .contenido{
-    
+   
     position: absolute;
     width: 710px;
     height: 109px;
@@ -315,13 +315,12 @@
   font-size: 64px;
   line-height: 86px;
   letter-spacing: 0.01em;
-  
-  color: #0A0000;
-  
-  }
-  .contendio{
+  color: #FFFFFF;
+
+
   
   }
+  
   .rayita{
     position: absolute;
     width: 1562px;
@@ -329,10 +328,29 @@
     left: 87px;
     top: 304px;
     
-    border: 1px solid #000000;
-  
-  border: 1px solid #000000;
+    border: 0.5px solid #FFFFFF
   }
+  .rayita2{
+    position: absolute;
+    width: 913px;
+    height: 0px;
+    left: 689px;
+    top: 380px;
+    
+    border: 0.5px solid #FFFFFF
+  }
+  .rayita3{
+    position: absolute;
+    width: 1509px;
+    height: 0px;
+    left: 93px;
+    top: 698px;
+    border: 0.5px solid #FFFFFF
+    
+  }
+
+
+
   .linea-atencion{
     position: absolute;
   width: 1409px;
@@ -347,91 +365,48 @@
   line-height: 52px;
   letter-spacing: 0.01em;
   
-  color: #000000;
+  color: #FFFFFF;;
   }
-  .mensaje{
+
+  .info-cuenta{
     position: absolute;
-  width: 347px;
-  height: 69px;
-  left: 95px;
-  top: 658px;
+    width: 913px;
+    height: 0px;
+    left: 689px;
+    top: 380px;
+    color: #FFFFFF;
+  }
+  .info-cuenta2{
+    position: absolute;
+    width: 268px;
+    height: 29px;
+    left: 1297px;
+    top: 398px;
+    color: #3E7CF8;
+
+  }
+
+  /* Perfiles: */
+  .perfil{
+  position: absolute;
+  width: 119px;
+  height: 43px;
+  left: 93px;
+  top: 777px;
   
   font-family: Barlow Semi Condensed;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 36px;
+  line-height: 43px;
   letter-spacing: 0.01em;
-  
-  color: #000000;
-  }
-  .notificacion{
-    position: absolute;
-  width: 341px;
-  height: 54px;
-  left: 100px;
-  top: 737px;
-  
-  font-family: Barlow Semi Condensed;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 31px;
-  letter-spacing: 0.01em;
-  
-  color: #000000;
-  
-  }
-  .caja-de-comentarios{
-    position: absolute;
-  width: 1170px;
-  height: 248px;
-  left: 90px;
-  top: 791px;
-  
-  background: #D1CFCF;
-  }
-  .btn-cancelar{
-    position: absolute;
-  width: 115px;
-  height: 45px;
-  left: 1024px;
-  top: 1052px;
-  
-  background: #F87878;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 31px;
-  letter-spacing: 0.01em;
-  
-  color: #FFFCFC;
-  
-  }
-  .btn-enviar{
-    position: absolute;
-  width: 115px;
-  height: 45px;
-  left: 1150px;
-  top: 1052px;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 31px;
-  letter-spacing: 0.01em;
-  color: #FFFCFC;
-  background: #478CF3;
-  }
-  .relleno{
-    position:absolute;
-  width: auto;
-  height: 25px;
-  top: 1300px;
-  }
+  color: #FFFFFF;
+}
+
   /* ----- Footer ----- */
   
   footer{
-    background-color:#252527;
+    background-color: white;
     position:absolute;
     width: auto;
     right: 0.1px;
@@ -491,18 +466,18 @@
   }
   
   .h5{
-    color: #b4b4ba;
+   
     text-align:center;
     font-size:x-small;
   }
   
   .red,.titulo-footer,.h3{
-    color: #b4b4ba; 
+    
   }
   
   
   .espe{
-    color: #b4b4ba; 
+   
   }
   
   .p{
@@ -513,3 +488,9 @@
     font-size: small;
     
   }
+  .imag-perfiles{
+    
+
+  }
+  
+  
