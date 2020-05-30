@@ -202,10 +202,11 @@ padding-top: 10px;
 }
 
 .boton-user{
-  
+  position:absolute;
+  top:17px ;
   background:none;
   border: none;
-}
+  }
 
 .titulodepagina{
   font-family: 'Shojumaru', cursive;
