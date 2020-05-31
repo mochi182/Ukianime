@@ -1,0 +1,559 @@
+/* menu oculto */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: grey; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover, .offcanvas a:focus{
+    color: #444;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+    overflow:hidden;
+    width:100%;
+  }
+ 
+  .menu-nav{
+  width: auto;
+  height: 50px;
+  background-color: #343131;
+  }
+  /* Add a black background color to the top navigation */
+  .topnav {
+    
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #444;
+    text-align: center;
+    padding: 6px 8px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #444;
+  
+  }
+  .topnav a.inicio{
+    color: none;
+    text-decoration: none;
+  }
+  
+  /* Change the color of links on hover */
+  
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: #444;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  a svg{
+  transition:all .5s ease;
+  
+  &:hover{
+    #transform:rotate(180deg);
+  }
+  }
+  
+  #ico{
+  display: none;
+  }
+  
+  .menu{
+  background: #444;
+  display: none;
+  padding: 5px;
+  width: 320px;
+  @include border-radius(5px);
+  
+  #transition: all 0.5s ease;
+  
+  a {
+    display: block;
+    color: #444;
+    text-align: center;
+    padding: 10px 2px;
+    margin: 3px 0;
+    text-decoration: none;
+    background: #444;
+  
+    &:nth-child(1){
+      margin-top: 0;
+      @include border-radius(3px 3px 0 0 );
+      }
+    &:nth-child(5){
+      margin-bottom: 0;
+      @include border-radius(0 0 3px 3px);
+    }
+  
+    :hover{
+      background: #555;
+     }
+   }
+  }
+  /* menu-nav*/
+  .nombre{
+  padding-left: 400px;
+  width: auto;
+  height: auto;
+  }
+  .nombre img,.nombre h2,.nombre input,.nombre h4,.clase-texto .textoennav{
+  float: left;
+  }
+  .logo
+  {
+  width: 40px;
+  height: 45px;
+  padding-top: 10px;
+  }
+  
+  .textoennav {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 15px;
+  color: rgb(255, 255, 255);
+  padding-left: 200px;
+  margin-block-start: 0.7em;
+  margin-block-end: 0em;
+  
+  }
+  
+  
+  
+  .subtextmoculto{
+  margin: auto;
+  width: 80%;
+  color: white;
+  font-size: 25px;
+  text-align: left;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  background-color:grey;
+  }
+  .cuadrocategoria{
+  list-style: none;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.658)0, 0, 0, 0.658);
+  }
+  
+  .subtextmoculto:hover{
+  background-color: rgba(0, 0, 0, 0.322);
+  }
+  
+  
+  
+  .textodemoculto{
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  color: rgb(255, 255, 255);
+  padding-left: 50px;
+  margin-block-start: 0.8em;
+  margin-block-end: 0em;
+  }
+  
+  .boton-user{
+  
+  background:none;
+  border: none;
+  }
+  
+  .titulodepagina{
+  font-family: 'Shojumaru', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  letter-spacing: 0.01em;
+  backdrop-filter: blur(4px);
+  color: rgb(243, 73, 11);
+  }
+  .search{
+  padding-right:55px ;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+  }
+  
+  
+  .searchbtn {
+  float:left;
+  padding-top: 10px;
+  padding-left: 100px;
+  width: auto;
+  height: auto;
+  }
+
+  .fondo-uki{
+    background-color: #343131;
+    width:auto;
+    height: auto;
+    }
+  .PantallaGvideosF{
+    height: 50%;
+  }
+  .contenedoranimesfavoritos{
+    background: #2D2828;
+    border-radius: 5px;
+    overflow: auto;
+    height: 100%;
+    margin-block-end: 1em;
+  }
+  .contenedorepisodiosfavoritos{
+    background: #2D2828;
+    border-radius: 5px;
+    overflow: auto;
+    margin-block-end: 1em;
+  }
+  .titulodecontenido{
+    /* Títulos de contenido */
+
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 80px;
+    /* identical to box height, or 143% */
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: rgb(255, 255, 255);
+    float: left;
+    padding-left: 30px;
+    
+    
+  }
+  .Estrellafav{
+    float: left;
+    padding-left: 20px;
+    width: 50px;
+    height: 55px;
+    padding-top: 20px;
+    
+  }
+  .lineaseparadora{
+    border: 2px solid rgb(253, 67, 0);
+  }
+
+  /* Submenu de categorias */
+
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: green;
+    color: white;
+  }
+
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+
+  /* Style the sidenav links and the dropdown button */
+  .sublinks, .dropdown-btn {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    color: #ffffff;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    margin-block-start: 0.8em;
+    margin-block-end: 0em;
+    outline: none;
+    transition: 0.3s
+  }
+
+  /* On mouse-over */
+  .sublinks:hover, .dropdown-btn:hover {
+    color: #444;
+  }
+
+
+  * {
+  box-sizing: border-box;
+}
+
+/* Se crean las columnas de Productos (titulos de animes) */
+
+/* Float four columns side by side */
+.columntexto {
+  float: left;
+  width: 15%;
+  height: 95%;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  color: white;
+  padding: 10px 10px;
+  padding-left: 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.rowtexto {margin: 0 -5px; height: 70%; padding-left: 7%;
+}
+
+/* Clear floats after the columns */
+.rowtexto:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.cardtexto {
+  box-shadow: 0 4px 8px 0 rgb(17, 17, 17); /* this adds the "card" effect */
+  padding: 16px;
+  height: 100%;
+  text-align: center;
+  background-color: #2b2929;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .columntexto {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Se crean las columnas de Productos (animes) */
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 15%;
+  height: 95%;
+  padding: 10px 10px;
+  padding-left: 10px;
+}
+.productos{
+  width: 161px;
+  height: 233px;
+}
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;
+  height: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  height: 100%;
+  text-align: center;
+  background-color: #202020;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Se crean las columnas de Productos (titulos de videos) */
+
+/* Float four columns side by side */
+.columnsubtexto {
+  float: left;
+  width: 25%;
+  height: 95%;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  color: white;
+  padding-right: 9%;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.rowsubtexto {margin: 0 -5px; height: 70%; padding-left: 7%;
+}
+
+/* Clear floats after the columns */
+.rowsubtexto:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.cardsubtexto {
+  box-shadow: 0 4px 8px 0 rgb(17, 17, 17); /* this adds the "card" effect */
+  padding: 16px;
+  height: 100%;
+  text-align: center;
+  background-color: #2b2929;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .columnsubtexto {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Se crean las columnas de Productos (videos) */
+
+/* Float four columns side by side */
+.column2 {
+  float: left;
+  width: 25%;
+  height: 95%;
+  padding: 10px 10px;
+  padding-left: 10px;
+}
+.productos2{
+  width: 232px;
+  height: 150px;
+}
+/* Remove extra left and right margins, due to padding in columns */
+.row2 {margin: 0 -5px;
+  height: 70%;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card2 {
+  box-shadow: 0 4px 8px 0 rgb(17, 17, 17); /* this adds the "card" effect */
+  padding: 16px;
+  height: 100%;
+  text-align: center;
+  background-color: #2b2929;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+/* Se crea el boton filtro con su contenedor */
+.contenedordefiltro{
+  margin: 20px;
+  float: right;
+  
+}
+
+.filtrob {
+  background-color: rgb(20, 20, 20); /* Green */
+  border: none;
+  color: white;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  border-radius: 7px;
+  text-decoration: none;
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.filtrob:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: rgba(104, 104, 104, 0.671);
+}
+
+.desplengandofiltro{
+  display: none;
+  background-color: #f1f1f1;
+  position: absolute;
+  margin-top: 35px;
+}
+.desplengandofiltro a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  
+}
+.desplengandofiltro a:hover{
+  background-color: #ddd;
+}
+.contenedordefiltro:hover .desplengandofiltro{
+  display: block;
+}
+

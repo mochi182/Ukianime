@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukianime</title>
+    <link rel="stylesheet" href="Guardar videos favoritos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shojumaru&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+</head>
+<body class="fondo-uki">
+    <script>
+        function openNav() {
+            document.getElementById("sideNavigation").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+         
+        function closeNav() {
+            document.getElementById("sideNavigation").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        </script>
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+            
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+              } else {
+              dropdownContent.style.display = "block";
+              }
+              });
+            }
+            </script>
+    <section class="menu-nav">
+        <div id="sideNavigation" class="sidenav">
+            <a href="javascript:void(1)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <a class= "textodemoculto" href="menu.html">Inicio</a>
+            <a class= "textodemoculto" href="acerca.html">Acerca de</a>
+            <a class= "textodemoculto" href="contacto.html">Contacto </a>
+            <button class="dropdown-btn">Categorias
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a class="sublinks" href="#">Shonen</a>
+                <a class="sublinks" href="#">Seinen</a>
+                <a class="sublinks" href="#">Slice of Life</a>
+            </div>
+         </div>
+   
+          <nav class="topnav">
+           
+            <a href="#" onclick="openNav()">
+              <svg width="30" height="25" id="icoOpen">
+                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                  <path d="M0,23 30,23" stroke="#fff" stroke-aawidth="5"/>
+                  
+              </svg>
+             
+            </a>
+            <div class="nombre">
+                <img src="https://i.imgur.com/bYacHHK.png" alt="mascara'lobo" class="logo">
+                <h2 class = "titulodepagina">Ukianime</h2>
+                
+            </div>
+            <div class="searchbtn">
+                <img src="https://icongr.am/clarity/search.svg?color=ffffff&size=15px" alt="lupa" class="lupita">
+                <input type="text" placeholder="Buscar.." class="search">
+                </div>
+                <div class="clase-texto">
+                <h3 class = "textoennav">Mi lista</h3>
+                <div class= "textoennav">
+                    <div class="user">
+                        <button class="boton-user"><img src="https://icongr.am/clarity/user.svg?color=ffffff" width="30" height="20" alt="user" class="logo-user"></button> 
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+                        
+            </div>  
+            </div>
+          </nav>
+          
+    </section>
+    <section class="PantallaGvideosF">
+        <div class="contenedoranimesfavoritos">
+            
+            <p class="titulodecontenido">Animes favoritos</p>
+            <img class= "Estrellafav"src="https://images.vexels.com/media/users/3/134121/isolated/preview/5ff73adb05d7f1fe47dd49bb1b08affa-icono-estrella-de-dibujos-animados-50-by-vexels.png">
+            <div class="contenedordefiltro">
+              <button class="filtrob">Filtro</button>
+              <div class="desplengandofiltro">
+                    <a href="">Shonen</a>
+                    <a href="">Seinen</a>
+                    <a href="">Drama</a>
+                    <a href="">Slice of Lice</a>
+              </div>
+            </div>
+            <hr style="clear: both;" class="lineaseparadora">
+            <div class="rowtexto">
+              <div class="columntexto">
+                <div class="cardtexto">One Piece</div>
+              </div>
+              <div class="columntexto">
+                <div class="cardtexto">Kimetsu no Yaiba</div>
+              </div>
+              <div class="columntexto">
+                <div class="cardtexto">The Promised Neverland</div>
+              </div>
+              <div class="columntexto">
+                <div class="cardtexto">Chainsawman</div>
+              </div>
+              <div class="columntexto">
+                <div class="cardtexto">Naruto</div>
+              </div>
+              <div class="columntexto">
+                <div class="cardtexto">Dragon Ball Super</div>
+              </div>
+            </div>
+            <div class="rowtexto">
+                <div class="column">
+                  <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100020/title_thumbnail_portrait_list/10711.jpg?key=6d28ed2b2ba9aa909bc1eeb7b132d0d3&duration=86400"></div>
+                </div>
+                <div class="column">
+                  <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100009/title_thumbnail_portrait_list/7984.jpg?key=03f3de8ab8e39277e72a783ae6e1703f&duration=86400"></div>
+                </div>
+                <div class="column">
+                  <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100026/title_thumbnail_portrait_list/8035.jpg?key=c6ab3bf9e05b4524104a50b205a8b9ff&duration=86400"></div>
+                </div>
+                <div class="column">
+                  <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100037/title_thumbnail_portrait_list/8068.jpg?key=d1029434cbb6220c274ad96103fa64b8&duration=86400"></div>
+                </div>
+                <div class="column">
+                  <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100018/title_thumbnail_portrait_list/8011.jpg?key=845cfdfb454ef84d3998d7df7cecac1a&duration=86400"></div>
+                </div>
+                <div class="column">
+                  <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100012/title_thumbnail_portrait_list/10699.jpg?key=930cbb7d96f94c8979c54304571847b5&duration=86400"></div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <section class="PantallaGvideosF">
+        <div class="contenedorepisodiosfavoritos">
+            
+            <p class="titulodecontenido">Episodios favoritos</p>
+            <img class= "Estrellafav"src="https://images.vexels.com/media/users/3/134121/isolated/preview/5ff73adb05d7f1fe47dd49bb1b08affa-icono-estrella-de-dibujos-animados-50-by-vexels.png">
+            <div class="contenedordefiltro">
+                    <button class="filtrob">Filtro</button>
+                    <div class="desplengandofiltro">
+                          <a href="">Shonen</a>
+                          <a href="">Seinen</a>
+                          <a href="">Drama</a>
+                          <a href="">Slice of Lice</a>
+                    </div>
+            </div>
+            <hr style="clear: both;" class="lineaseparadora">
+            <div class="rowsubtexto">
+              <div class="columnsubtexto">
+                <div class="cardsubtexto">Episodio 90: "¡Los cerezos de Hiruluk! El milagro de Drum"</div>
+              </div>
+              <div class="columnsubtexto">
+                <div class="cardsubtexto">Episodio 13: "One Is All, All Is One"</div>
+              </div>
+              <div class="columnsubtexto">
+                <div class="cardsubtexto">Episodio 11: "La flor que floreció en ese verano"</div>
+              </div>
+              <div class="columnsubtexto">
+                <div class="cardsubtexto">Episodio 1: "Dio Brando the Invader, Part 1"</div>
+              </div>
+             
+            </div>
+            <div class="row2">         
+                <div class="column2">
+                  <div class="card2"><img class="productos2" src="https://vignette.wikia.nocookie.net/onepiece/images/3/3a/380px-Episode_90.png/revision/latest/scale-to-width-down/350?cb=20110305213849&path-prefix=es"></div>
+                </div>
+                <div class="column2">
+                  <div class="card2"><img class="productos2" src="https://m.media-amazon.com/images/M/MV5BNDkyNzFkYWMtNjUyYS00MDZiLWFlNzQtOTM5ZTZiMWY1NmYyXkEyXkFqcGdeQXVyNjMxNzQ2NTQ@._V1_.jpg"></div>
+                </div>
+                <div class="column2">
+                  <div class="card2"><img class="productos2" src="https://www.anmosugoi.com/wp-content/uploads/2019/10/anohana.jpg"></div>
+                </div>
+                <div class="column2">
+                  <div class="card2"><img class="productos2" src="https://i.ytimg.com/vi/wLoRiTk-awo/maxresdefault.jpg"></div>
+                </div>
+              </div>
+        </div>
+    </section>
+</body>
+</html>
