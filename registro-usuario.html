@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo-registro.css">
+</head>
+<body>    
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Personales')">1. Datos Personales</button>
+      <button class="tablinks" onclick="openCity(event, 'Cuenta')">2. Datos de la cuenta</button>
+      <button class="tablinks" onclick="openCity(event, 'Pago')">3. Método de pago</button>
+    </div>
+    
+    <section id="Personales" class="tabcontent">
+        <div class="contenedor-form">
+            <div class="formulario">
+                <h3>PASO 1 - DATOS PERSONALES</h3>
+                <form action="#">
+                    <input type="text" placeholder="Nombre" class="nombre" required>
+                    <input type="text" placeholder="Apellido" required>
+                    <input type="date" placeholder="Fecha de Nacimineto" required>
+                    <input type="text" placeholder="Teléfono" required>
+                    <input type="text" placeholder="País" required>
+                    
+                    <input type="submit" value="Siguiente">
+                </form>
+    </section>
+    
+    <section id="Cuenta" class="tabcontent">
+        <div class="contenedor-form">
+            <h3>PASO 2 - DATOS DE LA CUENTA</h3>
+            <form action="#">
+                <input type="email" placeholder="Correo Electronico" required>
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <input type="password" placeholder="Repetir Contraseña" required>
+                <input type="text" placeholder="Idioma de preferencia" required>
+                
+                <input type="submit" value="Siguiente" onclick="siguiente1">
+            </form>
+        </div>
+    </section>
+    
+    <section id="Pago" class="tabcontent">
+        <div class="contenedor-form">
+            <h3>PASO 3 - DATOS DE LA CUENTA</h3>
+            <form action="#">
+
+                <p style="text-align: left; font-size: 20px;">Tipo de cuenta</p>
+                <input type="radio" name="cuenta" value="basica" required>
+                <label for="Basica">Basica...   20.00$</label><br>
+                <input type="radio" name="cuenta" value= "Premiun" required>
+                <label for="Premiun">Premiun... 50.00$</label><br>
+
+                <p style="text-align: left; font-size: 20px;">Metodo de Pago</p>
+                <input type="radio" name="metodo" value="Visa" required>
+                <label for="Visa">Visa</label><br>
+                <input type="radio" name="metodo" value= "MasterCard" required>
+                <label for="MasterCard">Premiun</label><br>
+
+                <p style="text-align: center; font-size: 20px;">Número de tarjeta</p> <br>
+                <input type="text" class="tarke" placeholder="xxxx" maxlength="4" required>
+                <input type="text" class="tarke" placeholder="xxxx" maxlength="4" required>
+                <input type="text" class="tarke" placeholder="xxxx" maxlength="4" required>
+                <input type="text" class="tarke" placeholder="xxxx" maxlength="4" required>
+
+                
+                <input type="text" class="tarke1" placeholder="xxxxxx" maxlength="6" required>
+
+                <input type="text" class="tarkes" placeholder="día" maxlength="2" required>
+                <span>/</span>
+                <input type="text" class="tarkes" placeholder="año" maxlength="2" required> <br>
+
+                <span class="textoag">Codigo de Seguridad </span>    
+                <span class="textoag">Fecha de Expiración </span>
+                <br>
+
+                <p style="text-align: left; font-size: 20px;">Forma de cobro</p>
+                <input type="radio" name="cobro" value="Manual" required>
+                <label for="Manual">Manual</label><br>
+                <input type="radio" name="cobro" value= "Automatico" required>
+                <label for="Automático">Automático</label><br>
+
+                <input type="submit" value="REGISTRARME" onclick="siguiente1">
+            </form>
+        </div>
+    </section>
+    <script src="script-registro.js"></script>
+</body>
+</html>
