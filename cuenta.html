@@ -3,76 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuenta</title>
-    <link rel="stylesheet" href="css/cuenta.css">
-    <link href="https://fonts.googleapis.com/css2?family=Shojumaru&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <title>Ukianime</title>
+    <!--Carga CSS-->
+    <link rel="stylesheet" href="css/estilos_comunes.css">
+    <link rel="stylesheet" href="css/paginas/cuenta.css">
+    <link rel="stylesheet" href="css/componentes/menu_oculto.css">
+    <link rel="stylesheet" href="css/componentes/header.css">
+    <link rel="stylesheet" href="css/componentes/footer.css">
 
+    <!--Carga librerías y archivos de JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/menu_desplegable.js"></script>
+
+    <!--Carga templates-->
+    <script>
+    $(function(){
+        $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/header.html"); 
+    });
+    $(function(){
+        $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/footer.html"); 
+    });
+    $(function(){
+        $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/menu_oculto.html"); 
+    });
+    </script>
 </head>
 <body>
-    <script>
-        function openNav() {
-            document.getElementById("sideNavigation").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-         
-        function closeNav() {
-            document.getElementById("sideNavigation").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-        </script>
-    <section class="menu-nav">
-        <div id="sideNavigation" class="sidenav">
-            <a href="javascript:void(1)" class="closebtn" onclick="closeNav()">&times;</a>
+    <header id="header"></header>
 
-            <a class= "textodemoculto" href="menu.html">Inicio</a>
-            <a class= "textodemoculto" href="acerca.html">Acerca de</a>
-            <a class= "textodemoculto" href="contacto.html">Contacto </a>
-            <a class= "textodemoculto" href="categoria.html">Categorias </a>
-             <ul class="cuadrocategoria">
-                 <li  class="subtextmoculto">Shonen</li>
-                 <li  class="subtextmoculto">Seinen</li>
-                 <li  class="subtextmoculto">Slice of Life</li>
-                 <li  class="subtextmoculto">Drama</li>
-             </ul>
-         </div>
-   
-          <nav class="topnav">
-           
-            <a href="#" onclick="openNav()">
-              <svg width="30" height="25" id="icoOpen">
-                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
-                  
-              </svg>
-             
-            </a>
-            <div class="nombre" >
-               <a class="inicio" href="menu.html"> <img src="https://i.imgur.com/bYacHHK.png" alt="mascara'lobo" class="logo">
-                <h2 class = "titulodepagina">Ukianime</h2>
-            </a>
-                
-            </div>
-            <div class="searchbtn">
-                <img src="https://icongr.am/clarity/search.svg?color=ffffff&size=15px" alt="lupa" class="lupita">
-                <input type="search" placeholder="Buscar.." class="search1" id="search">
-                </div>
-                <div class="clase-texto">
-                <h3 class = "textoennav">Mi lista</h3>
-                <div class= "textoennav">
-                    <div class="user">
-                        <button class="boton-user"><img src="https://icongr.am/clarity/user.svg?color=ffffff" width="30" height="20" alt="user" class="logo-user"></button> 
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
-                        
-            </div>  
-            </div>
-          </nav>
-          
-    </section>
     <section>
         <div class="contenido">Cuenta</div>
         <div class="rayita"></div>
@@ -131,70 +89,9 @@
             <div class="botones-perfil3">
                 Eliminar perfil 
             </div>
-
-            
-       
-
         </div>
     </section>
-     <!--Elementos del footer-->
-    <footer>
-        <section id="flexFooter">
-            <div class="divisionFooter1">
-            
-                <h4 class="titulo-footer">Descripción</h4>
-                <br>
-                
-                <p class="h3">Ukianime se encarga de brindarte los mejores anime con un servicio de calidad, en el cual no tendrás problema para encontrar los mejores animes.El anime tradicionalmente es dibujado a mano y al principio los procesos realizados de forma digital eran muy específicos (retoque y montaje). Sin embargo, en la actualidad las tareas más comunes dentro de la producción de una animación, como podría ser el coloreado o los efectos visuales (brillos, sombras, luz ambiental, etc.), se hacen con aplicaciones digitales, que permiten un mayor control sobre el trabajo y ayudan a agilizar la labor de los dibujantes a niveles insospechados en un proceso de animación tradicional.6​ Sus guiones incluyen gran parte de los géneros de ficción y son transmitidos a través de medios audiovisuales (transmisión por televisión, distribución en formatos de vídeo doméstico y películas con audio).[cita requerida] La relación del anime japonés con el manga es estrecha, pues históricamente una gran cantidad de series y trabajos de anime se basan en historias de manga populares. Además, también guarda estrecha relación con las novelas visuales.</p>
 
-            </div>
-        
-            <div class="divisionFooter2">
-                <h4 class="titulo-footer"> Quienes somos </h4>
-                <br>
-                <a href="acerca.css"class="espe">Acerca De</a> 
-                <hr>
-                <br>
-                <br>
-                <br>
-      
-
-               <a href="contacto.css"class="espe">Contactos</a> <hr>
-                <br>
-                <br>
-                <br>
-                <a href="contacto.css"class="espe">Categorias</a> <hr>
-                
-
-            </div>
-        
-            <div class="divisionFooter3">
-                <h4 class="titulo-footer">Redes Sociales</h4>
-                <br>
-                <img src="https://icongr.am/entypo/facebook.svg?size=15&color=b4b4ba" alt="facebook" class="imagenred"> 
-                <label for="" class="red">Ukianime</label>
-                <br>
-                <br>
-                <img src="https://icongr.am/entypo/instagram.svg?size=15&color=b4b4ba" alt="facebook" class="imagenred"> 
-                <label for="" class="red">@Ukianime</label>
-                <br>
-                <br>
-                <img src="https://icongr.am/entypo/twitter.svg?size=15&color=b4b4ba" alt="facebook" class="imagenred"> 
-                <label for="" class="red">Ukianime</label>
-               
-
-            </div>
-        </section>
-            
-        <div class="divisionFooter4">
-            <p class="barrita"></p>
-        </div>
-
-        <div class="divisionFooter5">
-            <h5 class="h5">Francisco Pérez - Meliton Rodriguez - Alejandro Andrade- Ernesto Solis- Alfredo Castillo- Juan Huerta</h5>
-        </div>
-       
-    </footer>
-   
+    <footer id="footer"></footer>
 </body>
 </html>

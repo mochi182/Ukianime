@@ -1,64 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ukianime</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ukianime</title>
+        <!--Carga CSS-->
+        <link rel="stylesheet" href="css/estilos_comunes.css">
+        <link rel="stylesheet" href="css/paginas/contacto.css">
+        <link rel="stylesheet" href="css/componentes/menu_oculto.css">
+        <link rel="stylesheet" href="css/componentes/header.css">
+        <link rel="stylesheet" href="css/componentes/footer.css">
 
-    <!--Carga CSS-->
-    <!--Ésto incluye: estilos generales, de header, footer, menú oculto...-->
-    <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/estilos_comunes.css">
-    <link rel="stylesheet" href="css/menu_oculto.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
+        <!--Carga librerías y archivos de JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="js/menu_desplegable.js"></script>
 
-    <!--Carga librerías y archivos de JS-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="js/menu_desplegable.js"></script>
+        <!--Carga templates-->
+        <script>
+        $(function(){
+            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/header.html"); 
+        });
+        $(function(){
+            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/footer.html"); 
+        });
+        $(function(){
+            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/menu_oculto.html"); 
+        });
+        </script>
+    </head>
 
-    <!--Carga templates-->
-    <!--Ésto incluye: header, footer, menú oculto...-->
-    <script>
-    $(function(){
-        $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/header.html"); 
-    });
-    $(function(){
-        $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/footer.html"); 
-    });
-    $(function(){
-        $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/menu_oculto.html"); 
-    });
-    </script>
-</head>
+    <body>
+        <header id="header"></header>
 
-<body>
-    <header id="header"></header>
+        <section>
+            <h1>Contacto</h1>
+            <hr>
+            <div id="contenido_de_contacto">
+                <ul>
+                    <li>Ciudad de Chitré, provincia de Herrera, Panamá</li>
+                    <li>Teléfono 1: (507) 274–2042</li>
+                    <li>Teléfono 2:  (507) 250–8434</li>
+                    <li>E-mail: Ukianime@outlook.com</li>
+                </ul>
+        
+                <h2>Mensaje</h2>
+                
+                <p>Escriba su notificación</p>
+        
+                <textarea id="caja_de_comentarios" rows="5" cols="50"></textarea>
+                <p>
+                    <button id="btn_cancelar" class="boton">cancelar</button>
+                    <button id="btn_enviar" class="boton">Enviar</button>
+                </p>
+            </div>
+        </section>
 
-    <section>
-        <h1>Contacto</h1>
-        <hr>
-        <div id="contenido_de_contacto">
-            <ul>
-                <li>Ciudad de Chitré, provincia de Herrera, Panamá</li>
-                <li>Teléfono 1: (507) 274–2042</li>
-                <li>Teléfono 2:  (507) 250–8434</li>
-                <li>E-mail: Ukianime@outlook.com</li>
-            </ul>
-    
-            <h2>Mensaje</h2>
-            
-            <p>Escriba su notificación</p>
-    
-            <textarea id="caja_de_comentarios" rows="5" cols="50"></textarea>
-            <p>
-                <button id="btn_cancelar" class="boton">cancelar</button>
-                <button id="btn_enviar" class="boton">Enviar</button>
-            </p>
-        </div>
-    </section>
-
-    <footer id="footer"></footer>
-
-</body>
+        <footer id="footer"></footer>
+    </body>
 </html>
