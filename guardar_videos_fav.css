@@ -155,7 +155,7 @@
   font-size: 20px;
   line-height: 15px;
   color: rgb(255, 255, 255);
-  padding-left: 200px;
+  padding-left: 170px;
   margin-block-start: 0.7em;
   margin-block-end: 0em;
   
@@ -196,8 +196,10 @@
   margin-block-end: 0em;
   }
   
-  .boton-user{
   
+.boton-user{
+  position:absolute;
+  top:17px ;
   background:none;
   border: none;
   }
