@@ -4,17 +4,25 @@
 
 /* Estilos de texto */
 
+/* Secciones */
+
 body {
-    background-color: lightblue;
+    color: white;
+    background-color: #4d4a4a;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Elementos */
+.fondo-uki {
+    background-image: url("https://i.imgur.com/tdianQe.jpg");
+    width:1200px;
+    height: 800px;
+}
 
-header, footer{ 
-    padding: 0px;
+header, footer {
     margin: 0px;
 }
+
+/* Elementos */
 
 .boton {
     color: #FFFCFC;
@@ -22,5 +30,15 @@ header, footer{
   }
   
 .caja_de_comentarios{
-    background: #D1CFCF;
+    background-color: #D1CFCF;
+}
+
+/* Colores */
+
+.alerta {
+    background-color: #F87878;
+}
+
+.informativo {
+    background-color: #478CF3;
 }
