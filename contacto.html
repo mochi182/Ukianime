@@ -4,149 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ukianime</title>
-    <link rel="stylesheet" href="contacto.css">
-    <link href="https://fonts.googleapis.com/css2?family=Shojumaru&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-</head>
-<body>
+
+    <!--Carga CSS-->
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/estilos_comunes.css">
+
+    <!--Carga librerías y archivos de JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/menu_desplegable.js"></script>
+
+    <!--Carga templates-->
     <script>
-        function openNav() {
-            document.getElementById("sideNavigation").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-         
-        function closeNav() {
-            document.getElementById("sideNavigation").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-        </script>
-    <section class="menu-nav">
-        <div id="sideNavigation" class="sidenav">
-            <a href="javascript:void(1)" class="closebtn" onclick="closeNav()">&times;</a>
+    $(function(){
+        $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/header.html"); 
+    });
+    $(function(){
+        $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/header.html"); 
+    });
+    $(function(){
+        $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/footer.html"); 
+    });
+    </script>
+</head>
 
-            <a class= "textodemoculto" href="menu.html">Inicio</a>
-            <a class= "textodemoculto" href="acerca_de.html">Acerca de</a>
-            <a class= "textodemoculto" href="contacto.html">Contacto </a>
-            <a class= "textodemoculto" href="categoria.html">Categorias </a>
-             <ul class="cuadrocategoria">
-                 <li  class="subtextmoculto">Shonen</li>
-                 <li  class="subtextmoculto">Seinen</li>
-                 <li  class="subtextmoculto">Slice of Life</li>
-                 <li  class="subtextmoculto">Drama</li>
-             </ul>
-         </div>
-   
-          <nav class="topnav">
-           
-            <a href="#" onclick="openNav()">
-              <svg width="30" height="25" id="icoOpen">
-                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
-                  
-              </svg>
-             
-            </a>
-            <div class="nombre" >
-               <a class="inicio" href="menu.html"> <img src="https://i.imgur.com/bYacHHK.png" alt="mascara'lobo" class="logo">
-                <h2 class = "titulodepagina">Ukianime</h2>
-            </a>
-                
-            </div>
-            <div class="searchbtn">
-                <img src="https://icongr.am/clarity/search.svg?color=ffffff&size=15px" alt="lupa" class="lupita">
-                <input type="search" placeholder="Buscar.." class="search1" id="search">
-                </div>
-                <div class="clase-texto">
-                <h3 class = "textoennav">Mi lista+</h3>
-                <div class= "textoennav">
-                    <div class="user">
-                        <button class="boton-user"><img src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" width="30" height="30" alt="user" class="logo-user"></button> 
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
-                        
-            </div>  
-            </div>
-          </nav>
-          
-    </section>
-    <section class="contendio">
-        <div class="contenido">Contacto</div>
-        <div class="rayita"></div>
-        <div class="linea-atencion">
-            Panama
-            <br>
-            <br>
-            Línea de ayuda de Ukianime (507) 274–2042 <br>
-            Centro de actualización  (507) 250–8434 <br>
-            Linea comunicación email Ukianime@outlook.com</div>
-            <div class="mensaje">Mensaje</div>
-            <div class="notificacion">Escriba su notificación</div>
-            <input type="text" placeholder="" class="caja-de-comentarios">
-           <button class="btn-cancelar">cancelar</button>
-           <button class="btn-enviar">Enviar</button>
-            <div class="relleno"><br><br>  <br> <br></div>
-    </section>
-     <!--Elementos del footer-->
-    <footer>
-        <section id="flexFooter">
-            <div class="divisionFooter1">
+<body>
+    <header id="header"></header>
+
+    <section>
+        <h1>Contacto</h1>
+        <hr>
+        <div id="contenido_de_contacto">
+            <ul>
+                <li>Ciudad de Chitré, provincia de Herrera, Panamá</li>
+                <li>Teléfono 1: (507) 274–2042</li>
+                <li>Teléfono 2:  (507) 250–8434</li>
+                <li>E-mail: Ukianime@outlook.com</li>
+            </ul>
+    
+            <h2>Mensaje</h2>
             
-                <h4 class="titulo-footer">Descripción</h4>
-                <br>
-                
-                <p class="h3">Nuestra compañía fundada en el año 2019 presta servicios de entregas a Domicilio "Delivery" tanto a nivel Empresarial como Particular. Durante estos años nos hemos caracterizado por ofrecer un servicio ágil y confiable, prueba de ello es la amplia cartera de clientes que hemos logrado vincular y mantener, tanto reconocidas empresas, bancos o entidades como también a particulares para sus diligencias personales.</p>
-
-            </div>
-        
-            <div class="divisionFooter2">
-                <h4 class="titulo-footer"> Quienes somos </h4>
-                <br>
-                <a href="acerca.css"class="espe">Acerca De</a> 
-                <hr>
-                <br>
-                <br>
-                <br>
-      
-
-               <a href="contacto.css"class="espe">Contactos</a> <hr>
-                <br>
-                <br>
-                <br>
-                <a href="contacto.css"class="espe">Categorias</a> <hr>
-                
-
-            </div>
-        
-            <div class="divisionFooter3">
-                <h4 class="titulo-footer">Redes Sociales</h4>
-                <br>
-                <img src="https://icongr.am/entypo/facebook.svg?size=15&color=b4b4ba" alt="facebook" class="imagenred"> 
-                <label for="" class="red">Ukianime</label>
-                <br>
-                <br>
-                <img src="https://icongr.am/entypo/instagram.svg?size=15&color=b4b4ba" alt="facebook" class="imagenred"> 
-                <label for="" class="red">@Ukianime</label>
-                <br>
-                <br>
-                <img src="https://icongr.am/entypo/twitter.svg?size=15&color=b4b4ba" alt="facebook" class="imagenred"> 
-                <label for="" class="red">Ukianime</label>
-               
-
-            </div>
-        </section>
-            
-        <div class="divisionFooter4">
-            <p class="barrita"></p>
+            <p>Escriba su notificación</p>
+    
+            <textarea id="caja_de_comentarios" rows="5" cols="50"></textarea>
+            <p>
+                <button id="btn_cancelar" class="boton">cancelar</button>
+                <button id="btn_enviar" class="boton">Enviar</button>
+            </p>
         </div>
+    </section>
 
-        <div class="divisionFooter5">
-            <h5 class="h5">Francisco Pérez - Meliton Rodriguez - Alejandro Andrade- Ernesto Solis- Alfredo Castillo- Juan Huerta</h5>
-        </div>
-       
-    </footer>
-   
+    <footer id="footer"></footer>
+
 </body>
 </html>
