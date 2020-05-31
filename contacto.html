@@ -6,23 +6,28 @@
     <title>Ukianime</title>
 
     <!--Carga CSS-->
+    <!--Ésto incluye: estilos generales, de header, footer, menú oculto...-->
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="css/estilos_comunes.css">
+    <link rel="stylesheet" href="css/menu_oculto.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!--Carga librerías y archivos de JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/menu_desplegable.js"></script>
 
     <!--Carga templates-->
+    <!--Ésto incluye: header, footer, menú oculto...-->
     <script>
-    $(function(){
-        $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/header.html"); 
-    });
     $(function(){
         $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/header.html"); 
     });
     $(function(){
         $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/footer.html"); 
+    });
+    $(function(){
+        $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/menu_oculto.html"); 
     });
     </script>
 </head>
