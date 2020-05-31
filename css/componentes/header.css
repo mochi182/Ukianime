@@ -5,12 +5,11 @@
 /* Navegador principal */
 
 #contenido_de_header {
-  color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #3f3c3c;
-  margin: 0px;
+  color: #b4b4ba;
   height: 75px;
 }
 
