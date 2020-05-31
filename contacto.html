@@ -7,8 +7,6 @@
 
     <!--Carga CSS-->
     <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/estilos_comunes.css">
 
     <!--Carga librerías y archivos de JS-->
@@ -17,6 +15,9 @@
 
     <!--Carga templates-->
     <script>
+    $(function(){
+        $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/header.html"); 
+    });
     $(function(){
         $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/header.html"); 
     });
