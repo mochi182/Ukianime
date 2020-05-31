@@ -200,23 +200,26 @@
   margin-block-end: 0em;
   }
   
-  .boton-user{
-  
+    
+.boton-user{
+  position:absolute;
+  top:17px ;
   background:none;
   border: none;
+  right: 10px;
   }
   
   .titulodepagina{
-  font-family: 'Shojumaru', cursive;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  letter-spacing: 0.01em;
-  backdrop-filter: blur(4px);
-  color: coral;
-  }
+    font-family: 'Shojumaru', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    margin-block-start: -0.2em;
+    margin-block-end: 0em;
+    letter-spacing: 0.01em;
+    backdrop-filter: blur(4px);
+    color: rgb(243, 73, 11);
+    }
   .search1{
     padding-right:55px ;
     padding-top: 5px;
@@ -229,7 +232,7 @@
     white-space: nowrap;
     position: absolute;
     top: 3px;
-    left: 550px;
+    left: 600px;
   }
   .searchbtn input#search{
     position: absolute;
