@@ -1,0 +1,20 @@
+/* Fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Estilos de texto */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Elementos */
+
+.boton {
+    color: #FFFCFC;
+    padding: 5px 10px 5px 10px;
+  }
+  
+.caja_de_comentarios{
+    background: #D1CFCF;
+}

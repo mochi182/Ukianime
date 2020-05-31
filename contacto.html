@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ukianime</title>
-    <link href="https://fonts.googleapis.com/css2?family=Shojumaru&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
     <!--Carga CSS-->
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/estilos_comunes.css">
+
+    <!--Carga librerías y archivos de JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/menu_desplegable.js"></script>
 
     <!--Carga templates-->
     <script>
@@ -26,34 +29,27 @@
 <body>
     <header id="header"></header>
 
-    <script>
-        function openNav() {
-            document.getElementById("sideNavigation").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-         
-        function closeNav() {
-            document.getElementById("sideNavigation").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-    </script>
+    <section id="contenido_de_contacto">
+        <h1>Contacto</h1>
+        <p>
+            Panamá
+            Teléfono (507) 274–2042
+            Centro de actualización  (507) 250–8434
+            Linea comunicación email Ukianime@outlook.com
+        </p>
 
-    <section class="contendio">
-        <div class="contenido">Contacto</div>
-        <div class="rayita"></div>
-        <div class="linea-atencion">
-            Panama
-            <br>
-            <br>
-            Línea de ayuda de Ukianime (507) 274–2042 <br>
-            Centro de actualización  (507) 250–8434 <br>
-            Linea comunicación email Ukianime@outlook.com</div>
-            <div class="mensaje">Mensaje</div>
-            <div class="notificacion">Escriba su notificación</div>
-            <input type="text" placeholder="" class="caja-de-comentarios">
-           <button class="btn-cancelar">cancelar</button>
-           <button class="btn-enviar">Enviar</button>
-            <div class="relleno"><br><br>  <br> <br></div>
+        <h2>Mensaje</h2>
+        
+        <p>Escriba su notificación</p>
+
+        <div>
+            <textarea id="caja_de_comentarios" rows="5" cols="50"></textarea>
+            <p>
+                <button id="btn_cancelar" class="boton">cancelar</button>
+                <button id="btn_enviar" class="boton">Enviar</button>
+            </p>
+        </div>
+
     </section>
 
     <footer id="footer"></footer>
