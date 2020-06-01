@@ -1,17 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    background : -moz-linear-gradient(-3.32% 97.07% 45deg,rgba(46, 46, 44, 1) 0%,rgba(0, 0, 0, 1) 100%);
-    background : -webkit-linear-gradient(45deg, rgba(46, 46, 44, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    background : -webkit-gradient(linear,-3.32% 97.07% ,103.32% 2.93% ,color-stop(0,rgba(46, 46, 44, 1) ),color-stop(1,rgba(0, 0, 0, 1) ));
-    background : -o-linear-gradient(45deg, rgba(46, 46, 44, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    background : -ms-linear-gradient(45deg, rgba(46, 46, 44, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2E2E2C', endColorstr='#000000' ,GradientType=0)";
-    background : linear-gradient(45deg, rgba(46, 46, 44, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2E2E2C',endColorstr='#000000' , GradientType=1);
+    background-color: #282828;
+    transition: margin-left .5s;
 }
 .tab {
     overflow: hidden;
@@ -21,6 +17,7 @@ body {
   
   /* Style the buttons inside the tab */
   .tab button {
+    font-family: 'Roboto', sans-serif;
     background-color: inherit;
     width: 33%;
     border: none;
@@ -33,6 +30,7 @@ body {
   
   /* Change background color of buttons on hover */
   .tab button:hover {
+    font-family: 'Roboto', sans-serif;
     background-color: #ddd;
   }
   
@@ -45,10 +43,9 @@ body {
   
   /* Style the tab content */
   .tabcontent {
-    display: none;
+    font-family: 'Roboto', sans-serif;
     padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+    border-top: 3px;
   }
 
 
@@ -82,7 +79,7 @@ body {
 .contenedor-form input[type = password],
 .contenedor-form input[type = text],
 .contenedor-form input[type = date]{
-
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin: 0 0 20px;
     font-weight: 700;

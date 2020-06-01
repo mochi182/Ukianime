@@ -1,35 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.fondo {
-    background : -moz-linear-gradient(-3.32% 97.07% 45deg,rgba(46, 46, 44, 1) 0%,rgba(0, 0, 0, 1) 100%);
-    background : -webkit-linear-gradient(45deg, rgba(46, 46, 44, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    background : -webkit-gradient(linear,-3.32% 97.07% ,103.32% 2.93% ,color-stop(0,rgba(46, 46, 44, 1) ),color-stop(1,rgba(0, 0, 0, 1) ));
-    background : -o-linear-gradient(45deg, rgba(46, 46, 44, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    background : -ms-linear-gradient(45deg, rgba(46, 46, 44, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2E2E2C', endColorstr='#000000' ,GradientType=0)";
-    background : linear-gradient(45deg, rgba(46, 46, 44, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2E2E2C',endColorstr='#000000' , GradientType=1);
+body {
+    background-color: #282828;
+    transition: margin-left .5s;
 }
 
 
 .contenedor-form{
+    font-family: 'Roboto', sans-serif;
     width: 50%;
     max-width: 500px;
     margin: 40px;
     margin-left: 8%;
+    margin-top: 170px;
     border-radius: 5px;
     color: white;
     padding-bottom: 140px;
-    opacity: 0.9;
     text-align: center;
     float: left;
 }
 
 .contenedor-form2{
+    font-family: 'Roboto', sans-serif;
     float: right;
     width: 50%;
     max-width: 500px;
@@ -38,7 +37,6 @@
     border-radius: 8px;
     color: white;
     padding-bottom: 60px;
-    opacity: 0.92;
     text-align: center;
     margin-right: 10%;
 
@@ -46,21 +44,14 @@
 
 
 .contenedor-form2 h2 {
-    padding-top: 40px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 45px;
+    font-weight: 300;
     margin: 0px 0 40px 0;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1px;
     text-align: center;
 }
-
-.contenedor-form2 h3 {
-    margin: 20px 0 30px 0;
-    font-size: 15px;
-    line-height: 1px;
-    text-align: left;
-    text-align: center;
-}
-
 
 
 .contenedor-form2 input[type = email]:focus,
@@ -72,6 +63,7 @@
 }
 
 .contenedor-form2 input[type = email] {
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin:20px;
     font-weight: 700;
@@ -93,6 +85,7 @@
 }
 
 .contenedor-form2 input[type = password] {
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin:20px;
     font-weight: 700;
@@ -114,7 +107,8 @@
     }
 
 .contenedor-form2 input[type=submit]{
-    font:          normal bold 25px/1 "Open Sans", sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
     color: rgb(255, 255, 255);
     background:    rgb(255, 38, 0);
     border-radius: 2px;
@@ -129,15 +123,16 @@
 }
 
 .contenedor-form2 input[type=submit]:hover {
+    font-family: 'Roboto', sans-serif;
     font-weight: 800;
     box-shadow: 0 0 5px rgb(177, 177, 177);
 }
 
 .contenedor-form2 .olvide {
-    font:  normal bold 25px/1 "Open Sans", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: rgb(252, 252, 252);
-    font-weight: 700;
+    font-weight: 100;
     margin:20px;
     position: relative;
     width: 50%;
@@ -147,13 +142,15 @@
 }
 
 .contenedor-form2 .olvide:hover {
+    font-family: 'Roboto', sans-serif;
     color: rgb(255, 0, 0);
-    font-weight: 700;
+    font-weight: 300;
 
 }
 
 .contenedor-form .botonr{
-    font:          normal bold 25px/1 "Open Sans", sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
     color: rgb(255, 255, 255);
     background:    rgb(255, 38, 0);
     border-radius: 2px;
@@ -161,27 +158,28 @@
     position: relative;
     width: 45%;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 3%;
     padding-top: 15px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .contenedor-form .botonr:hover {
-
+    font-family: 'Roboto', sans-serif;
     font-weight: 800;
     box-shadow: 0 0 5px rgb(177, 177, 177);
 }
 
-.contenedor-form .logo {
+.contenedor-form .titulo {
     font-family: 'Shojumaru', cursive;
-    font-style: normal;
-    font-weight: normal;
+    text-shadow: 3px 3px #222020;
     font-size: 70px;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
     letter-spacing: 0.01em;
-    backdrop-filter: blur(4px);
-    color: coral;
-    margin-top: 150px;
+    color: rgb(241, 97, 44);
+    position: relative;
+    margin-bottom: 45px;
 }
 
+.contenedor-form .logo {
+    height: 100px;
+    float: left;
+}
