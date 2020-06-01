@@ -5,19 +5,17 @@
 /* Estilos de texto */
 
 body {
+    /* SOLO PARA CAMBIAR FORMATO DE TEXTO */
     color: white;
 }
 
 /* Secciones */
 
 body {
+    transition: margin-left .5s;
     margin: 0px;
-    background-color: #4d4a4a;
+    background-color: #282828;
     font-family: 'Roboto', sans-serif;
-}
-
-.fondo-uki {
-    background-image: url("https://i.imgur.com/tdianQe.jpg");
 }
 
 .seccion_central {
