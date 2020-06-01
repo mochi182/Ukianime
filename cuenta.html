@@ -1,96 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ukianime</title>
-    <!--Carga CSS-->
-    <link rel="stylesheet" href="css/estilos_comunes.css">
-    <link rel="stylesheet" href="css/paginas/cuenta.css">
-    <link rel="stylesheet" href="css/componentes/menu_oculto.css">
-    <link rel="stylesheet" href="css/componentes/header.css">
-    <link rel="stylesheet" href="css/componentes/footer.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ukianime</title>
+        <!--Carga CSS-->
+        <link rel="stylesheet" href="css/estilos_comunes.css">
+        <link rel="stylesheet" href="css/paginas/cuenta.css">
+        <link rel="stylesheet" href="css/componentes/menu_oculto.css">
+        <link rel="stylesheet" href="css/componentes/header.css">
+        <link rel="stylesheet" href="css/componentes/footer.css">
 
-    <!--Carga librerías y archivos de JS-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="js/menu_desplegable.js"></script>
+        <!--Carga librerías y archivos de JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="js/menu_desplegable.js"></script>
 
-    <!--Carga templates-->
-    <script>
-    $(function(){
-        $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/header.html"); 
-    });
-    $(function(){
-        $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/footer.html"); 
-    });
-    $(function(){
-        $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/menu_oculto.html"); 
-    });
-    </script>
-</head>
+        <!--Carga componentes-->
+        <script>
+        $(function(){
+            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/header.html"); 
+        });
+        $(function(){
+            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/footer.html"); 
+        });
+        $(function(){
+            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/menu_oculto.html"); 
+        });
+        </script>
+    </head>
 
 <body>
     <header id="header"></header>
     <div id="menu_oculto"></div>
 
     <section class="seccion_central">
-        <div class="contenido">Cuenta</div>
-        <div class="rayita"></div>
-        <div class="linea-atencion">
-            Administración de cuenta:
-            
+        <h1>Cuenta</h1>
+        <hr>
+
+        <div class="cuenta_div_flex_1">
+            <p>Administración de cuenta:</p>
+
+            <p class="multilinea">alejandroandrade@gmail.com
+                Contraseña *********** 
+                VISA  •••• •••• •••• 8345
+                próximo cobro: 15 de junio de 2020
+            </p>
+        
+            <p class="info-cuenta multilinea">Cambiar correo de la cuenta
+            Cambiar contraseña
+            Cambiar datos personales
+            Administrar sitio
+            Actualizar métodos de pago
+            Historial de facturación
+            Cancelación de la membresia
+            Eliminar Cuenta
+            </p> 
         </div>
-        <div class="rayita2"></div>
-        <div class="info-cuenta">
 
-            <br>
-            alejandroandrade@gmail.com<br><br>
-            Contraseña *********** <br><br>
-            VISA  •••• •••• •••• 8345<br><br>
-            próximo cobro: 15 de junio de 2020<br><br>
+        <h1>Perfiles</h1>
+        <hr>
 
-        </div>
-     
-        <div class="info-cuenta2">
-
-           Cambiar correo de la cuenta<br><br>
-           Cambiar contraseña<br><br>
-           Cambiar datos personales<br><br>
-           Administrar sitio<br><br>
-           Actualizar métodos de pago<br><br>
-           Historial de facturación<br><br>
-           Cancelación de la membresia<br><br>
-           Eliminar Cuenta
-
-        </div>  
-        </section>
-        <section>
-           <div class="rayita3"></div>
-           <div class="perfiles">
-            Perfiles:
-        </div>
-            <div class="perfil"><img src="https://icongr.am/clarity/user.svg?color=ffffff">
-                
+        <div class="cuenta_div_flex_2">
+            <div class="cuenta_div_flex_3">
+                <img src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" id="icono_perfil">
+                <span>Alejandro</span>
             </div>
-            <div class="nombre-perfiles1">Alejandro</div>
-            <div class="perfil2"><img src="https://icongr.am/clarity/user.svg?color=ffffff">
             
+            <div class="cuenta_div_flex_3">
+                <img src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" id="icono_perfil">
+                <span>Francisco</span>
             </div>
-            <div class="nombre-perfiles2">Francisco</div>
             
-            <div class="perfil3"><img src="https://icongr.am/clarity/user.svg?color=ffffff">
-                
+            <div class="cuenta_div_flex_3">
+                <img src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" id="icono_perfil">
+                <span>Ernesto</span>
             </div>
-            <div class="nombre-perfiles3">Ernesto</div>
-            <div class="botones-perfil1">
-                Editar Perfiles
-            </div>
-            <div class="botones-perfil2">
-                + Agregar nuevo perfil
-            </div>
-            <div class="botones-perfil3">
-                Eliminar perfil 
-            </div>
+
+            <button class="boton cuidao">Editar Perfiles</button>
+            <button class="boton cuidao">+ Agregar nuevo perfil</button>
+            <button class="boton cuidao">Eliminar perfil </button>
         </div>
     </section>
 

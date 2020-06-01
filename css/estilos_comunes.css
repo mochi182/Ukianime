@@ -1,21 +1,21 @@
-/* Fuentes */
+/* ---------- Fuentes ---------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-/* Estilos de texto */
+/* ---------- Estilos de texto ---------- */
 
 body {
-    /* SOLO PARA CAMBIAR FORMATO DE TEXTO */
+    /* SOLO PARA TEXTO */
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Secciones */
+/* ---------- Secciones ---------- */
 
 body {
     transition: margin-left .5s;
     margin: 0px;
     background-color: #282828;
-    font-family: 'Roboto', sans-serif;
 }
 
 .seccion_central {
@@ -23,12 +23,14 @@ body {
     min-height: 550px;
 }
 
-/* Elementos */
+/* ---------- Elementos ---------- */
 
 .boton {
     color: #FFFCFC;
-    padding: 5px 10px 5px 10px;
-  }
+    padding: 8px 12px 8px 12px;
+    text-align: center;
+    border-radius: 10px;
+}
   
 .caja_de_comentarios{
     background-color: #D1CFCF;
@@ -40,12 +42,25 @@ hr {
     border: 0px;
 }
 
-/* Colores */
+.multilinea {
+    white-space: pre-line;
+}
 
-.alerta {
+#icono_perfil {
+    border-radius: 100%;
+    width: 45px;
+}
+
+/* ---------- Colores ---------- */
+
+.peligro {
     background-color: #F87878;
 }
 
-.informativo {
+.chillin {
     background-color: #478CF3;
+}
+
+.cuidao {
+    background-color: rgb(187, 139, 8);
 }
