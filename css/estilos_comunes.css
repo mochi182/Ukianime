@@ -20,6 +20,11 @@ body {
     background-image: url("https://i.imgur.com/tdianQe.jpg");
 }
 
+.seccion_central {
+    padding: 30px;
+    min-height: 550px;
+}
+
 /* Elementos */
 
 .boton {
@@ -29,6 +34,12 @@ body {
   
 .caja_de_comentarios{
     background-color: #D1CFCF;
+}
+
+hr {
+    background: grey;
+    height: 1px;
+    border: 0px;
 }
 
 /* Colores */
