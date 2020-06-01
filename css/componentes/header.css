@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #3f3c3c;
+  background-color: #343131;
   color: #b4b4ba;
   height: 75px;
 }
@@ -25,9 +25,10 @@
 
 #titulo {
   font-family: 'Shojumaru', cursive;
+  text-shadow: 2px 2px #222020;
   font-size: 40px;
   letter-spacing: 0.01em;
-  color: rgb(243, 73, 11);
+  color: rgb(241, 97, 44);
 }
 
 a {
@@ -35,7 +36,7 @@ a {
 }
 
 #menu_burger {
-  padding: 15px;
+  padding-left: 25px;
 }
 
 /* Posicionamiento */
@@ -64,7 +65,7 @@ div.busqueda {
   width: 400px;
   vertical-align: middle;
   white-space: nowrap;
-  background: linear-gradient(90deg, rgba(52,49,49,1) 19%, rgba(63,60,60,1) 19%);
+  background: linear-gradient(90deg, #222020 19%, #343131 19%);
   border-radius: 5px;
 }
 
@@ -79,7 +80,7 @@ input#input_busqueda {
   border: none;
   font-size: 10pt;
   padding-left: 15px;
-  background: #343131;
+  background: #222020;
   border-radius: 5px;
   transition: width .55s ease;
 }
