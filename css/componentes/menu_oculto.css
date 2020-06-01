@@ -45,13 +45,7 @@
     width:100%;
   }
 
-  body {
-    overflow-x: hidden;
-    width: auto;
-    height: auto;
-    background-color: #fff;
-  }
-  
+ 
   .menu-nav{
   width: auto;
   height: 50px;

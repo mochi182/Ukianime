@@ -2,171 +2,96 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
 
-  /* menu-nav*/
-  .nombre{
-    padding-left: 400px;
-    width: auto;
-    height: auto;
-    }
-    .nombre img,.nombre h2,.nombre input,.nombre h4,.clase-texto .textoennav{
-    float: left;
-    }
-    .logo
-    {
-    width: 25px;
-    height: 25px;
-    padding-top: 10px;
-    }
-    
-    .textoennav {
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 15px;
-    color: rgb(255, 255, 255);
-    padding-left: 350px;
-    margin-block-start: 0.7em;
-    margin-block-end: 0em;
-    
-    }
-    
-    
-    
-    .subtextmoculto{
-    margin: auto;
-    width: 80%;
-    color: white;
-    font-size: 25px;
-    text-align: left;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-    background-color:grey;
-    }
-    .cuadrocategoria{
-    list-style: none;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.658)0, 0, 0, 0.658);
-    }
-    
-    .subtextmoculto:hover{
-    background-color: rgba(0, 0, 0, 0.322);
-    }
-    
-    
-    
-    .textodemoculto{
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 30px;
-    color: rgb(255, 255, 255);
-    padding-left: 50px;
-    margin-block-start: 0.8em;
-    margin-block-end: 0em;
-    }
-    
-    
-  .boton-user{
-    position:absolute;
-    top:17px ;
-    background:none;
-    border: none;
-    right: 10px;
-    }
-    
-    .titulodepagina{
-        font-family: 'Shojumaru', cursive;
-        font-size: 40px;
-        margin-block-start: -0.2em;
-        margin-block-end: 0em;
-        letter-spacing: 0.01em;
-        backdrop-filter: blur(4px);
-        color: rgb(243, 73, 11);
-      }
-    .search1{
-      padding-right:55px ;
-      padding-top: 5px;
-      padding-bottom: 5px;
-    
-    }
-    
-    .searchbtn{
-      width: 300px;
-      vertical-align: middle;
-      white-space: nowrap;
-      position: absolute;
-      top: 3px;
-      left: 600px;
-    }
-    .searchbtn input#search{
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: #343131;
-      border: none;
-      font-size: 10pt;
-      float: left;
-      color: #fff;
-      padding-left: 35px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      color: #fff;
-      
-      -webkit-transition: width .55s ease;
-      -moz-transition: width .55s ease;
-      -ms-transition: width .55s ease;
-      -o-transition: width .55s ease;
-      transition: width .55s ease;
-    }
-    .searchbtn input#search::-webkit-input-placeholder {
-      color: #65737e;
-    }
-    
-    .searchbtn input#search:-moz-placeholder { /* Firefox 18- */
-      color: #65737e;  
-    }
-    
-    .searchbtn input#search::-moz-placeholder {  /* Firefox 19+ */
-      color: #65737e;  
-    }
-    
-    .searchbtn input#search:-ms-input-placeholder {  
-      color: #65737e;  
-    }
-    .searchbtn .lupita{
-      position: absolute;
-      top: 10%;
-      margin-left: 17px;
-      margin-top: 17px;
-      z-index: 1;
-      color: #fff;
-    }
-    .searchbtn input#search:focus, .searchbtn input#search:active{
-      outline:none;
-      width: 300px;
-    }
-     
-    .searchbtn:hover input#search{
-    width: 300px;
-    }
-     
-    .searchbtn:hover .lupita{
-      color: #93a2ad;
-    }
-    
-    .searchbtn {
-      float:left;
-    padding-top: 5px;
-    padding-left: 100px;
-    width: auto;
-    height: auto;
-    }
-    
-    
-    .fondo-uki{
-    background-image: url("https://i.imgur.com/tdianQe.jpg");
-    width:1200px;
-    height: 800px;
-    }
+/* Navegador principal */
+
+#contenido_de_header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3f3c3c;
+  color: #b4b4ba;
+  height: 75px;
+}
+
+#logo {
+  height: 25px;
+}
+
+#icono_perfil {
+  border-radius: 100%;
+  width: 45px;
+}
+
+#titulo {
+  font-family: 'Shojumaru', cursive;
+  font-size: 40px;
+  letter-spacing: 0.01em;
+  color: rgb(243, 73, 11);
+}
+
+a {
+  text-decoration: none;
+}
+
+#menu_burger {
+  padding: 15px;
+}
+
+/* Posicionamiento */
+
+#menu_burger {
+flex-basis: 6%;
+}
+a.inicio {
+  flex-basis: 30%;
+}
+div.busqueda {
+  flex-basis: 48%;
+}
+#mi_lista {
+  flex-basis: 8%;
+}
+#link_perfil {
+  flex-basis: 8%;
+}
+
+/* Barra de búsqueda */
+
+.busqueda {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: linear-gradient(90deg, rgba(52,49,49,1) 19%, rgba(63,60,60,1) 19%);
+  border-radius: 5px;
+}
+
+.lupa {
+  padding-left: 15px;
+}
+
+input#input_busqueda {
+  color: white;
+  width: 130px;
+  height: 50px;
+  border: none;
+  font-size: 10pt;
+  padding-left: 15px;
+  background: #343131;
+  border-radius: 5px;
+  transition: width .55s ease;
+}
+
+input#input_busqueda::placeholder {  
+  color: #c2c2c2;  
+}
+
+.busqueda input#input_busqueda:focus, .busqueda input#input_busqueda:active {
+  outline:none;
+  width: 300px;
+}
+
+.busqueda:hover input#input_busqueda {
+  width: 300px;
+}

@@ -1,0 +1,81 @@
+.cont1{
+    display: flex;
+    justify-content: center;
+}
+
+.izquierda1{
+    float: left;
+    width: 30%;
+    margin:10px;
+    padding: 10px;
+    /*tamaño de la imagen= portada*/
+    width: 350px;
+    height: 550px;
+
+}
+
+.portada{
+    width: 350px;
+    height: 550px;
+}
+
+.derecha1{
+    float: left;
+    width: 70%;
+    margin:10px;
+    padding: 10px;  
+}
+
+
+
+.subcont2{
+    display: flex;
+    justify-content: center; 
+}
+
+.izquierda2{
+    float: left;
+    width: 30%;
+    margin: none;
+    padding: none;
+}
+
+.derecha2{
+    float: center;
+    width: 50%;
+    margin:20px;
+    padding: 20px;  
+}
+
+.context{
+    float: center;
+    text-align: justify ;
+
+}
+
+.p_sin_margen{
+    margin: 0%;
+}
+.titulo_genero{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.genero_color{
+    margin-left: 10px;
+    background-color:#967B36;
+}
+
+.izquierda3{
+    float: right;
+}
+
+.lista{
+    background-color:#4E4A4A;
+}
+
+.listati{
+    font-size: 23px;
+    font-weight: bold;
+    margin-inline-end: 25px;
+}

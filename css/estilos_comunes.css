@@ -5,16 +5,22 @@
 /* Estilos de texto */
 
 body {
-    background-color: lightblue;
+    color: white;
+}
+
+/* Secciones */
+
+body {
+    margin: 0px;
+    background-color: #4d4a4a;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Elementos */
-
-header, footer{ 
-    padding: 0px;
-    margin: 0px;
+.fondo-uki {
+    background-image: url("https://i.imgur.com/tdianQe.jpg");
 }
+
+/* Elementos */
 
 .boton {
     color: #FFFCFC;
@@ -22,5 +28,15 @@ header, footer{
   }
   
 .caja_de_comentarios{
-    background: #D1CFCF;
+    background-color: #D1CFCF;
+}
+
+/* Colores */
+
+.alerta {
+    background-color: #F87878;
+}
+
+.informativo {
+    background-color: #478CF3;
 }
