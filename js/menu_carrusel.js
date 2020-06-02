@@ -1,4 +1,6 @@
-$('.main-gallery').flickity({
+$('.carousel').flickity({
+    wrapAround: true,
     cellAlign: 'left',
-    contain: true
+    contain: true,
+    pageDots: false
 });
