@@ -1,6 +1,7 @@
 .cont1{
     display: flex;
     justify-content: center;
+    margin-left: 20px;
 }
 
 .izquierda1{
@@ -9,14 +10,15 @@
     margin:10px;
     padding: 10px;
     /*tamaño de la imagen= portada*/
-    width: 350px;
-    height: 550px;
+    width: 370px;
+    height: 570px;
+ 
 
 }
 
 .portada{
-    width: 350px;
-    height: 550px;
+    width: 370px;
+    height: 570px;
 }
 
 .derecha1{
@@ -42,9 +44,9 @@
 
 .derecha2{
     float: center;
-    width: 50%;
-    margin:20px;
-    padding: 20px;  
+    padding: 20px;
+    margin: 15px;
+    margin-left: 40%;
 }
 
 .context{
@@ -54,7 +56,7 @@
 }
 
 .p_sin_margen{
-    margin: 0%;
+    margin: 5px;
 }
 .titulo_genero{
     font-size: 17px;
@@ -71,11 +73,45 @@
 }
 
 .lista{
+    width: 25%;
     background-color:#4E4A4A;
+    padding: 5px 5px 5px 25px;
+    margin: 53px;
+    border-radius: 9px;
+    margin-left: 5%;
 }
 
 .listati{
     font-size: 23px;
     font-weight: bold;
     margin-inline-end: 25px;
+}
+.alinear_menu{
+    margin-top: 50px;
+}
+.votos{
+    display: flex;
+    ;
+}
+.contenedor_estrella{
+    display: flex;
+    justify-content: center;
+}
+.izquierda_informacion{
+    flex-basis: 95%;
+}
+.derecha_votos{
+    text-align: center; 
+    margin: 0%;
+}
+
+.numero_votos{ 
+    font-size: 15px;
+    color: #BE633B;
+    margin: 0%;
+}
+.numero_rating{
+    margin: 0%;
+    color: #E0E287;
+    font-size: 19px;
 }
