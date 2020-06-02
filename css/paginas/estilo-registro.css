@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+.botonr{
+    border: 2px solid black;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    background:    rgb(255, 38, 0);
+    border-radius: 2px;
+    padding:       15px 35px;
+    position: relative;
+    width: 45%;
+    text-align: center;
+    margin-top: 3%;
+    padding-top: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
 * {
     margin: 0;
     padding: 0;

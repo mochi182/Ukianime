@@ -14,7 +14,7 @@
         <br>
         <br>
         <p>Si aún no tienes cuenta</p>
-        <a type="button" href="registro-usuario.html" class="botonr">Regístrate</button>
+        <input type="submit" value="Regístrate" class="botonr" onclick="boton_loco()">
     </div>
     <div class="contenedor-form2">
         <h2>BIENVENIDO</h2>
@@ -26,8 +26,13 @@
 
                 <input type="submit" value="Iniciar Sesión">
             </form>
-                <a href="#" class="olvide">Olvidé la Contraseña</a>
         </div>
     </div>
+    
+    <script>
+        function boton_loco(){
+            window.location.href = 'registro-usuario.html';
+        }
+    </script>
 </body>
 </html>
