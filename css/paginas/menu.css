@@ -21,3 +21,7 @@
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
+
+.carousel {
+  margin: 20px;
+}
