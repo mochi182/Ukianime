@@ -24,6 +24,14 @@ body {
     min-height: 550px;
 }
 
+.fondo-uki {
+    background-color: #282828;
+    background-image: url("../media/ola_chevere.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
 /* ---------- Elementos ---------- */
 
 .boton {

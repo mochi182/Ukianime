@@ -1,23 +1,19 @@
-.fondo-uki {
-  /*
-  background-image: url("https://i.imgur.com/tdianQe.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  */
-}
-
 .menu_imagen {
-  padding: 5px 10px 5px 10px;
+  margin: 5px 10px 5px 10px;
   width: 200px;
   height: 250px;
   box-sizing: border-box;
   object-fit: cover;
+  border-left: 15px solid rgb(32, 32, 32);
+  box-shadow: 5px 10px 10px rgb(36, 36, 36, 0.5);
 }
 
 .carousel-cell {
   display: flex;
   margin-right: 10px;
-  background: rgb(49, 49, 49);
+  background: rgba(87, 85, 85, 0.5);
+  padding: 15px;
+  
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
@@ -25,3 +21,9 @@
 .carousel {
   margin: 20px;
 }
+
+.menu_contenedores {
+  padding: 10px;
+  background-color: #444444;
+}
+
