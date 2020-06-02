@@ -11,6 +11,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: x-large;
+}
+
 /* ---------- Secciones ---------- */
 
 body {
@@ -28,7 +33,7 @@ body {
     background-color: #282828;
     background-image: url("../media/ola_chevere.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
   }
 

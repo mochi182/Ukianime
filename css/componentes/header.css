@@ -48,10 +48,10 @@ a.inicio {
   flex-basis: 30%;
 }
 div.busqueda {
-  flex-basis: 48%;
+  flex-basis: 44%;
 }
 #mi_lista {
-  flex-basis: 8%;
+  flex-basis: 12%;
 }
 #link_perfil {
   flex-basis: 8%;
