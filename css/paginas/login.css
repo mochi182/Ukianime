@@ -8,13 +8,11 @@
 }
 
 body {
-    background-color: #282828;
     transition: margin-left .5s;
 }
 
 
 .contenedor-form{
-    font-family: 'Roboto', sans-serif;
     width: 50%;
     max-width: 500px;
     margin: 40px;
@@ -28,7 +26,6 @@ body {
 }
 
 .contenedor-form2{
-    font-family: 'Roboto', sans-serif;
     float: right;
     width: 50%;
     max-width: 500px;
@@ -44,7 +41,6 @@ body {
 
 
 .contenedor-form2 h2 {
-    font-family: 'Roboto', sans-serif;
     padding-top: 45px;
     font-weight: 300;
     margin: 0px 0 40px 0;
@@ -63,7 +59,6 @@ body {
 }
 
 .contenedor-form2 input[type = email] {
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin:20px;
     font-weight: 700;
@@ -85,7 +80,6 @@ body {
 }
 
 .contenedor-form2 input[type = password] {
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin:20px;
     font-weight: 700;
@@ -107,7 +101,6 @@ body {
     }
 
 .contenedor-form2 input[type=submit]{
-    font-family: 'Roboto', sans-serif;
     font-size: 25px;
     color: rgb(255, 255, 255);
     background:    rgb(255, 38, 0);
@@ -123,13 +116,11 @@ body {
 }
 
 .contenedor-form2 input[type=submit]:hover {
-    font-family: 'Roboto', sans-serif;
     font-weight: 800;
     box-shadow: 0 0 5px rgb(177, 177, 177);
 }
 
 .contenedor-form2 .olvide {
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: rgb(252, 252, 252);
     font-weight: 100;
@@ -142,14 +133,12 @@ body {
 }
 
 .contenedor-form2 .olvide:hover {
-    font-family: 'Roboto', sans-serif;
     color: rgb(255, 0, 0);
     font-weight: 300;
 
 }
 
 .contenedor-form .botonr{
-    font-family: 'Roboto', sans-serif;
     font-size: 25px;
     color: rgb(255, 255, 255);
     background:    rgb(255, 38, 0);
@@ -164,7 +153,6 @@ body {
 }
 
 .contenedor-form .botonr:hover {
-    font-family: 'Roboto', sans-serif;
     font-weight: 800;
     box-shadow: 0 0 5px rgb(177, 177, 177);
 }
