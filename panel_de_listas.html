@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ukianime</title>
+        <!--Carga CSS-->
+        <link rel="stylesheet" href="css/estilos_comunes.css">
+        <link rel="stylesheet" href="css/paginas/crud_panel.css">
+        <link rel="stylesheet" href="css/componentes/menu_oculto.css">
+        <link rel="stylesheet" href="css/componentes/header.css">
+        <link rel="stylesheet" href="css/componentes/footer.css">
+
+        <!--Carga librerías y archivos de JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="js/menu_desplegable.js"></script>
+
+        <!--Carga templates-->
+        <script>
+        $(function(){
+            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/header.html"); 
+        });
+        $(function(){
+            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/footer.html"); 
+        });
+        $(function(){
+            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/menu_oculto.html"); 
+        });
+        </script>
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <div id="menu_oculto"></div>
+
+        <section class="seccion_central">
+            <div id="listas_flex_1">
+                <h1 id="titulo_listas_de_reproduccion">Panel de listas de reproducción</h1>
+                <div id="listas_flex_2">
+                    <a href="crear_lista.html" type="button" class="boton hierba">Crear lista</a>
+                    <a href="panel_de_videos.html" type="button" class="boton chillin">Regresar</a>
+                </div>
+            </div>  
+                      
+            <hr>
+            <table class="tabla_sin_bordes">
+                <tr>
+                    <th colspan="2"></th>
+                    <th>Fecha</th>
+                    <th>Vistas</th>
+                    <th>Comentarios</th>
+                    <th colspan="2"></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="imagen_lista" src="https://m.media-amazon.com/images/M/MV5BMGZmMjIxYjYtYWE5YS00OWYyLWE5YzUtOTI3YTkxNmQyZDkzXkEyXkFqcGdeQXVyNTY0NDkzNDc@._V1_UY1200_CR109,0,630,1200_AL_.jpg" alt="l1">
+                    </td>
+                    <td class="texto_alineado_iz">
+                        <b>Beastars</b>
+                        <br>
+                        Shonen
+                    </td>
+                    <td>23/5/2018</td>
+                    <td>921</td>
+                    <td>2</td>
+                    <td>
+                        <a href="editar_lista.html" type="button" class="boton hierba">Editar</a>
+                    </td>
+                    <td>
+                        <a href="#" type="button" class="boton peligro">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="imagen_lista" src="https://vignette.wikia.nocookie.net/samuraix/images/d/d2/Samurai_x.jpg/revision/latest/scale-to-width-down/340?cb=20121126183437&path-prefix=es" alt="l2">
+                    </td>
+                    <td class="texto_alineado_iz">
+                        <b>Rurouni Kenshin</b>
+                        <br>
+                        Shonen
+                    </td>
+                    <td>3/8/2018</td>
+                    <td>854</td>
+                    <td>12</td>
+                    <td>
+                        <a href="#" type="button" class="boton hierba">Editar</a>
+                    </td>
+                    <td>
+                        <a href="#" type="button" class="boton peligro">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="imagen_lista" src="https://m.media-amazon.com/images/M/MV5BMzQxMzE5NzM2NV5BMl5BanBnXkFtZTgwMDQ4NTUyNzE@._V1_.jpg" alt="l3">
+                    </td>
+                    <td class="texto_alineado_iz">
+                        <b>One Punch Man</b>
+                        <br>
+                        Seinen
+                    </td>
+                    <td>5/3/2019</td>
+                    <td>1200</td>
+                    <td>25</td>
+                    <td>
+                        <a href="#" type="button" class="boton hierba">Editar</a>
+                    </td>
+                    <td>
+                        <a href="#" type="button" class="boton peligro">Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="imagen_lista" src="https://vignette.wikia.nocookie.net/haikyuu/images/a/a4/Haikyu_S4.jpg/revision/latest?cb=20200111012854" alt="l4">
+                    </td>
+                    <td class="texto_alineado_iz">
+                        <b>Haikyuu!</b>
+                        <br>
+                        Shonen
+                    </td>
+                    <td>20/1/2020</td>
+                    <td>540</td>
+                    <td>0</td>
+                    <td>
+                        <a href="#" type="button" class="boton hierba">Editar</a>
+                    </td>
+                    <td>
+                        <a href="#" type="button" class="boton peligro">Eliminar</a>
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <footer id="footer"></footer>
+    </body>
+</html>

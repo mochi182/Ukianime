@@ -1,94 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ukianime</title>
-    <link rel="stylesheet" href="css/guardar_videos_fav.css">
-    <link href="https://fonts.googleapis.com/css2?family=Shojumaru&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-</head>
-<body class="fondo-uki">
-    <script>
-        function openNav() {
-            document.getElementById("sideNavigation").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-         
-        function closeNav() {
-            document.getElementById("sideNavigation").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-        </script>
-        <script>
-            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-            var dropdown = document.getElementsByClassName("dropdown-btn");
-            var i;
-            
-            for (i = 0; i < dropdown.length; i++) {
-              dropdown[i].addEventListener("click", function() {
-              this.classList.toggle("active");
-              var dropdownContent = this.nextElementSibling;
-              if (dropdownContent.style.display === "block") {
-              dropdownContent.style.display = "none";
-              } else {
-              dropdownContent.style.display = "block";
-              }
-              });
-            }
-            </script>
-    <section class="menu-nav">
-        <div id="sideNavigation" class="sidenav">
-            <a href="javascript:void(1)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!--Carga CSS-->
+    <link rel="stylesheet" href="css/estilos_comunes.css">
+    <link rel="stylesheet" href="css/paginas/guardar_videos_fav.css">
+    <link rel="stylesheet" href="css/componentes/menu_oculto.css">
+    <link rel="stylesheet" href="css/componentes/header.css">
+    <link rel="stylesheet" href="css/componentes/footer.css">
 
-            <a class= "textodemoculto" href="menu.html">Inicio</a>
-            <a class= "textodemoculto" href="acerca.html">Acerca de</a>
-            <a class= "textodemoculto" href="contacto.html">Contacto </a>
-            <button class="dropdown-btn">Categorias
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container">
-                <a class="sublinks" href="#">Shonen</a>
-                <a class="sublinks" href="#">Seinen</a>
-                <a class="sublinks" href="#">Slice of Life</a>
-            </div>
-         </div>
-   
-          <nav class="topnav">
-           
-            <a href="#" onclick="openNav()">
-              <svg width="30" height="25" id="icoOpen">
-                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,23 30,23" stroke="#fff" stroke-aawidth="5"/>
-                  
-              </svg>
-             
-            </a>
-            <div class="nombre">
-                <img src="https://i.imgur.com/bYacHHK.png" alt="mascara'lobo" class="logo">
-                <h2 class = "titulodepagina">Ukianime</h2>
-                
-            </div>
-            <div class="searchbtn">
-                <img src="https://icongr.am/clarity/search.svg?color=ffffff&size=15px" alt="lupa" class="lupita">
-                <input type="search" placeholder="Buscar.." class="search1" id="search">
-                </div>
-                <div class="clase-texto">
-                <h3 class = "textoennav">Mi lista</h3>
-                <div class= "textoennav">
-                    <div class="user">
-                        <button class="boton-user"><img src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" width="30" height="30" alt="user" class="logo-user"></button> 
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
-                        
-            </div>  
-            </div>
-          </nav>
-          
-    </section>
+    <!--Carga librerías y archivos de JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/menu_desplegable.js"></script>
+    <script src="js/guardar_videos_fav.js"></script>
+
+    <!--Carga componentes-->
+    <script>
+    $(function(){
+        $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/header.html"); 
+    });
+    $(function(){
+        $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/footer.html"); 
+    });
+    $(function(){
+        $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/menu_oculto.html"); 
+    });
+    </script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="menu_oculto"></div>
     <section class="PantallaGvideosF">
         <div class="contenedoranimesfavoritos">
             
@@ -192,5 +136,6 @@
               </div>
         </div>
     </section>
+    <footer id="footer"></footer>
 </body>
 </html>

@@ -1,150 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ukianime</title>
-    <link rel="stylesheet" href="css/paginas/vista_videos_tags.css">
-    <link href="https://fonts.googleapis.com/css2?family=Shojumaru&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-</head>
-<body class="fondo-uki">
-    <script>
-        function openNav() {
-            document.getElementById("sideNavigation").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-         
-        function closeNav() {
-            document.getElementById("sideNavigation").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-        </script>
-        <script>
-            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-            var dropdown = document.getElementsByClassName("dropdown-btn");
-            var i;
-            
-            for (i = 0; i < dropdown.length; i++) {
-              dropdown[i].addEventListener("click", function() {
-              this.classList.toggle("active");
-              var dropdownContent = this.nextElementSibling;
-              if (dropdownContent.style.display === "block") {
-              dropdownContent.style.display = "none";
-              } else {
-              dropdownContent.style.display = "block";
-              }
-              });
-            }
-            </script>
-    <section class="menu-nav">
-        <div id="sideNavigation" class="sidenav">
-            <a href="javascript:void(1)" class="closebtn" onclick="closeNav()">&times;</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ukianime</title>
+        <!--Carga CSS-->
+        <link rel="stylesheet" href="css/estilos_comunes.css">
+        <link rel="stylesheet" href="css/paginas/vista_videos_tags.css">
+        <link rel="stylesheet" href="css/componentes/menu_oculto.css">
+        <link rel="stylesheet" href="css/componentes/header.css">
+        <link rel="stylesheet" href="css/componentes/footer.css">
 
-            <a class= "textodemoculto" href="menu.html">Inicio</a>
-            <a class= "textodemoculto" href="acerca.html">Acerca de</a>
-            <a class= "textodemoculto" href="contacto.html">Contacto </a>
-            <button class="dropdown-btn">Categorias
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container">
-                <a class="sublinks" href="#">Shonen</a>
-                <a class="sublinks" href="#">Seinen</a>
-                <a class="sublinks" href="#">Slice of Life</a>
-            </div>
-         </div>
-   
-          <nav class="topnav">
-           
-            <a href="#" onclick="openNav()">
-              <svg width="30" height="25" id="icoOpen">
-                  <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-                  <path d="M0,23 30,23" stroke="#fff" stroke-aawidth="5"/>
-                  
-              </svg>
-             
-            </a>
-            <div class="nombre">
-                <img src="https://i.imgur.com/bYacHHK.png" alt="mascara'lobo" class="logo">
-                <h2 class = "titulodepagina">Ukianime</h2>
-                
-            </div>
-            <div class="searchbtn">
-                <img src="https://icongr.am/clarity/search.svg?color=ffffff&size=15px" alt="lupa" class="lupita">
-                <input type="text" placeholder="Buscar.." class="search">
+        <!--Carga librerías y archivos de JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="js/menu_desplegable.js"></script>
+        <script src="js/guardar_videos_fav.js"></script>
+
+        <!--Carga componentes-->
+        <script>
+        $(function(){
+            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/header.html"); 
+        });
+        $(function(){
+            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/footer.html"); 
+        });
+        $(function(){
+            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/menu_oculto.html"); 
+        });
+        </script>
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <div id="menu_oculto"></div>
+
+        <section>      
+            <section class="primercontenedor">
+                <p class="tituloprincipal">Beastars - Episodio 1 : La luna y la bestia</p> 
+                <div class="contenedordelvideo">
+                    <video controls>
+                        <source src="MI VIDA.mp4" type="video/mp4">
+                    </video>
                 </div>
-                <div class="clase-texto">
-                <h3 class = "textoennav">Mi lista</h3>
-                <div class= "textoennav">
-                    <div class="user">
-                        <button class="boton-user"><img src="https://icongr.am/clarity/user.svg?color=ffffff" width="30" height="20" alt="user" class="logo-user"></button> 
+            </section>
+            <section class="segundocontenedor">
+                <p class="textoetiqueta">Etiquetas:</p>
+                <div class="moverbotones">
+                    <button class="compartir">Compartir</button>
+                </div>
+                <div class="moverbotones2">
+                    <button class="anadirfavorito">Añadir favoritos</button>
+                </div>
+            </section>
+            <section class="tercercontenedor">
+                <div class="row">
+                    <div class="column">
+                    <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100020/title_thumbnail_portrait_list/10711.jpg?key=6d28ed2b2ba9aa909bc1eeb7b132d0d3&duration=86400"></div>
                     </div>
-                    <div>
-                        
+                    <div class="column">
+                    <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100009/title_thumbnail_portrait_list/7984.jpg?key=03f3de8ab8e39277e72a783ae6e1703f&duration=86400"></div>
+                    </div>
+                    <div class="column">
+                    <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100026/title_thumbnail_portrait_list/8035.jpg?key=c6ab3bf9e05b4524104a50b205a8b9ff&duration=86400"></div>
                     </div>
                 </div>
+            </section>
+                <p class="tituloCseccion">Comentarios</p>  
+            <section class="cuartocontenedor">
+                <div>
+                    <hr class="lineadivisora">
+                    <div class="notificacion">
+                        <div class="contenedorcajadecomts"><input type="text" placeholder="" class="caja-de-comentarios"></div>
+                        <div class="contenedordebtnenviar"><button class="btn-enviar">Agregar comentario</button></div>
+                    </div>
                         
-            </div>  
-            </div>
-          </nav>
-          </section>
-    
-        <section class="primercontenedor">
-            <p class="tituloprincipal">Beastars - Episodio 1 : La luna y la bestia</p> 
-            <div class="contenedordelvideo">
-                <iframe width="420" height="315"src="https://www.youtube.com/watch?v=o4eRy7HCkFU">
-                </iframe>
-            </div>
-        </section>
-        <section class="segundocontenedor">
-            <p class="textoetiqueta">Etiquetas:</p>
-            <div class="moverbotones">
-                <button class="compartir">Compartir</button>
-            </div>
-            <div class="moverbotones2">
-                <button class="anadirfavorito">Añadir favoritos</button>
-            </div>
-        </section>
-        <section class="tercercontenedor">
-            <div class="row">
-                <div class="column">
-                  <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100020/title_thumbnail_portrait_list/10711.jpg?key=6d28ed2b2ba9aa909bc1eeb7b132d0d3&duration=86400"></div>
                 </div>
-                <div class="column">
-                  <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100009/title_thumbnail_portrait_list/7984.jpg?key=03f3de8ab8e39277e72a783ae6e1703f&duration=86400"></div>
-                </div>
-                <div class="column">
-                  <div class="card"><img class="productos" src="https://mangaplus.shueisha.co.jp/drm/title/100026/title_thumbnail_portrait_list/8035.jpg?key=c6ab3bf9e05b4524104a50b205a8b9ff&duration=86400"></div>
-                </div>
-              </div>
-        </section>
-            <p class="tituloCseccion">Comentarios</p>  
-        <section class="cuartocontenedor">
-            <div>
-                <hr class="lineadivisora">
-                <div class="notificacion">
-                    <div class="contenedorcajadecomts"><input type="text" placeholder="" class="caja-de-comentarios"></div>
-                    <div class="contenedordebtnenviar"><button class="btn-enviar">Agregar comentario</button></div>
-                </div>
+            </section>
+            <br style="clear: both;">
+            <section class="quintocontenedor">
+                <div class="ultimocontenedor">
+                    <hr class="lineadivisorafinal">
+                    <div class="comtsusuario">
+                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Avatar" style="width:90px">
+                        <p><span>ACastillo-bit</span> Ayer </p>
+                        <p>Haru, porque eres asi...</p>
+                    </div>
                     
-            </div>
+                    <div class="comtsusuario">
+                        <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Avatar" style="width:90px">
+                        <p><span>Mrs_Bushido</span> Hoy</p>
+                        <p>Por gordo xd</p>
+                    </div>
+                </div>
+            </section>
         </section>
-        <br style="clear: both;">
-        <section class="quintocontenedor">
-            <div class="ultimocontenedor">
-                <hr class="lineadivisorafinal">
-                <div class="comtsusuario">
-                    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Avatar" style="width:90px">
-                    <p><span>Chris Fox</span> Ayer </p>
-                    <p>Haru, porque eres asi...</p>
-                  </div>
-                  
-                  <div class="comtsusuario">
-                    <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Avatar" style="width:90px">
-                    <p><span>Rebecca Flex</span> Hoy</p>
-                    <p>Por gordo xd</p>
-                  </div>
-            </div>
-        </section>
-</body>
+        <footer id="footer"></footer>
+    </body>
 </html>

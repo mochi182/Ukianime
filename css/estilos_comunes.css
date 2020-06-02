@@ -1,6 +1,7 @@
 /* ---------- Fuentes ---------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
 
 /* ---------- Estilos de texto ---------- */
 
@@ -26,6 +27,7 @@ body {
 /* ---------- Elementos ---------- */
 
 .boton {
+    border: 0px;
     color: #FFFCFC;
     padding: 8px 12px 8px 12px;
     text-align: center;
@@ -51,16 +53,62 @@ hr {
     width: 45px;
 }
 
+.tabla_sin_bordes {
+    border-collapse: collapse;
+    border: none;
+}
+
+.texto_alineado_iz {
+    text-align: left;
+}
+
 /* ---------- Colores ---------- */
 
 .peligro {
-    background-color: #F87878;
+    background-color: rgb(170, 43, 75);
 }
 
 .chillin {
-    background-color: #478CF3;
+    background-color: rgb(46, 99, 179);
 }
 
 .cuidao {
     background-color: rgb(187, 139, 8);
 }
+
+.hierba {
+    background-color: rgb(48, 139, 48);
+}
+
+/* ---------- Scrollbar ---------- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(68, 66, 66); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(68, 66, 66); 
+}
+
+/* Firefox */
+
+/*.scroller {
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+  } */
