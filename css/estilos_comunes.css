@@ -51,16 +51,32 @@ hr {
     width: 45px;
 }
 
+.tabla_sin_bordes {
+    border: none;
+    text-align: center;
+}
+.tabla_sin_bordes td {
+    padding: 10px;
+}
+
+.texto_alineado_iz {
+    text-align: left;
+}
+
 /* ---------- Colores ---------- */
 
 .peligro {
-    background-color: #F87878;
+    background-color: rgb(170, 43, 75);
 }
 
 .chillin {
-    background-color: #478CF3;
+    background-color: rgb(46, 99, 179);
 }
 
 .cuidao {
     background-color: rgb(187, 139, 8);
+}
+
+.hierba {
+    background-color: rgb(48, 139, 48);
 }

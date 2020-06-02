@@ -1,0 +1,22 @@
+#panel_flex_1 {
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#panel_flex_1 h1 {
+    flex-basis: 45%;
+}
+
+select {
+    width: 25%;
+    margin: 20px;
+    height: 30px;
+}
+
+.vista_previa {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+}
+
