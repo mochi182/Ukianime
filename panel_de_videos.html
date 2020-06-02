@@ -6,7 +6,7 @@
         <title>Ukianime</title>
         <!--Carga CSS-->
         <link rel="stylesheet" href="css/estilos_comunes.css">
-        <link rel="stylesheet" href="css/paginas/panel_de_videos.css">
+        <link rel="stylesheet" href="css/paginas/crud_panel.css">
         <link rel="stylesheet" href="css/componentes/menu_oculto.css">
         <link rel="stylesheet" href="css/componentes/header.css">
         <link rel="stylesheet" href="css/componentes/footer.css">
@@ -36,14 +36,15 @@
         <section class="seccion_central">
             <div id="panel_flex_1">
                 <h1>Panel de videos</h1>
-                <select name="playlist" id="playlist_panel">
-                    <option value="beastars">Beastars</option>
-                    <option value="rurouni_kenshin">Rurouni Kenshin</option>
-                    <option value="neon_genesis_evangelion">Neon Genesis Evangelion</option>
-                </select>
-                <a href="administrar_listas.html" type="button" class="boton chillin">Administrar listas</a>
-                <a href="subir_video.html" type="button" class="boton chillin">Subir video</a>
-
+                <div id="panel_flex_2">
+                    <select name="playlist" id="playlist_panel">
+                        <option value="beastars">Beastars</option>
+                        <option value="rurouni_kenshin">Rurouni Kenshin</option>
+                        <option value="neon_genesis_evangelion">Neon Genesis Evangelion</option>
+                    </select>
+                    <a href="subir_video.html" type="button" class="boton hierba">Subir video</a>
+                    <a href="panel_de_listas.html" type="button" class="boton chillin">Administrar listas</a>
+                </div>
             </div>            
             <hr>
             <table class="tabla_sin_bordes">

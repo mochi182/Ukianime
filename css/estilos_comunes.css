@@ -26,6 +26,7 @@ body {
 /* ---------- Elementos ---------- */
 
 .boton {
+    border: 0px;
     color: #FFFCFC;
     padding: 8px 12px 8px 12px;
     text-align: center;
@@ -52,6 +53,7 @@ hr {
 }
 
 .tabla_sin_bordes {
+    border-collapse: collapse;
     border: none;
 }
 

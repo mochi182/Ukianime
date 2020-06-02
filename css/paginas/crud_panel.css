@@ -1,19 +1,19 @@
 /* Para las páginas de panel de videos y panel de listas de reproducción */
 
-/* Panel de videos */
+/* ---------- Panel de videos ---------- */
 
 #panel_flex_1 {
     display:flex;
-    align-items: baseline;
     justify-content: space-between;
+    align-items: baseline;
 }
 
-#panel_flex_1 h1 {
-    flex-basis: 45%;
+#panel_flex_2 a {
+    margin: 0px 8px 0px 8px;
 }
 
 select {
-    width: 25%;
+    width: 200px;
     margin: 20px;
     height: 30px;
 }
@@ -29,19 +29,24 @@ select {
     text-align: center;
 }
 
+.tabla_sin_bordes tr:hover {
+    background-color: #343131;
+  }
+
 .tabla_sin_bordes td {
     padding: 8px;
 }
 
-/* Administrar listas */
+/* ---------- Administrar listas ---------- */
 
 #listas_flex_1 {
     display:flex;
+    justify-content: space-between;
     align-items: baseline;
 }
 
-#titulo_listas_de_reproduccion {
-    flex-basis: 90%;
+#listas_flex_2 a {
+    margin: 0px 8px 0px 8px;
 }
 
 .imagen_lista {

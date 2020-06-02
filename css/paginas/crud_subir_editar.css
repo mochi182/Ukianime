@@ -14,10 +14,6 @@
     height: 50px;
 }
 
-select {
-    width: 90%;
-}
-
 .file_input {
     padding: 15px 8px 8px 15px;
     background-color: #343131;
@@ -27,7 +23,7 @@ input, select {
     height: 30px;
 }
 
-input, textarea {
+input, textarea, select {
     width: 95%;
 }
 
@@ -75,7 +71,7 @@ input, textarea {
 /* ---------- Crear/editar lista de reproducción ---------- */
 
 #preview_crear_lista {
-    max-width: 360px;
-    max-height: 270px;
+    max-width: 270px;
+    max-height: 360px;
     object-fit: cover;
 }
