@@ -34,34 +34,14 @@
         <div id="menu_oculto"></div>
 
         <section class="seccion_central">
-            <h1>Subir video</h1>
+            <h1>Editar lista de reproducción</h1>
             <hr>
             <div id="subir_video_flex_1">
                 <div id="subir_video_flex_2">
-                    <img id="preview_subir_video" src="https://maroon-prod.s3.amazonaws.com/media/CACHE/images/photos/2020/04/19/beatars/ce09d947a4dc92f740c51383fc3a057b.jpg" alt="e1">
-                    <p>
-                        Lista de reproducción
-                        <br>
-                        <select name="playlist" id="playlist_subir_video">
-                            <option value="beastars">Beastars</option>
-                            <option value="rurouni_kenshin">Rurouni Kenshin</option>
-                            <option value="neon_genesis_evangelion">Neon Genesis Evangelion</option>
-                        </select>
-                    </p>
-                    <p>
-                        Imágen de preview
-                        <br>
-                        <input type="file" class="file_input">
-                    </p>
-                    <p>
-                        Subtítulos
-                        <br>
-                        <input type="file" class="file_input">
-                    </p>
+                    <img id="preview_crear_lista" src="https://maroon-prod.s3.amazonaws.com/media/CACHE/images/photos/2020/04/19/beatars/ce09d947a4dc92f740c51383fc3a057b.jpg" alt="e1">
+
                 </div>
                 <div id="seccion_derecha">
-                    <div id="barra_de_cargar"></div>
-                    <h2>Cargando</h2>
                     <p>Información básica</p>
                     <hr>
                     <div id="subir_video_flex_3">
@@ -77,14 +57,18 @@
                                 <textarea name="descripcion" rows="10"></textarea>
                             </p>
                             <p>
-                                Etiquetas
+                                Categoría
                                 <br>
-                                <input type="text">
+                                <select name="categoria" id="play_list_categoria">
+                                    <option value="shonen">Shonen</option>
+                                    <option value="seinen">Seinen</option>
+                                    <option value="slice">Slice of life</option>
+                                </select>
                             </p>
                         </div>
                         <div id="subseccion_de_botones">
-                            <a href="panel_de_videos.html" type="button" class="boton hierba">Listo</a>
-                            <a href="panel_de_videos.html" type="button" class="boton peligro">Cancelar</a>
+                            <a href="administrar_listas.html" type="button" class="boton hierba">Listo</a>
+                            <a href="administrar_listas.html" type="button" class="boton peligro">Cancelar</a>
                         </div>
     
                     </div>

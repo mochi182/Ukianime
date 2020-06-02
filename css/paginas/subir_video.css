@@ -1,4 +1,8 @@
-.vista_previa {
+/* Para las páginas de subir video, editar video, crear lista de reproducción y editar lista de reproducción */
+
+/* ---------- Subir video ---------- */
+
+#preview_subir_video {
     max-width: 360px;
     max-height: 270px;
     object-fit: cover;
@@ -26,6 +30,14 @@ input, select {
 input, textarea {
     width: 95%;
 }
+
+.boton {
+    display:block;
+    width: 100px;
+    margin: 5px;
+}
+
+/* Estructura */
 
 
 #subir_video_flex_1 {
@@ -58,11 +70,12 @@ input, textarea {
     flex-direction: column;
     justify-content: flex-end;
     flex-basis: 20%;
-    
 }
 
-.boton {
-    display:block;
-    width: 100px;
-    margin: 5px;
+/* ---------- Crear/editar lista de reproducción ---------- */
+
+#preview_crear_lista {
+    max-width: 360px;
+    max-height: 270px;
+    object-fit: cover;
 }

@@ -53,10 +53,6 @@ hr {
 
 .tabla_sin_bordes {
     border: none;
-    text-align: center;
-}
-.tabla_sin_bordes td {
-    padding: 10px;
 }
 
 .texto_alineado_iz {

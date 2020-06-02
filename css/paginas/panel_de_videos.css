@@ -1,3 +1,7 @@
+/* Para las páginas de panel de videos y panel de listas de reproducción */
+
+/* Panel de videos */
+
 #panel_flex_1 {
     display:flex;
     align-items: baseline;
@@ -20,3 +24,28 @@ select {
     object-fit: cover;
 }
 
+.tabla_sin_bordes {
+    width: 100%;
+    text-align: center;
+}
+
+.tabla_sin_bordes td {
+    padding: 8px;
+}
+
+/* Administrar listas */
+
+#listas_flex_1 {
+    display:flex;
+    align-items: baseline;
+}
+
+#titulo_listas_de_reproduccion {
+    flex-basis: 90%;
+}
+
+.imagen_lista {
+    width: 160px;
+    height: 220px;
+    object-fit: cover;
+}
