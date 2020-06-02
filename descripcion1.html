@@ -4,15 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ukianime</title>
-    <link rel="stylesheet" href="css/descripcion1.css">
+    <link rel="stylesheet" href="css/paginas/descripcion1.css">
+    <link rel="stylesheet" href="css/componentes/menu_oculto.css">
+    <link rel="stylesheet" href="css/componentes/header.css">
+    <link rel="stylesheet" href="css/componentes/footer.css">
+    <link rel="stylesheet" href="css/estilos_comunes.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/menu_desplegable.js"></script>
+
+    <script>
+        $(function(){
+            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/header.html"); 
+        });
+        $(function(){
+            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/footer.html"); 
+        });
+        $(function(){
+            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/menu_oculto.html"); 
+        });
+    </script>
 </head>
 <body>
 
-    <section>el nav
-
+    <section>
+        <header id="header"></header>
+        <div id="menu_oculto"></div>
     </section>
-
-
+    <br>
+    <br>
     <section class="cont1">
         <div class="izquierda1">
             <img  class="portada" src="https://nosomosnonos.com/wp-content/uploads/2020/03/Beastars-key-promo-e1568699647589.jpg">
@@ -47,53 +67,54 @@
                 </p>
             </div>
             <br>
-            <div>
-                <h2>Información General</h2>
-                <p class="p_sin_margen">
-                    <span class="titulo_genero">Idiomas:</span>
-                    <span class="genero_color">Español Latino</span>
-                    <span class="genero_color">Español España</span>
-                    <span class="genero_color">Japonés</span>
-                    <span class="genero_color">Francés</span>
-                </p>
-                
-                <p class="p_sin_margen">
-                    <span class="titulo_genero">Episodios:</span>
-                    <span class="genero_color">12</span>
-                </p>
+            <div class="contenedor_estrella">
+                <div class="izquierda_informacion">
+                    <h2>Información General</h2>
+                    <p class="p_sin_margen">
+                        <span class="titulo_genero">Idiomas:</span>
+                        <span class="genero_color">Español Latino</span>
+                        <span class="genero_color">Español España</span>
+                        <span class="genero_color">Japonés</span>
+                        <span class="genero_color">Francés</span>
+                    </p>
+                    
+                    <p class="p_sin_margen">
+                        <span class="titulo_genero">Episodios:</span>
+                        <span class="genero_color">12</span>
+                    </p>
 
-                <p class="p_sin_margen">
-                    <span class="titulo_genero">Visitas:</span>
-                    <span class="genero_color">2523</span>
-                </p>
+                    <p class="p_sin_margen">
+                        <span class="titulo_genero">Visitas:</span>
+                        <span class="genero_color">2523</span>
+                    </p>
                 </div>
-            </div>
-            <div class="izquierda3">
-                <div><p>250</p><p>Votos</p></div>
-                <div><img src="https://icongr.am/entypo/star.svg?size=65&color=922B21"></div>
-                <div><p>9.00</p></div>
+                <div class="derecha_votos">
+                    <p class="numero_votos">250</p><p class="numero_votos">Votos</p>
+                    <img src="https://icongr.am/entypo/star.svg?size=65&color=922B21">
+                    <p class="numero_rating">9.00</p>
+                </div>
             </div>
         </div>
 
     </section>
-
-
+    <br>
     <section class="lista">
         <p>
             <span><img src="https://icongr.am/clarity/menu.svg?size=30&color=9b9b9b"></span>
             <span class="listati">Listado de Espisodios</span>
         </p>
         <hr>
-        <p><span class="titulo_genero">Episodio 1.</span> <span>&nbsp;&nbsp;La kuna y la bestia.</span></p>
+        <a href="vista_videos_tags.html"><p><span class="titulo_genero">Episodio 1.</span> <span>&nbsp;&nbsp;La kuna y la bestia.</span></p></a>
         <p><span class="titulo_genero">Episodio 2.</span> <span>&nbsp;&nbsp;Los alfas de la academia.</span></p>
         <p><span class="titulo_genero">Episodio 3.</span> <span>&nbsp;&nbsp;Nace un lobo.</span></p>
         <p><span class="titulo_genero">Episodio 4.</span> <span>&nbsp;&nbsp;Muere un lobo.</span></p>       
 
     </section>
 
-    <footer>
-        aqui va el footer
-    </footer>
+    <br>
+    <br>
+
+    <footer id="footer"></footer>
    
 </body>
 </html>
