@@ -48,16 +48,17 @@ input, textarea, select {
 }
 
 #subir_video_flex_3 {
+    width: 100%;
+    padding: 20px;
     display: flex;
 }
 
-#seccion_derecha {
-    width: 100%;
-    padding: 20px;
+#titulo_y_descripcion_videos {
+    flex-basis: 70%;
 }
 
-#titulo_y_descripcion {
-    flex-basis: 50%;
+#titulo_y_descripcion_listas {
+    flex-basis: 60%;
 }
 
 #subseccion_de_botones {
