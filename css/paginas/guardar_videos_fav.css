@@ -1,24 +1,23 @@
 .PantallaGvideosF{
   height: 50%;
+  overflow: hidden;
 }
-
 .contenedoranimesfavoritos{
   background: #2D2828;
   border-radius: 5px;
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
   margin-block-end: 1em;
 }
-
 .contenedorepisodiosfavoritos{
   background: #2D2828;
   border-radius: 5px;
-  overflow: auto;
+  overflow: hidden;
   margin-block-end: 1em;
 }
-
 .titulodecontenido{
   /* Títulos de contenido */
+
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-style: normal;
   font-weight: normal;
@@ -31,18 +30,19 @@
   letter-spacing: -0.015em;
   color: rgb(255, 255, 255);
   float: left;
-  padding-left: 30px;  
+  padding-left: 30px;
+  
+  
 }
-
-.Estrellafav {
+.Estrellafav{
   float: left;
   padding-left: 20px;
   width: 50px;
   height: 55px;
   padding-top: 20px;
+  
 }
-
-.lineaseparadora {
+.lineaseparadora{
   border: 2px solid rgb(253, 67, 0);
 }
 
@@ -66,6 +66,7 @@
   float: right;
   padding-right: 8px;
 }
+
 
 /* Style the sidenav links and the dropdown button */
 .sublinks, .dropdown-btn {
@@ -93,20 +94,20 @@
 
 
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 /* Se crean las columnas de Productos (titulos de animes) */
 
 /* Float four columns side by side */
 .columntexto {
-  float: left;
-  width: 15%;
-  height: 95%;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  color: white;
-  padding: 10px 10px;
-  padding-left: 10px;
+float: left;
+width: 15%;
+height: 95%;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+color: white;
+padding: 10px 10px;
+padding-left: 10px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
@@ -115,209 +116,137 @@
 
 /* Clear floats after the columns */
 .rowtexto:after {
-  content: "";
-  display: table;
-  clear: both;
+content: "";
+display: table;
+clear: both;
 }
 
 /* Style the counter cards */
 .cardtexto {
-  box-shadow: 0 4px 8px 0 rgb(17, 17, 17); /* this adds the "card" effect */
-  padding: 16px;
-  height: 100%;
-  text-align: center;
-  background-color: #2b2929;
+box-shadow: 0 4px 8px 0 rgb(17, 17, 17); /* this adds the "card" effect */
+padding: 16px;
+height: 100%;
+text-align: center;
+background-color: #2b2929;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
-  .columntexto {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+.columntexto {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
 }
+}
+
+
+.carousel {
+background: rgb(54, 54, 54);
+width: auto;
+height: 60%;
+}
+
+.carousel-cell {
+display: flex;
+padding: 30px;
+padding-top: 10px;
+margin-right: 10px;
+
+background: rgb(22, 22, 22);
+border-radius: 5px;
+counter-increment: carousel-cell;
+}
+
+
 
 /* Se crean las columnas de Productos (animes) */
 
 /* Float four columns side by side */
-.column {
-  float: left;
-  width: 15%;
-  height: 95%;
-  padding: 10px 10px;
-  padding-left: 10px;
-}
 
 .productos{
-  width: 161px;
-  height: 233px;
+width: 166px;
+height: 264px;
+}
+.titulosanimes{
+color: white;
+font-size: 20px;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+text-align: center;
+margin-block-start: 0em;
+margin-block-end: 0em;
+padding-bottom: 8px;
 }
 
-/* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;
-  height: 70%;
-}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 16px;
-  height: 100%;
-  text-align: center;
-  background-color: #202020;
-}
-
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Se crean las columnas de Productos (titulos de videos) */
-
-/* Float four columns side by side */
-.columnsubtexto {
-  float: left;
-  width: 25%;
-  height: 95%;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  color: white;
-  padding-right: 9%;
-}
-
-/* Remove extra left and right margins, due to padding in columns */
-.rowsubtexto {margin: 0 -5px; height: 70%; padding-left: 7%;
-}
-
-/* Clear floats after the columns */
-.rowsubtexto:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the counter cards */
-.cardsubtexto {
-  box-shadow: 0 4px 8px 0 rgb(17, 17, 17); /* this adds the "card" effect */
-  padding: 16px;
-  height: 100%;
-  text-align: center;
-  background-color: #2b2929;
-}
-
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-  .columnsubtexto {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
 
 /* Se crean las columnas de Productos (videos) */
 
-/* Float four columns side by side */
-.column2 {
-  float: left;
-  width: 25%;
-  height: 95%;
-  padding: 10px 10px;
-  padding-left: 10px;
-}
 
 .productos2{
-  width: 232px;
-  height: 150px;
+width: 230px;
+height: 150px;
 }
-/* Remove extra left and right margins, due to padding in columns */
-.row2 {margin: 0 -5px;
-  height: 70%;
+.contenedortituloep{
+
+width: auto;
 }
 
-/* Clear floats after the columns */
-.row2:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-/* Style the counter cards */
-.card2 {
-  box-shadow: 0 4px 8px 0 rgb(17, 17, 17); /* this adds the "card" effect */
-  padding: 16px;
-  height: 100%;
-  text-align: center;
-  background-color: #2b2929;
-}
 
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-  .column2 {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
 
 /* Se crea el boton filtro con su contenedor */
 .contenedordefiltro{
-  margin: 20px;
-  float: right;
-
+margin: 20px;
+float: right;
+overflow: hidden;  
 }
 
 .filtrob {
-  background-color: rgb(20, 20, 20); /* Green */
-  border: none;
-  color: white;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  text-align: center;
-  border-radius: 7px;
-  text-decoration: none;
-  float: right;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+background-color: rgb(20, 20, 20); /* Green */
+border: none;
+color: white;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+padding-top: 8px;
+padding-bottom: 8px;
+margin-right: 40px;
+text-align: center;
+border-radius: 7px;
+text-decoration: none;
+float: right;
+font-size: 16px;
+cursor: pointer;
+display: flex;
+overflow: hidden;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
 }
 
 .filtrob:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  background-color: rgba(104, 104, 104, 0.671);
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+background-color: rgba(104, 104, 104, 0.671);
 }
 
 .desplengandofiltro{
-  display: none;
-  background-color: #f1f1f1;
-  position: absolute;
-  margin-top: 35px;
+display: none;
+background-color: #f1f1f1;
+position: absolute;
+margin-top: 35px;
+z-index: 1;
+overflow: hidden;
 }
 .desplengandofiltro a{
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  
+color: black;
+padding: 12px 16px;
+overflow: hidden;
+text-decoration: none;
+display: block;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+
 }
 .desplengandofiltro a:hover{
-  background-color: #ddd;
+background-color: #ddd;
 }
 .contenedordefiltro:hover .desplengandofiltro{
-  display: block;
+display: block;
+overflow: hidden;
 }
-

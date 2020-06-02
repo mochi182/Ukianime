@@ -116,14 +116,14 @@ video{
   }
 }
 
-.carousel2 {
+.carousel {
   background: rgb(54, 54, 54);
   height: 60%;
   width: auto;
   margin-top: 1%;
 }
 
-.carousel-cell2 {
+.carousel-cell {
   
   display: flex;
   padding: 30px;
@@ -143,7 +143,6 @@ video{
   padding-bottom: 8px;
 }
 .contenedortextmini{
-
   width: auto;
 }
 
