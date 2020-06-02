@@ -79,12 +79,12 @@
     margin: 53px;
     border-radius: 9px;
     margin-left: 5%;
+
 }
 
 .listati{
     font-size: 23px;
     font-weight: bold;
-    margin-inline-end: 25px;
 }
 .alinear_menu{
     margin-top: 50px;
@@ -115,3 +115,8 @@
     color: #E0E287;
     font-size: 19px;
 }
+.spam-div{
+    float: left;
+}
+
+
