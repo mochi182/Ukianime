@@ -1,19 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-.botonr{
-    border: 2px solid black;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    background:    rgb(255, 38, 0);
-    border-radius: 2px;
-    padding:       15px 35px;
-    position: relative;
-    width: 45%;
-    text-align: center;
-    margin-top: 3%;
-    padding-top: 15px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-}
 
 * {
     margin: 0;
@@ -51,7 +37,7 @@ body {
   
   /* Create an active/current tablink class */
   .tab button.active {
-    background-color: rgb(255, 38, 0);
+    background-color: rgb(255, 94, 0);
     box-shadow: 0 0 13px black;
     font-weight: 700;
   }
@@ -61,6 +47,7 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 6px 12px;
     border-top: 3px;
+    display: none;
   }
 
 
@@ -105,8 +92,7 @@ body {
     color: #000000;
     background: #ffffff;
     transition: color 0.3s ease-out;
-    border: none;
-    box-shadow: 0 0 6px rgb(255, 255, 255);
+    border-radius: 5px;
 }   
 
 .contenedor-form input[type = radio] {
@@ -119,6 +105,7 @@ body {
     border-radius: 50% black;
 
 }
+
 .contenedor-form input.tarke[type = text]{
     font-size: 20px;
     margin-bottom: 20px;
@@ -172,22 +159,26 @@ body {
 
     background-color: rgb(233, 233, 233);
     color: black;
-    box-shadow: 0 0 6px rgb(255, 38, 0);
+    box-shadow: 0 0 6px rgb(255, 94, 0);
 }
 
 .contenedor-form input[type=submit]{
-    font:          normal bold 25px/1 "Open Sans", sans-serif;
     color: rgb(255, 255, 255);
-    background:    rgb(255, 38, 0);
-    border-radius: 2px;
+    font-size: 20px;
+    background:    rgb(255, 94, 0);
+    border-radius: 10px;
     padding:       15px 35px;
     position: relative;
     width: 80%;
     margin-left: 10%;
     margin-top: 5%;
+    margin-bottom: 10px;
+    margin-right: 10px;
     padding-top: 15px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
+
+
 
 .contenedor-form .textoag {
     font-size: 17px;
@@ -195,4 +186,25 @@ body {
     margin-left: 15px;
     margin-bottom: 30px;
     
+}
+
+.contenedor-form .salir{
+    display: block;
+    color: #ddd;
+    text-align: center;
+}
+
+.contenedor-form input[type=button] {
+    color: rgb(20, 20, 20);
+    font-size: 20px;
+    background:    rgb(255, 255, 255);
+    border-radius: 6px;
+    padding:       10px 10px;
+    position: relative;
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-top: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }

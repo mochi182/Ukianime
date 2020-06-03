@@ -8,9 +8,9 @@
 </head>
 <body>    
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'Personales')">1. Datos Personales</button>
-      <button class="tablinks" onclick="openCity(event, 'Cuenta')">2. Datos de la cuenta</button>
-      <button class="tablinks" onclick="openCity(event, 'Pago')">3. Método de pago</button>
+      <button class="tablinks" onclick="pestana(event, 'Personales')">1. Datos Personales</button>
+      <button class="tablinks" onclick="pestana(event, 'Cuenta')">2. Datos de la cuenta</button>
+      <button class="tablinks" onclick="pestana(event, 'Pago')">3. Método de pago</button>
     </div>
     
     <section id="Personales" class="tabcontent">
@@ -24,8 +24,10 @@
                     <input type="text" placeholder="Teléfono" required>
                     <input type="text" placeholder="País" required>
                     
-                    <input type="submit" value="Siguiente">
+                    <input type="submit" value="Siguiente" onclick="pestana(event, 'Cuenta')">
+                    <div class="salirregresar"></div>
                 </form>
+                <a href="login.html" class="salir">Salir</a>
     </section>
     
     <section id="Cuenta" class="tabcontent">
@@ -38,8 +40,10 @@
                 <input type="password" placeholder="Repetir Contraseña" required>
                 <input type="text" placeholder="Idioma de preferencia" required>
                 
-                <input type="submit" value="Siguiente" onclick="siguiente1">
+                <input type="submit" value="Siguiente"  onclick="pestana(event, 'Pago')">
             </form>
+            <input type="button" value="Regresar" onclick="pestana(event, 'Personales')">
+            <a href="login.html" class="salir">Salir</a>
         </div>
     </section>
     
@@ -83,8 +87,10 @@
                 <input type="radio" name="cobro" value= "Automatico" required>
                 <label for="Automático">Automático</label><br>
 
-                <input type="submit" value="REGISTRARME" onclick="boton_loco()">
+                <input type="submit" value="Registrarme" onclick="boton_loco()">
             </form>
+            <input type="button" value="Regresar" onclick="pestana(event, 'Cuenta')">
+            <a href="login.html" class="salir">Salir</a>
         </div>
     </section>
     <script src="js/script-registro.js"></script>

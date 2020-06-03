@@ -9,6 +9,7 @@
 
 body {
     transition: margin-left .5s;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -50,15 +51,10 @@ body {
 }
 
 
-.contenedor-form2 input[type = email]:focus,
-.contenedor-form2 input[type = password]:focus {
-    border: 3px solid rgb(82, 82, 82);
-    background-color: rgb(230, 230, 230);
-    box-shadow: 0 0 6px rgb(255, 255, 255);
-    color: black;
-}
+
 
 .contenedor-form2 input[type = email] {
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin:20px;
     font-weight: 700;
@@ -69,7 +65,6 @@ body {
     color: #000000;
     background: #ffffff;
     transition: color 0.3s ease-out;
-    border: none;
     box-shadow: 0 0 13px rgb(0, 0, 0);
     background: url("email.png")  no-repeat;
     background-size: 8%;
@@ -77,9 +72,11 @@ body {
     background-color: rgb(255, 255, 255);
     background-position-x: 5px;
     box-shadow: 0 0 12px rgb(8, 8, 8);
+    border-radius: 10px;
 }
 
 .contenedor-form2 input[type = password] {
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin:20px;
     font-weight: 700;
@@ -90,21 +87,29 @@ body {
     color: #000000;
     background: #ffffff;
     transition: color 0.3s ease-out;
-    border: none;
     box-shadow: 0 0 15px rgb(17, 17, 17);
     background: url("lock1.png")  no-repeat;
     background-size: 8%;
     background-position: left;
     background-color: rgb(255, 255, 255);
     background-position-x: 6px;
-
+    border-radius: 10px;
     }
+
+
+.contenedor-form2 input[type = email]:focus,
+.contenedor-form2 input[type = password]:focus {
+    border: 3px solid rgb(82, 82, 82);
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0 0 6px rgb(255, 255, 255);
+    color: black;
+    border-radius: 10px;
+}
 
 .contenedor-form2 input[type=submit]{
     font-size: 25px;
-    color: rgb(255, 255, 255);
-    background:    rgb(255, 38, 0);
-    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    background:    rgb(241, 97, 44);
     padding:       15px 35px;
     position: relative;
     width: 70%;
@@ -113,10 +118,12 @@ body {
     margin-bottom: 5%;
     padding-top: 15px;
     box-shadow: 0 0 15px rgb(0, 0, 0);
+    border-radius: 10px;
 }
 
 .contenedor-form2 input[type=submit]:hover {
-    font-weight: 800;
+    border-radius: 10px;
+    font-weight: 600;
     box-shadow: 0 0 5px rgb(177, 177, 177);
 }
 
@@ -140,9 +147,9 @@ body {
 
 .contenedor-form .botonr{
     font-size: 25px;
-    color: rgb(255, 255, 255);
-    background:    rgb(255, 38, 0);
-    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    background:    rgb(241, 97, 44);
+    border-radius: 10px;
     padding:       15px 35px;
     position: relative;
     width: 45%;
@@ -153,13 +160,13 @@ body {
 }
 
 .contenedor-form .botonr:hover {
-    font-weight: 800;
+    font-weight: 600;
     box-shadow: 0 0 5px rgb(177, 177, 177);
 }
 
 .contenedor-form .titulo {
     font-family: 'Shojumaru', cursive;
-    text-shadow: 3px 3px #222020;
+    text-shadow: 4px 4px #222020;
     font-size: 70px;
     letter-spacing: 0.01em;
     color: rgb(241, 97, 44);
