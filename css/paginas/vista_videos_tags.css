@@ -133,6 +133,10 @@ video{
   border-radius:2%;
   counter-increment: carousel-cell;
 }
+.productos3{
+  width: 230px;
+  height: 150px;
+}
 .titulosanimesmini{
   color: white;
   font-size: 15px;
