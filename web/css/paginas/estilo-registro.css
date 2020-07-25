@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #282828;
+    transition: margin-left .5s;
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid rgb(172, 172, 172);
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    font-family: 'Roboto', sans-serif;
+    background-color: inherit;
+    width: 33%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: rgb(255, 94, 0);
+    box-shadow: 0 0 13px black;
+    font-weight: 700;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    font-family: 'Roboto', sans-serif;
+    padding: 6px 12px;
+    border-top: 3px;
+    display: none;
+  }
+
+
+
+  
+  .contenedor-form{
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 2px;
+    color: white;
+    padding: 50px; 
+    padding-bottom: 35px;   
+    opacity: 0.9;
+}
+.contenedor-form h2 {
+    margin: 15px 0 40px 0;
+    font-size: 16px;
+    line-height: 1px;
+    text-align: center;
+}
+
+.contenedor-form h3 {
+    margin: 0px 0 25px 0;
+    font-size: 15px;
+    line-height: 1px;
+    text-align: center;
+}
+
+.contenedor-form input[type = email],
+.contenedor-form input[type = password],
+.contenedor-form input[type = text],
+.contenedor-form input[type = date]{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 0 0 20px;
+    font-weight: 700;
+    padding: 10px 15px 10px 15px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    color: #000000;
+    background: #ffffff;
+    transition: color 0.3s ease-out;
+    border-radius: 5px;
+}   
+
+.contenedor-form input[type = radio] {
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    padding: 10px 15px 10px 15px;
+    background: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 50% black;
+
+}
+
+.contenedor-form input.tarke[type = text]{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    padding: 10px 15px 10px 15px;
+    position: relative;
+    width: 24%;
+    height: 40px;
+    color: #000000;
+    background: #ffffff;
+    transition: color 0.3s ease-out;
+    border: none;
+    text-align: center;
+}
+
+.contenedor-form input.tarke1[type = text]{
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-weight: 700;
+    padding: 10px 15px 10px 15px;
+    position: relative;
+    width: 24%;
+    height: 40px;
+    color: #000000;
+    background: #ffffff;
+    transition: color 0.3s ease-out;
+    border: none;
+    text-align: center;
+}
+
+.contenedor-form input.tarkes[type = text]{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    padding: 10px 15px 10px 15px;
+    position: relative;
+    width: 17%;
+    height: 40px;
+    color: #000000;
+    background: #ffffff;
+    transition: color 0.3s ease-out;
+    border: none;
+}
+
+.contenedor-form input[type = email]:focus,
+.contenedor-form input[type = password]:focus,
+.contenedor-form input[type = text]:focus,
+.contenedor-form input[type = date]:focus {
+
+    background-color: rgb(233, 233, 233);
+    color: black;
+    box-shadow: 0 0 6px rgb(255, 94, 0);
+}
+
+.contenedor-form input[type=submit]{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background:    rgb(255, 94, 0);
+    border-radius: 10px;
+    padding:       15px 35px;
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-top: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+
+
+.contenedor-form .textoag {
+    font-size: 17px;
+    margin: 3%;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    
+}
+
+.contenedor-form .salir{
+    display: block;
+    color: #ddd;
+    text-align: center;
+}
+
+.contenedor-form input[type=button] {
+    color: rgb(20, 20, 20);
+    font-size: 20px;
+    background:    rgb(255, 255, 255);
+    border-radius: 6px;
+    padding:       10px 10px;
+    position: relative;
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-top: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
