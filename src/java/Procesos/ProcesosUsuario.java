@@ -39,8 +39,8 @@ public class ProcesosUsuario {
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO usuario(nombre, contrasena, id_rol)";
-                    query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+usuario.getId_rol()+")";
+            String query = "INSERT INTO usuario(nombre, contrasena, id_rol, usuario, apellido, correo, idioma, fecha_nacimiento, telefono, pais)";
+                    query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+usuario.getId_rol()+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getCorreo()+"','"+usuario.getIdioma()+"',"+usuario.getFecha_nacimiento()+", "+usuario.getTelefono()+",'"+usuario.getPais()+"')";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -62,6 +62,13 @@ public class ProcesosUsuario {
                 usuario.setId_rol(resultado.getInt("id_anime"));
                 usuario.setNombre(resultado.getString("nombre"));
                 usuario.setContrasena(resultado.getString("contrasena"));
+                usuario.setUsuario(resultado.getString("usuario"));
+                usuario.setApellido(resultado.getString("apellido"));
+                usuario.setCorreo(resultado.getString("correo"));
+                usuario.setIdioma(resultado.getString("idioma"));
+                usuario.setPais(resultado.getString("pais"));
+                usuario.setTelefono(resultado.getInt("telefono"));
+                usuario.setFecha_nacimiento(resultado.getDate("fecha_nacimiento"));
                 usuarios.add(usuario);
             }
             resultado.close();
