@@ -1,0 +1,78 @@
+/* Para las páginas de subir video, editar video, crear lista de reproducción y editar lista de reproducción */
+
+/* ---------- Subir video ---------- */
+
+#preview_subir_video {
+    max-width: 360px;
+    max-height: 270px;
+    object-fit: cover;
+}
+
+#barra_de_cargar {
+    background: linear-gradient(90deg,rgb(36, 114, 231) 19%, #5c5757 19%);
+    width: 100%;
+    height: 50px;
+}
+
+.file_input {
+    padding: 15px 8px 8px 15px;
+    background-color: #343131;
+}
+
+input, select {
+    height: 30px;
+}
+
+input, textarea, select {
+    width: 95%;
+}
+
+.boton {
+    display:block;
+    width: 100px;
+    margin: 5px;
+}
+
+/* Estructura */
+
+
+#subir_video_flex_1 {
+    display: flex;
+}
+
+#subir_video_flex_2 {
+    padding: 20px;
+    flex-basis: 25%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#subir_video_flex_3 {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+#titulo_y_descripcion_videos {
+    flex-basis: 70%;
+}
+
+#titulo_y_descripcion_listas {
+    flex-basis: 60%;
+}
+
+#subseccion_de_botones {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-basis: 20%;
+}
+
+/* ---------- Crear/editar lista de reproducción ---------- */
+
+#preview_crear_lista {
+    max-width: 270px;
+    max-height: 360px;
+    object-fit: cover;
+}

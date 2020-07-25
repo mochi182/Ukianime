@@ -1,0 +1,45 @@
+
+.rayita {
+  width: 100%;
+  border: 0.5px solid #FFFFFF
+}
+
+.rayita2 {
+  width: 100%;
+  border: 0.5px solid #FFFFFF
+}
+
+.rayita3 {
+  width: 100%;
+  border: 0.5px solid #FFFFFF
+}
+
+.info-cuenta {
+  color: #3E7CF8;
+}
+  
+.cuenta_div_flex_1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cuenta_div_flex_2{
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cuenta_div_flex_3 {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.cuenta_div_flex_2 button {
+  margin: 3px;
+}
+
+.cuenta_div_flex_3 span {
+  margin-left: 15px;
+}

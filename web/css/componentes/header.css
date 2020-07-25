@@ -1,0 +1,99 @@
+/* Fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+
+/* Navegador principal */
+
+#contenido_de_header {
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #343131;
+  color: #b4b4ba;
+  height: 75px;
+}
+
+#logo {
+  height: 25px;
+}
+
+#icono_perfil {
+  border-radius: 100%;
+  width: 45px;
+}
+
+#titulo {
+  font-family: 'Shojumaru', cursive;
+  text-shadow: 2px 2px #222020;
+  font-size: 40px;
+  letter-spacing: 0.01em;
+  color: rgb(241, 97, 44);
+}
+
+a {
+  text-decoration: none;
+}
+
+#menu_burger {
+  padding-left: 25px;
+}
+
+/* Posicionamiento */
+
+#menu_burger {
+flex-basis: 6%;
+}
+a.inicio {
+  flex-basis: 30%;
+}
+div.busqueda {
+  flex-basis: 48%;
+}
+#mi_lista {
+  flex-basis: 8%;
+}
+#link_perfil {
+  flex-basis: 8%;
+}
+
+/* Barra de búsqueda */
+
+.busqueda {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #222020 19%, #343131 19%);
+  border-radius: 5px;
+}
+
+.lupa {
+  padding-left: 15px;
+}
+
+input#input_busqueda {
+  color: white;
+  width: 130px;
+  height: 50px;
+  border: none;
+  font-size: 10pt;
+  padding-left: 15px;
+  background: #222020;
+  border-radius: 5px;
+  transition: width .55s ease;
+}
+
+input#input_busqueda::placeholder {  
+  color: #c2c2c2;  
+}
+
+.busqueda input#input_busqueda:focus, .busqueda input#input_busqueda:active {
+  outline:none;
+  width: 300px;
+}
+
+.busqueda:hover input#input_busqueda {
+  width: 300px;
+}
