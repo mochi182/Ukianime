@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `info_de_pago` (
   `id_usuario` int(11) NOT NULL,
   `tipo_de_cuenta` varchar(50) DEFAULT NULL,
   `metodo_de_pago` varchar(50) DEFAULT NULL,
-  `numero_de_tarjeta` int(11) DEFAULT NULL,
+  `tarjeta` varchar(50) DEFAULT NULL,
   `codigo_de_seguridad` int(11) DEFAULT NULL,
   `fecha_de_expiracion` date DEFAULT NULL,
   `forma_de_cobro` varchar(50) DEFAULT NULL,
@@ -196,6 +196,20 @@ CREATE TABLE IF NOT EXISTS `video` (
 -- Dumping data for table ukianime.video: ~0 rows (approximately)
 /*!40000 ALTER TABLE `video` DISABLE KEYS */;
 /*!40000 ALTER TABLE `video` ENABLE KEYS */;
+
+-- Dumping structure for table ukianime.video_tiene_tag
+CREATE TABLE IF NOT EXISTS `video_tiene_tag` (
+  `id_video` int(11) NOT NULL,
+  `id_tag` int(11) NOT NULL,
+  PRIMARY KEY (`id_video`,`id_tag`),
+  KEY `FK_video_tag_id_tag` (`id_tag`),
+  CONSTRAINT `FK_video_tag_id_tag` FOREIGN KEY (`id_tag`) REFERENCES `tag` (`id_tag`),
+  CONSTRAINT `FK_video_tag_id_video` FOREIGN KEY (`id_video`) REFERENCES `video` (`id_video`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table ukianime.video_tiene_tag: ~0 rows (approximately)
+/*!40000 ALTER TABLE `video_tiene_tag` DISABLE KEYS */;
+/*!40000 ALTER TABLE `video_tiene_tag` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
