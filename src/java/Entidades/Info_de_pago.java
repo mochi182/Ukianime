@@ -17,9 +17,9 @@ public class Info_de_pago {
     private int id_usuario;
     private String tipo_de_cuenta;
     private String metodo_de_pago;
-    private int numero_de_tarjeta;
+    private String numero_de_tarjeta;
     private int codigo_de_seguridad;
-    private Date fecha_de_expiracion;
+    private String fecha_de_expiracion;
     private String forma_de_cobro;
 
     /**
@@ -81,14 +81,14 @@ public class Info_de_pago {
     /**
      * @return the numero_de_tarjeta
      */
-    public int getNumero_de_tarjeta() {
+    public String getNumero_de_tarjeta() {
         return numero_de_tarjeta;
     }
 
     /**
      * @param numero_de_tarjeta the numero_de_tarjeta to set
      */
-    public void setNumero_de_tarjeta(int numero_de_tarjeta) {
+    public void setNumero_de_tarjeta(String numero_de_tarjeta) {
         this.numero_de_tarjeta = numero_de_tarjeta;
     }
 
@@ -109,14 +109,14 @@ public class Info_de_pago {
     /**
      * @return the fecha_de_expiracion
      */
-    public Date getFecha_de_expiracion() {
+    public String getFecha_de_expiracion() {
         return fecha_de_expiracion;
     }
 
     /**
      * @param fecha_de_expiracion the fecha_de_expiracion to set
      */
-    public void setFecha_de_expiracion(Date fecha_de_expiracion) {
+    public void setFecha_de_expiracion(String fecha_de_expiracion) {
         this.fecha_de_expiracion = fecha_de_expiracion;
     }
 
