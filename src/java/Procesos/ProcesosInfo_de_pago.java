@@ -40,7 +40,7 @@ public class ProcesosInfo_de_pago {
         try{
             Statement stmt = conn.createStatement();
             String query = "INSERT INTO info_de_pago(id_usuario, tipo_de_cuenta, metodo_de_pago, tarjeta, codigo_de_seguridad, fecha_de_expiracion, forma_de_cobro)";
-                    query += "VALUES("+info_de_pago.getId_usuario()+",'"+info_de_pago.getTipo_de_cuenta()+"', '"+info_de_pago.getMetodo_de_pago()+"','"+info_de_pago.getTarjeta()+"',"+info_de_pago.getCodigo_de_seguridad()+","+info_de_pago.getFecha_de_expiracion()+", '"+info_de_pago.getForma_de_cobro()+"')";
+                    query += "VALUES("+info_de_pago.getId_usuario()+",'"+info_de_pago.getTipo_de_cuenta()+"', '"+info_de_pago.getMetodo_de_pago()+"','"+info_de_pago.getTarjeta()+"',"+info_de_pago.getCodigo_de_seguridad()+",'"+info_de_pago.getFecha_de_expiracion()+"', '"+info_de_pago.getForma_de_cobro()+"')";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -64,7 +64,7 @@ public class ProcesosInfo_de_pago {
                 info_de_pago.setMetodo_de_pago(resultado.getString("metodo_de_pago"));
                 info_de_pago.setTarjeta(resultado.getString("tarjeta"));
                 info_de_pago.setCodigo_de_seguridad(resultado.getInt("codigo_de_seguridad"));
-                info_de_pago.setFecha_de_expiracion(resultado.getDate("fecha_de_expiracion"));
+                info_de_pago.setFecha_de_expiracion(resultado.getString("fecha_de_expiracion"));
                 info_de_pago.setForma_de_cobro(resultado.getString("forma_de_cobro"));
                 infos_de_pago.add(info_de_pago);
             }

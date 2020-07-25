@@ -19,7 +19,7 @@ public class Info_de_pago {
     private String metodo_de_pago;
     private String tarjeta;
     private int codigo_de_seguridad;
-    private Date fecha_de_expiracion;
+    private String fecha_de_expiracion;
     private String forma_de_cobro;
 
     /**
@@ -93,6 +93,7 @@ public class Info_de_pago {
     }
 
     /**
+
      * @return the codigo_de_seguridad
      */
     public int getCodigo_de_seguridad() {
@@ -109,14 +110,14 @@ public class Info_de_pago {
     /**
      * @return the fecha_de_expiracion
      */
-    public Date getFecha_de_expiracion() {
+    public String getFecha_de_expiracion() {
         return fecha_de_expiracion;
     }
 
     /**
      * @param fecha_de_expiracion the fecha_de_expiracion to set
      */
-    public void setFecha_de_expiracion(Date fecha_de_expiracion) {
+    public void setFecha_de_expiracion(String fecha_de_expiracion) {
         this.fecha_de_expiracion = fecha_de_expiracion;
     }
 

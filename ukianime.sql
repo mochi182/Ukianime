@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `info_de_pago` (
   `metodo_de_pago` varchar(50) DEFAULT NULL,
   `tarjeta` varchar(50) DEFAULT NULL,
   `codigo_de_seguridad` int(11) DEFAULT NULL,
-  `fecha_de_expiracion` date DEFAULT NULL,
+  `fecha_de_expiracion` varchar(50) DEFAULT NULL,
   `forma_de_cobro` varchar(50) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
