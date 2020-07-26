@@ -53,7 +53,7 @@ body {
 
 
   
-  .contenedor-form{
+  .contenido{
     width: 100%;
     max-width: 500px;
     margin: 20px auto;
@@ -63,24 +63,24 @@ body {
     padding-bottom: 35px;   
     opacity: 0.9;
 }
-.contenedor-form h2 {
+.contenido h2 {
     margin: 15px 0 40px 0;
     font-size: 16px;
     line-height: 1px;
     text-align: center;
 }
 
-.contenedor-form h3 {
+.contenido h3 {
     margin: 0px 0 25px 0;
     font-size: 15px;
     line-height: 1px;
     text-align: center;
 }
 
-.contenedor-form input[type = email],
-.contenedor-form input[type = password],
-.contenedor-form input[type = text],
-.contenedor-form input[type = date]{
+.contenido input[type = email],
+.contenido input[type = password],
+.contenido input[type = text],
+.contenido input[type = date]{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin: 0 0 20px;
@@ -95,7 +95,7 @@ body {
     border-radius: 5px;
 }   
 
-.contenedor-form input[type = radio] {
+.contenido input[type = radio] {
     height: 30px;
     width: 30px;
     margin-top: 10px;
@@ -106,7 +106,7 @@ body {
 
 }
 
-.contenedor-form input.tarke[type = text]{
+.contenido input.tarke[type = text]{
     font-size: 20px;
     margin-bottom: 20px;
     font-weight: 700;
@@ -121,7 +121,7 @@ body {
     text-align: center;
 }
 
-.contenedor-form input.tarke1[type = text]{
+.contenido input.tarke1[type = text]{
     font-size: 20px;
     margin-bottom: 5px;
     margin-right: 50px;
@@ -138,7 +138,7 @@ body {
     text-align: center;
 }
 
-.contenedor-form input.tarkes[type = text]{
+.contenido input.tarkes[type = text]{
     font-size: 20px;
     margin-bottom: 5px;
     font-weight: 700;
@@ -152,17 +152,17 @@ body {
     border: none;
 }
 
-.contenedor-form input[type = email]:focus,
-.contenedor-form input[type = password]:focus,
-.contenedor-form input[type = text]:focus,
-.contenedor-form input[type = date]:focus {
+.contenido input[type = email]:focus,
+.contenido input[type = password]:focus,
+.contenido input[type = text]:focus,
+.contenido input[type = date]:focus {
 
     background-color: rgb(233, 233, 233);
     color: black;
     box-shadow: 0 0 6px rgb(255, 94, 0);
 }
 
-.contenedor-form input[type=submit]{
+.contenido input[type=submit]{
     color: rgb(255, 255, 255);
     font-size: 20px;
     background:    rgb(255, 94, 0);
@@ -180,7 +180,7 @@ body {
 
 
 
-.contenedor-form .textoag {
+.contenido .textoag {
     font-size: 17px;
     margin: 3%;
     margin-left: 15px;
@@ -188,13 +188,13 @@ body {
     
 }
 
-.contenedor-form .salir{
+.contenido .salir{
     display: block;
     color: #ddd;
     text-align: center;
 }
 
-.contenedor-form input[type=button] {
+.contenido input[type=button] {
     color: rgb(20, 20, 20);
     font-size: 20px;
     background:    rgb(255, 255, 255);
