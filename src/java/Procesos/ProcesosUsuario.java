@@ -39,8 +39,8 @@ public class ProcesosUsuario {
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO usuario(nombre, contrasena, id_rol, usuario, apellido, correo, idioma, fecha_nacimiento, telefono, pais)";
-                    query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+usuario.getId_rol()+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getCorreo()+"','"+usuario.getIdioma()+"',"+usuario.getFecha_nacimiento()+", "+usuario.getTelefono()+",'"+usuario.getPais()+"')";
+            String query = "INSERT INTO usuario(nombre, contrasena, id_rol, usuario, apellido, correo, fecha_nacimiento, telefono, region)";
+                    query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+usuario.getId_rol()+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getCorreo()+"','"+usuario.getFecha_nacimiento()+"', "+usuario.getTelefono()+",'"+usuario.getRegion()+"')";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -65,10 +65,9 @@ public class ProcesosUsuario {
                 usuario.setUsuario(resultado.getString("usuario"));
                 usuario.setApellido(resultado.getString("apellido"));
                 usuario.setCorreo(resultado.getString("correo"));
-                usuario.setIdioma(resultado.getString("idioma"));
-                usuario.setPais(resultado.getString("pais"));
+                usuario.setRegion(resultado.getString("region"));
                 usuario.setTelefono(resultado.getInt("telefono"));
-                usuario.setFecha_nacimiento(resultado.getDate("fecha_nacimiento"));
+                usuario.setFecha_nacimiento(resultado.getString("fecha_nacimiento"));
                 usuarios.add(usuario);
             }
             resultado.close();
