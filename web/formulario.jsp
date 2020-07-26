@@ -26,7 +26,7 @@
     usuario.setApellido(apellido);
     usuario.setFecha_nacimiento(fechanacimiento);
     usuario.setTelefono(telefono);
-    usuario.setPais(region);
+    usuario.setRegion(region); 
     usuario.setCorreo(email);
     usuario.setUsuario(usuariop);
     usuario.setContrasena(password);
