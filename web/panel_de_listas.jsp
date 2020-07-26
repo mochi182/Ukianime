@@ -40,7 +40,7 @@
 
         <section class="seccion_central">
             <div id="listas_flex_1">
-                <h1 id="titulo_listas_de_reproduccion">Panel de listas de reproducciónn</h1>
+                <h1 id="titulo_listas_de_reproduccion">Panel de listas de reproducción</h1>
                 <div id="listas_flex_2">
                     <a href="crear_lista.jsp" type="button" class="boton hierba">Crear lista</a>
                     <a href="panel_de_videos.html" type="button" class="boton chillin">Regresar</a>

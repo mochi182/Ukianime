@@ -35,7 +35,7 @@ public class ProcesosVideo {
         }
     }
     
-    public int guardarAnime(Video video){
+    public int guardarVideo(Video video){
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();

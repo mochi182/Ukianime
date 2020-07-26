@@ -38,57 +38,59 @@
         <section class="seccion_central">
             <h1>Subir video</h1>
             <hr>
-            <div id="subir_video_flex_1">
-                <div id="subir_video_flex_2">
-                    <img id="preview_subir_video" src="https://maroon-prod.s3.amazonaws.com/media/CACHE/images/photos/2020/04/19/beatars/ce09d947a4dc92f740c51383fc3a057b.jpg" alt="e1">
-                    <p>
-                        Lista de reproducciónn
-                        <br>
-                        <select name="playlist" id="playlist_subir_video">
-                            <option value="beastars">Beastars</option>
-                            <option value="rurouni_kenshin">Rurouni Kenshin</option>
-                            <option value="neon_genesis_evangelion">Neon Genesis Evangelion</option>
-                        </select>
-                    </p>
-                    <p>
-                        Vista previa
-                        <br>
-                        <input type="file" class="file_input">
-                    </p>
-                    <p>
-                        Subtítulos
-                        <br>
-                        <input type="file" class="file_input">
-                    </p>
-                </div>
-                <div id="subir_video_flex_3">
-                    <div id="titulo_y_descripcion_videos">
-                        <div id="barra_de_cargar"></div>
-                        <h2>Cargando</h2>
-                        <p>Información básica</p>
-                        <hr>
+            <form method="POST" action="panel_de_videos.jsp">
+                <div id="subir_video_flex_1">
+                    <div id="subir_video_flex_2">
                         <p>
-                            TÃ­tulo
+                            Lista de reproducción
                             <br>
-                            <input type="text">
-                        </p>
-                        <p>
-                            Descripción
-                            <br>
-                            <textarea name="descripcion" rows="15"></textarea>
-                        </p>
-                        <p>
-                            Etiquetas
-                            <br>
-                            <input type="text">
+                            <select name="id_anime" id="playlist_subir_video">
+                                <option value="3">Beastars</option>
+                                <option value="2">Rurouni Kenshin</option>
+                                <option value="1">Haikyuu!!</option>
+                            </select>
                         </p>
                     </div>
-                    <div id="subseccion_de_botones">
-                        <a href="panel_de_videos.html" type="button" class="boton hierba">Listo</a>
-                        <a href="panel_de_videos.html" type="button" class="boton peligro">Cancelar</a>
+                    <div id="subir_video_flex_3">
+                        <div id="titulo_y_descripcion_videos">
+                            <div id="barra_de_cargar"></div>
+                            <h2>Cargando</h2>
+                            <p>Información básica</p>
+                            <hr>
+                            <p>
+                                Episodio
+                                <br>
+                                <input name="episodio" type="number">
+                            </p>
+                            <p>
+                                Título
+                                <br>
+                                <input name="nombre" type="text">
+                            </p>
+                            <p>
+                                Descripción
+                                <br>
+                                <textarea name="descripcion" rows="15"></textarea>
+                            </p>
+                            <p>
+                                Video
+                                <br>
+                                <input name="url_video" type="text">
+                            </p>
+                            <p>
+                                Etiquetas
+                                <br>
+                                <input type="text">
+                            </p>
+                        </div>
+                        <div id="subseccion_de_botones">
+                            <input type="submit" value="Listo" class="boton hierba"><br>
+                            <a href="panel_de_videos.html" type="button" class="boton hierba">Listo</a>
+                            <a href="panel_de_videos.html" type="button" class="boton peligro">Cancelar</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </section>
 
         <footer id="footer"></footer>
