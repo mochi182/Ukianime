@@ -21,10 +21,24 @@ public class Usuario {
     private String usuario;
     private String apellido;
     private String region;
-    private String correo;
+    private String email;
     private int telefono;
     private String fecha_nacimiento;
 
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
     /**
      * @return the region
      */
@@ -65,20 +79,6 @@ public class Usuario {
      */
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-
-    /**
-     * @return the correo
-     */
-    public String getCorreo() {
-        return correo;
-    }
-
-    /**
-     * @param correo the correo to set
-     */
-    public void setCorreo(String correo) {
-        this.correo = correo;
     }
 
     /**

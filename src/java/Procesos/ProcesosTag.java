@@ -39,8 +39,8 @@ public class ProcesosTag {
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO tag(nombre)";
-                    query += "VALUES('"+tag.getNombre()+"')";
+            String query = "INSERT INTO tag(nombre, tipo)";
+                    query += "VALUES('"+tag.getNombre()+"', '"+tag.getTipo()+"')";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -60,6 +60,7 @@ public class ProcesosTag {
                 Tag tag = new Tag();
                 tag.setId_tag(resultado.getInt("id_tag"));
                 tag.setNombre(resultado.getString("nombre"));
+                tag.setTipo(resultado.getString("tipo"));
                 tags.add(tag);
             }
             resultado.close();

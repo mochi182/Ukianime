@@ -13,7 +13,22 @@ public class Tag {
     
     private int id_tag;
     private String nombre;
+    private String tipo;
 
+    /**
+     * @return the tipo
+     */
+    public String getTipo() {
+        return tipo;
+    }
+
+    /**
+     * @param tipo the tipo to set
+     */
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
     /**
      * @return the id_tag
      */
