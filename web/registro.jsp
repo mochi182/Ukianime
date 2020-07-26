@@ -22,9 +22,9 @@
                         <input type="date" name="fechanacimiento" id="Fechanacimiento" min="1920-04-08" max="2015-04-08" required>
                         <input type="text" name="telefono" class="telefono" placeholder="Tel�fono" required>
                         <p>Seleccione su region: </p>
-                        <label><input type="radio" id="region" name="region" name="region" value="Norteamerica"> Norteamerica</label> <br>
-                        <label><input type="radio" id="region" name="region" name="region" value="Latinoamerica"> Latinoamerica</label> <br>
-                        <label><input type="radio" id="region" name="region" name="region" value="Europa"> Europa</label> <br>
+                        <label><input type="radio" id="region" name="region" value="Norteamerica"> Norteamerica</label> <br>
+                        <label><input type="radio" id="region" name="region" value="Latinoamerica"> Latinoamerica</label> <br>
+                        <label><input type="radio" id="region" name="region" value="Europa"> Europa</label> <br>
 
                         
                     
@@ -51,19 +51,19 @@
             <div class="contenido">
                 <h3>PASO 3 - DATOS DE LA CUENTA</h3>
 
-                <p style="text-align: left; font-size: 20px;">Tipo de cuenta</p>
+                <p class="textos"">Tipo de cuenta</p>
                 <input type="radio" id="cuenta" class="cuenta" name="cuenta" value="basica">
                 <label for="Basica">Basica...   20.00$</label><br>
                 <input type="radio" id="cuenta" class="cuenta" name="cuenta" value= "Premiun">
                 <label for="Premiun">Premiun... 50.00$</label><br>
 
-                <p style="text-align: left; font-size: 20px;">Metodo de Pago</p>
+                <p class="textos"">Metodo de Pago</p>
                 <input type="radio" id="metodo" class="metodo" name="metodo" value="Visa" required>
                 <label for="Visa">Visa</label><br>
                 <input type="radio" id="metodo" class="metodo" name="metodo" value= "MasterCard" required>
                 <label for="MasterCard">MasterCard</label><br>
 
-                <p style="text-align: center; font-size: 20px;">N�mero de tarjeta</p> <br>
+                <p class="textos"">N�mero de tarjeta</p> <br>
                 <input type="text" id="tarjeta" name="tarjeta1" class="tarke" placeholder="xxxx" maxlength="4" required>
                 <input type="text" id="tarjeta" name="tarjeta2" class="tarke" placeholder="xxxx" maxlength="4" required>
                 <input type="text" id="tarjeta" name="tarjeta3" class="tarke" placeholder="xxxx" maxlength="4" required>
@@ -80,19 +80,24 @@
                 <span class="textoag">Fecha de Expiraci�n </span>
                 <br>
 
-                <p style="text-align: left; font-size: 20px;">Forma de cobro</p>
+                <p class="textos">Forma de cobro</p>
                 <input type="radio" id="cobro" class="manual" name="cobro" value="Manual" required>
                 <label for="Manual">Manual</label><br>
                 <input type="radio" id="cobro" class="automatico" name="cobro" value= "Automatico" required>
                 <label for="Autom�tico">Autom�tico</label><br>
 
-                <input type="submit" value="Registrarme" onclick="boton_loco()">
+                <p class="textos">Seleccione su rol:</p>
+                <label><input type="radio" name="rol" value="administrador">Administrador</label> <br>
+                <label><input type="radio" name="rol" value="expectador">Expectador</label>
+
+
+                <input type="submit" value="Registrarme" onclick="boton_loco()">  
 
                 <a class="salir" onclick="pestana(event, 'Cuenta')"> Regresar </a>
                 <a href="login.html" class="salir">Salir</a>
             </div>
         </section>
-        
+
     </form>
     
     <script src="js/script-registro.js"></script>

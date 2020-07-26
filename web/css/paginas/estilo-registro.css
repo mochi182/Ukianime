@@ -98,11 +98,13 @@ body {
 .contenido input[type = radio] {
     height: 30px;
     width: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 10px 15px 10px 15px;
     background: rgb(255, 255, 255);
     position: relative;
     border-radius: 50% black;
+    cursor: pointer;
+
 
 }
 
@@ -210,4 +212,10 @@ body {
     margin-right: 10px;
     padding-top: 15px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.textos {
+    padding-top: 4%;
+    font-size: 20px; 
+    font-weight: 600;
 }
