@@ -192,17 +192,20 @@ body {
     display: block;
     color: #ddd;
     text-align: center;
+    cursor: pointer;
+    padding-bottom: 10px;
 }
 
 .contenido input[type=button] {
-    color: rgb(20, 20, 20);
+    color: rgb(255, 255, 255);
     font-size: 20px;
     background:    rgb(255, 94, 0);
     border-radius: 2px;
-    padding:       10px 10px;
+    padding:       15px 35px;
     position: relative;
     width: 80%;
-    margin-left: 30%;
+    margin-left: 10%;
+    margin-top: 5%;
     margin-bottom: 10px;
     margin-right: 10px;
     padding-top: 15px;
