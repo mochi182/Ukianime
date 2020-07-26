@@ -5,7 +5,7 @@
  */
 package Procesos;
 
-import Entidades.Video;
+import Entidades.Usuario_comenta_video;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -18,11 +18,11 @@ import java.util.List;
  *
  * @author galop
  */
-public class ProcesosVideo {
+public class ProcesosUsuario_comenta_video {
     
     Connection conn;
     
-    public ProcesosVideo() {
+    public ProcesosUsuario_comenta_video() {
         
         try{
             Class.forName("org.mariadb.jdbc.Driver");
@@ -35,12 +35,12 @@ public class ProcesosVideo {
         }
     }
     
-    public int guardarAnime(Video video){
+    public int guardarUsuario_comenta_video(Usuario_comenta_video usuario_comenta_video){
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO video(id_anime, nombre, descripcion, url_video, episodio)";
-                    query += "VALUES("+video.getId_anime()+",'"+video.getNombre()+"', '"+video.getDescripcion()+"', '"+video.getUrl_video()+"', "+video.getEpisodio()+")";
+            String query = "INSERT INTO usuario_comenta_video(id_usuario, id_video,texto)";
+                    query += "VALUES("+usuario_comenta_video.getId_usuario()+", "+usuario_comenta_video.getId_video()+", '"+usuario_comenta_video.getTexto()+"')";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -50,21 +50,18 @@ public class ProcesosVideo {
         return 0;
     }
     
-    public List<Video>  consultarDatos(){
-        List<Video> videos = new ArrayList<Video>();
+    public List<Usuario_comenta_video>  consultarDatos(){
+        List<Usuario_comenta_video> usuarios_comentan_videos = new ArrayList<Usuario_comenta_video>();
         try{
             Statement stmt = conn.createStatement();
-            String query = "SELECT * FROM video";
+            String query = "SELECT * FROM usuario_comenta_video";
             ResultSet resultado = stmt.executeQuery(query);
             while(resultado.next()){
-                Video video = new Video();
-                video.setId_video(resultado.getInt("id_video"));
-                video.setId_anime(resultado.getInt("id_anime"));
-                video.setNombre(resultado.getString("nombre"));
-                video.setDescripcion(resultado.getString("descripcion"));
-                video.setUrl_video(resultado.getString("url_video"));
-                video.setEpisodio(resultado.getInt("episodio"));
-                videos.add(video);
+                Usuario_comenta_video usuario_comenta_video = new Usuario_comenta_video();
+                usuario_comenta_video.setId_usuario(resultado.getInt("id_usuario"));
+                usuario_comenta_video.setId_video(resultado.getInt("id_video"));
+                usuario_comenta_video.setTexto(resultado.getString("texto"));
+                usuarios_comentan_videos.add(usuario_comenta_video);
             }
             resultado.close();
             stmt.close();
@@ -72,7 +69,7 @@ public class ProcesosVideo {
         } catch(Exception e){
             System.out.println("Error: " + e);
         }
-        return videos;
+        return usuarios_comentan_videos;
     }
     
 }
