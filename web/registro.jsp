@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/paginas/estilo-registro.css">
-    <link rel="stylesheet" href="css/paginas/intlTelInput.min.css"
 </head>
 <body>    
     <div class="tab">
       <button class="tablinks" onclick="pestana(event, 'Personales')">1. Datos Personales</button>
       <button class="tablinks" onclick="pestana(event, 'Cuenta')">2. Datos de la cuenta</button>
-      <button class="tablinks" onclick="pestana(event, 'Pago')">3. Método de pago</button>
+      <button class="tablinks" onclick="pestana(event, 'Pago')">3. Mï¿½todo de pago</button>
     </div>
     <form id="formulario" class="formulario" method="POST" action="formulario.jsp">
 
@@ -21,7 +20,7 @@
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                         <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
                         <input type="date" name="fechanacimiento" id="Fechanacimiento" min="1920-04-08" max="2015-04-08" required>
-                        <input type="text" name="telefono" class="telefono" placeholder="Teléfono" required>
+                        <input type="text" name="telefono" class="telefono" placeholder="Telï¿½fono" required>
                         <p>Seleccione su region: </p>
                         <label><input type="radio" id="region" name="region" name="region" value="Norteamerica"> Norteamerica</label> <br>
                         <label><input type="radio" id="region" name="region" name="region" value="Latinoamerica"> Latinoamerica</label> <br>
@@ -39,8 +38,8 @@
                 <h3>PASO 2 - DATOS DE LA CUENTA</h3>
                     <input type="email" id="email" name="email" placeholder="Correo Electronico" required>
                     <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
-                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    <input type="password" id="password2" name="password2" placeholder="Repetir Contraseña" required>
+                    <input type="password" id="password" name="password" placeholder="Contraseï¿½a" required>
+                    <input type="password" id="password2" name="password2" placeholder="Repetir Contraseï¿½a" required>
                 
                     <input type="button" value="siguiente"  onclick="pestana(event, 'Pago')">
                     <a class="salir" onclick="pestana(event, 'Personales')"> Regresar </a>
@@ -64,7 +63,7 @@
                 <input type="radio" id="metodo" class="metodo" name="metodo" value= "MasterCard" required>
                 <label for="MasterCard">MasterCard</label><br>
 
-                <p style="text-align: center; font-size: 20px;">Número de tarjeta</p> <br>
+                <p style="text-align: center; font-size: 20px;">Nï¿½mero de tarjeta</p> <br>
                 <input type="text" id="tarjeta" name="tarjeta1" class="tarke" placeholder="xxxx" maxlength="4" required>
                 <input type="text" id="tarjeta" name="tarjeta2" class="tarke" placeholder="xxxx" maxlength="4" required>
                 <input type="text" id="tarjeta" name="tarjeta3" class="tarke" placeholder="xxxx" maxlength="4" required>
@@ -73,19 +72,19 @@
                 
                 <input type="text" id="seguridad" name="seguridad" class="tarke1" placeholder="xxxxxx" maxlength="6" required>
 
-                <input type="text" id="fecha" name="fecha" class="tarkes" placeholder="día" maxlength="2" required>
+                <input type="text" id="fecha" name="fecha" class="tarkes" placeholder="dï¿½a" maxlength="2" required>
                 <span>/</span>
-                <input type="text" id="dia" name="dia" class="tarkes" placeholder="año" maxlength="2" required> <br>
+                <input type="text" id="dia" name="dia" class="tarkes" placeholder="aï¿½o" maxlength="2" required> <br>
 
                 <span class="textoag">Codigo de Seguridad </span>    
-                <span class="textoag">Fecha de Expiración </span>
+                <span class="textoag">Fecha de Expiraciï¿½n </span>
                 <br>
 
                 <p style="text-align: left; font-size: 20px;">Forma de cobro</p>
                 <input type="radio" id="cobro" class="manual" name="cobro" value="Manual" required>
                 <label for="Manual">Manual</label><br>
                 <input type="radio" id="cobro" class="automatico" name="cobro" value= "Automatico" required>
-                <label for="Automático">Automático</label><br>
+                <label for="Automï¿½tico">Automï¿½tico</label><br>
 
                 <input type="submit" value="Registrarme" onclick="boton_loco()">
 
