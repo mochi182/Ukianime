@@ -19,31 +19,24 @@ USE `ukianime`;
 -- Dumping structure for table ukianime.anime
 CREATE TABLE IF NOT EXISTS `anime` (
   `id_anime` int(11) NOT NULL AUTO_INCREMENT,
+  `id_categoria` int(11) DEFAULT NULL,
   `nombre` varchar(50) DEFAULT NULL,
   `descripcion` text DEFAULT NULL,
   `url_imagen` varchar(256) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`id_anime`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id_anime`),
+  KEY `FK_anime_categoria` (`id_categoria`),
+  CONSTRAINT `FK_anime_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table ukianime.anime: ~0 rows (approximately)
 /*!40000 ALTER TABLE `anime` DISABLE KEYS */;
+INSERT INTO `anime` (`id_anime`, `id_categoria`, `nombre`, `descripcion`, `url_imagen`, `created_at`, `updated_at`) VALUES
+	(1, 1, 'Haikyuu!', 'Animé de Volleyball a otro nivel.', 'https://vignette.wikia.nocookie.net/haikyuu/images/a/a4/Haikyu_S4.jpg/revision/latest?cb=20200111012854', '2020-07-25 22:31:25', '2020-07-25 22:31:36'),
+	(2, 1, 'Rurouni Kenshin', 'Un vagabundo con una cicatriz en la mejilla es un samurai asesino.', 'https://vignette.wikia.nocookie.net/samuraix/images/d/d2/Samurai_x.jpg/revision/latest/scale-to-width-down/340?cb=20121126183437&path-prefix=es', '2020-07-25 22:32:15', '2020-07-25 22:33:07'),
+	(3, 1, 'Beastars', 'lalala', 'https://m.media-amazon.com/images/M/MV5BMGZmMjIxYjYtYWE5YS00OWYyLWE5YzUtOTI3YTkxNmQyZDkzXkEyXkFqcGdeQXVyNTY0NDkzNDc@._V1_UY1200_CR109,0,630,1200_AL_.jpg', '2020-07-25 23:20:42', '2020-07-25 23:20:42');
 /*!40000 ALTER TABLE `anime` ENABLE KEYS */;
-
--- Dumping structure for table ukianime.anime_tiene_categoria
-CREATE TABLE IF NOT EXISTS `anime_tiene_categoria` (
-  `id_anime` int(11) NOT NULL,
-  `id_categoria` int(11) NOT NULL,
-  PRIMARY KEY (`id_anime`,`id_categoria`),
-  KEY `FK_anime_categoria_id_categoria` (`id_categoria`),
-  CONSTRAINT `FK_anime_categoria_id_anime` FOREIGN KEY (`id_anime`) REFERENCES `anime` (`id_anime`),
-  CONSTRAINT `FK_anime_categoria_id_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- Dumping data for table ukianime.anime_tiene_categoria: ~0 rows (approximately)
-/*!40000 ALTER TABLE `anime_tiene_categoria` DISABLE KEYS */;
-/*!40000 ALTER TABLE `anime_tiene_categoria` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.anime_tiene_tag
 CREATE TABLE IF NOT EXISTS `anime_tiene_tag` (
@@ -62,14 +55,21 @@ CREATE TABLE IF NOT EXISTS `anime_tiene_tag` (
 -- Dumping structure for table ukianime.categoria
 CREATE TABLE IF NOT EXISTS `categoria` (
   `id_categoria` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` int(11) DEFAULT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id_categoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table ukianime.categoria: ~0 rows (approximately)
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
+INSERT INTO `categoria` (`id_categoria`, `nombre`, `created_at`, `updated_at`) VALUES
+	(1, 'Shonen', '2020-07-25 21:59:58', '2020-07-25 21:59:58'),
+	(2, 'Seinen', '2020-07-25 22:00:22', '2020-07-25 22:00:22'),
+	(3, 'Kodomo', '2020-07-25 22:01:26', '2020-07-25 22:01:26'),
+	(4, 'Josei', '2020-07-25 22:01:40', '2020-07-25 22:02:16'),
+	(5, 'Mecha', '2020-07-25 22:01:46', '2020-07-25 22:01:46'),
+	(6, 'Isekai', '2020-07-25 22:02:33', '2020-07-25 22:02:33');
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.grupo
@@ -122,10 +122,13 @@ CREATE TABLE IF NOT EXISTS `rol` (
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id_rol`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table ukianime.rol: ~0 rows (approximately)
 /*!40000 ALTER TABLE `rol` DISABLE KEYS */;
+INSERT INTO `rol` (`id_rol`, `nombre`, `created_at`, `updated_at`) VALUES
+	(1, 'Administrador', '2020-07-25 22:03:04', '2020-07-25 22:03:04'),
+	(2, 'Normal', '2020-07-25 22:03:23', '2020-07-25 22:03:23');
 /*!40000 ALTER TABLE `rol` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.tag
