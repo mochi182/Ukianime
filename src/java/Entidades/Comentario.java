@@ -9,12 +9,27 @@ package Entidades;
  *
  * @author galop
  */
-public class Usuario_comenta_video {
+public class Comentario {
     
+    private int id_comentario;
     private int id_usuario;
     private int id_video;
     private String texto;
 
+    /**
+     * @return the id_comentario
+     */
+    public int getId_comentario() {
+        return id_comentario;
+    }
+
+    /**
+     * @param id_comentario the id_comentario to set
+     */
+    public void setId_comentario(int id_comentario) {
+        this.id_comentario = id_comentario;
+    }
+    
     /**
      * @return the id_usuario
      */
