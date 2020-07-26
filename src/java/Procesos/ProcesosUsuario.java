@@ -39,7 +39,7 @@ public class ProcesosUsuario {
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO usuario(nombre, contrasena, id_rol, usuario, apellido, correo, fecha_nacimiento, telefono, region)";
+            String query = "INSERT INTO usuario(nombre, contrasena, id_rol, usuario, apellido, email, fecha_nacimiento, telefono, region)";
                     query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+usuario.getId_rol()+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getCorreo()+"','"+usuario.getFecha_nacimiento()+"', "+usuario.getTelefono()+",'"+usuario.getRegion()+"')";
         
             resultado = stmt.executeUpdate(query);
@@ -64,7 +64,7 @@ public class ProcesosUsuario {
                 usuario.setContrasena(resultado.getString("contrasena"));
                 usuario.setUsuario(resultado.getString("usuario"));
                 usuario.setApellido(resultado.getString("apellido"));
-                usuario.setCorreo(resultado.getString("correo"));
+                usuario.setCorreo(resultado.getString("email"));
                 usuario.setRegion(resultado.getString("region"));
                 usuario.setTelefono(resultado.getInt("telefono"));
                 usuario.setFecha_nacimiento(resultado.getString("fecha_nacimiento"));
