@@ -51,13 +51,15 @@
                     video.setUrl_video(url_video);
                     int isSaved = pvideo.guardarVideo(video);
             %>
-                    <h2>
-                        <%
-                            if (isSaved > 0){
-                                out.print("¡Datos ingresados exitosamente!");
-                            } else{}
-                        %>
-                    </h2>
+                    <div class="alertaVerde">
+                        <h2>
+                            <%
+                                if (isSaved > 0){
+                                    out.print("¡Datos ingresados exitosamente!");
+                                } else{}
+                            %>
+                        </h2>
+                    </div>
                 <%}%><!-- Fin del IF-ELSE -->
             
             <div id="panel_flex_1">

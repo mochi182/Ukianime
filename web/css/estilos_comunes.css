@@ -58,9 +58,10 @@ body {
 }
 
 .boton {
+    width: 124px;
+    height: 35px;
     border: 0px;
     color: #FFFCFC;
-    padding: 8px 12px 8px 12px;
     text-align: center;
     border-radius: 10px;
 }
@@ -70,7 +71,6 @@ body {
     height: 35px;
     border: 0px;
     color: #FFFCFC;
-    padding: 8px 12px 8px 12px;
     text-align: center;
     border-radius: 10px;
     font-size: 16px;

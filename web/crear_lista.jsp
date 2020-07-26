@@ -1,3 +1,6 @@
+<%@page import="Entidades.Categoria"%>
+<%@page import="java.util.List"%>
+<%@page import="Procesos.ProcesosCategoria"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -43,13 +46,17 @@
                                 <br>
                                 <textarea name="descripcion" rows="15"></textarea>
                             </p>
+                            <%
+                                ProcesosCategoria pcategoria = new ProcesosCategoria();
+                                List<Categoria> categorias = pcategoria.consultarDatos();
+                            %>
                             <p>
                                 Categoría *
                                 <br>
                                 <select name="id_categoria" id="play_list_categoria" required>
-                                    <option value="1">Shonen</option>
-                                    <option value="2">Seinen</option>
-                                    <option value="3">Kodomo</option>
+                                    <% for(Categoria opcion_categoria: categorias){%>
+                                        <option value=<%= opcion_categoria.getId_categoria() %>><%= opcion_categoria.getNombre() %></option>
+                                    <%}%>
                                 </select>
                             </p>
                             <p>

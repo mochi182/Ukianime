@@ -58,7 +58,7 @@ public class ProcesosCategoria {
             ResultSet resultado = stmt.executeQuery(query);
             while(resultado.next()){
                 Categoria categoria = new Categoria();
-                categoria.setId_categoria(resultado.getInt("id_tag"));
+                categoria.setId_categoria(resultado.getInt("id_categoria"));
                 categoria.setNombre(resultado.getString("nombre"));
                 categorias.add(categoria);
             }

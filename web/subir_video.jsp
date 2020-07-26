@@ -1,3 +1,6 @@
+<%@page import="Entidades.Anime"%>
+<%@page import="Procesos.ProcesosAnime"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -53,13 +56,17 @@
                                 <br>
                                 <input name="url_video" type="text" required>
                             </p>
+                            <%
+                                ProcesosAnime panime = new ProcesosAnime();
+                                List<Anime> animes = panime.consultarDatos();
+                            %>
                             <p>
                                 Lista de reproducción *
                                 <br>
                                 <select name="id_anime" id="playlist_subir_video" required>
-                                    <option value="3">Beastars</option>
-                                    <option value="2">Rurouni Kenshin</option>
-                                    <option value="1">Haikyuu!!</option>
+                                    <% for(Anime opcion_anime: animes){%>
+                                        <option value=<%= opcion_anime.getId_anime() %>><%= opcion_anime.getNombre() %></option>
+                                    <%}%>
                                 </select>
                             </p>
                             <p>
