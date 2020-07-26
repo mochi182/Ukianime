@@ -20,12 +20,25 @@ public class Usuario {
     
     private String usuario;
     private String apellido;
-    private String pais;
+    private String region;
     private String correo;
-    private String idioma;
     private int telefono;
-    private Date fecha_nacimiento;
+    private String fecha_nacimiento;
 
+    /**
+     * @return the region
+     */
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * @param region the region to set
+     */
+    public void setRegion(String region) {
+        this.region = region;
+    }
+    
     /**
      * @return the usuario
      */
@@ -55,20 +68,6 @@ public class Usuario {
     }
 
     /**
-     * @return the pais
-     */
-    public String getPais() {
-        return pais;
-    }
-
-    /**
-     * @param pais the pais to set
-     */
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
-
-    /**
      * @return the correo
      */
     public String getCorreo() {
@@ -80,20 +79,6 @@ public class Usuario {
      */
     public void setCorreo(String correo) {
         this.correo = correo;
-    }
-
-    /**
-     * @return the idioma
-     */
-    public String getIdioma() {
-        return idioma;
-    }
-
-    /**
-     * @param idioma the idioma to set
-     */
-    public void setIdioma(String idioma) {
-        this.idioma = idioma;
     }
 
     /**
@@ -113,14 +98,14 @@ public class Usuario {
     /**
      * @return the fecha_nacimiento
      */
-    public Date getFecha_nacimiento() {
+    public String getFecha_nacimiento() {
         return fecha_nacimiento;
     }
 
     /**
      * @param fecha_nacimiento the fecha_nacimiento to set
      */
-    public void setFecha_nacimiento(Date fecha_nacimiento) {
+    public void setFecha_nacimiento(String fecha_nacimiento) {
         this.fecha_nacimiento = fecha_nacimiento;
     }
       
