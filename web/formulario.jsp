@@ -45,7 +45,7 @@
     Info_de_pago info_de_pago = new Info_de_pago ();
     info_de_pago.setTipo_de_cuenta(cuenta);
     info_de_pago.setMetodo_de_pago(metodo);
-    info_de_pago.setTarjeta(tarjeta);
+    info_de_pago.setNumero_de_tarjeta(tarjeta);
     info_de_pago.setCodigo_de_seguridad(seguridad);
     info_de_pago.setFecha_de_expiracion(expiracion);
     info_de_pago.setForma_de_cobro(cobro);
