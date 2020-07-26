@@ -1,0 +1,122 @@
+.cont1{
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.izquierda1{
+    float: left;
+    width: 30%;
+    margin:10px;
+    padding: 10px;
+    /*tamaño de la imagen= portada*/
+    width: 370px;
+    height: 570px;
+ 
+
+}
+
+.portada{
+    width: 370px;
+    height: 570px;
+}
+
+.derecha1{
+    float: left;
+    width: 70%;
+    margin:10px;
+    padding: 10px;  
+}
+
+
+
+.subcont2{
+    display: flex;
+    justify-content: center; 
+}
+
+.izquierda2{
+    float: left;
+    width: 30%;
+    margin: none;
+    padding: none;
+}
+
+.derecha2{
+    float: center;
+    padding: 20px;
+    margin: 15px;
+    margin-left: 40%;
+}
+
+.context{
+    float: center;
+    text-align: justify ;
+
+}
+
+.p_sin_margen{
+    margin: 5px;
+}
+.titulo_genero{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.genero_color{
+    margin-left: 10px;
+    background-color:#967B36;
+}
+
+.izquierda3{
+    float: right;
+}
+
+.lista{
+    width: 25%;
+    background-color:#4E4A4A;
+    padding: 5px 5px 5px 25px;
+    margin: 53px;
+    border-radius: 9px;
+    margin-left: 5%;
+
+}
+
+.listati{
+    font-size: 23px;
+    font-weight: bold;
+}
+.alinear_menu{
+    margin-top: 50px;
+}
+.votos{
+    display: flex;
+    ;
+}
+.contenedor_estrella{
+    display: flex;
+    justify-content: center;
+}
+.izquierda_informacion{
+    flex-basis: 95%;
+}
+.derecha_votos{
+    text-align: center; 
+    margin: 0%;
+}
+
+.numero_votos{ 
+    font-size: 15px;
+    color: #BE633B;
+    margin: 0%;
+}
+.numero_rating{
+    margin: 0%;
+    color: #E0E287;
+    font-size: 19px;
+}
+.spam-div{
+    float: left;
+}
+
+

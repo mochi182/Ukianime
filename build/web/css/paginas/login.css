@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: margin-left .5s;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.contenedor-form{
+    width: 50%;
+    max-width: 500px;
+    margin: 40px;
+    margin-left: 8%;
+    margin-top: 170px;
+    border-radius: 5px;
+    color: white;
+    padding-bottom: 140px;
+    text-align: center;
+    float: left;
+}
+
+.contenedor-form2{
+    float: right;
+    width: 50%;
+    max-width: 500px;
+    margin: 40px;
+    margin-top: 70px;
+    border-radius: 8px;
+    color: white;
+    padding-bottom: 60px;
+    text-align: center;
+    margin-right: 10%;
+
+}
+
+
+.contenedor-form2 h2 {
+    padding-top: 45px;
+    font-weight: 300;
+    margin: 0px 0 40px 0;
+    font-size: 20px;
+    line-height: 1px;
+    text-align: center;
+}
+
+
+
+
+.contenedor-form2 input[type = email] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin:20px;
+    font-weight: 700;
+    padding: 10px 15px 10px 45px;
+    position: relative;
+    width: 80%;
+    height: 50px;
+    color: #000000;
+    background: #ffffff;
+    transition: color 0.3s ease-out;
+    box-shadow: 0 0 13px rgb(0, 0, 0);
+    background: url("media/email.png")  no-repeat;
+    background-size: 8%;
+    background-position: left;
+    background-color: rgb(255, 255, 255);
+    background-position-x: 5px;
+    box-shadow: 0 0 12px rgb(8, 8, 8);
+    border-radius: 10px;
+}
+
+.contenedor-form2 input[type = password] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin:20px;
+    font-weight: 700;
+    padding: 10px 15px 10px 45px;
+    position: relative;
+    width: 80%;
+    height: 50px;
+    color: #000000;
+    background: #ffffff;
+    transition: color 0.3s ease-out;
+    box-shadow: 0 0 15px rgb(17, 17, 17);
+    background: url("media/lock1.png")  no-repeat;
+    background-size: 8%;
+    background-position: left;
+    background-color: rgb(255, 255, 255);
+    background-position-x: 6px;
+    border-radius: 10px;
+    }
+
+
+.contenedor-form2 input[type = email]:focus,
+.contenedor-form2 input[type = password]:focus {
+    border: 3px solid rgb(82, 82, 82);
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0 0 6px rgb(255, 255, 255);
+    color: black;
+    border-radius: 10px;
+}
+
+.contenedor-form2 input[type=submit]{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background:    rgb(241, 97, 44);
+    padding:       15px 35px;
+    position: relative;
+    width: 70%;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 15px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.contenedor-form2 input[type=submit]:hover {
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 0 5px rgb(177, 177, 177);
+}
+
+.contenedor-form2 .olvide {
+    font-size: 15px;
+    color: rgb(252, 252, 252);
+    font-weight: 100;
+    margin:20px;
+    position: relative;
+    width: 50%;
+    margin-top: 5px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+.contenedor-form2 .olvide:hover {
+    color: rgb(255, 0, 0);
+    font-weight: 300;
+
+}
+
+.contenedor-form .botonr{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background:    rgb(241, 97, 44);
+    border-radius: 10px;
+    padding:       15px 35px;
+    position: relative;
+    width: 45%;
+    text-align: center;
+    margin-top: 3%;
+    padding-top: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.contenedor-form .botonr:hover {
+    font-weight: 600;
+    box-shadow: 0 0 5px rgb(177, 177, 177);
+}
+
+.contenedor-form .titulo {
+    font-family: 'Shojumaru', cursive;
+    text-shadow: 4px 4px #222020;
+    font-size: 70px;
+    letter-spacing: 0.01em;
+    color: rgb(241, 97, 44);
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.contenedor-form .logo {
+    height: 100px;
+    float: left;
+}

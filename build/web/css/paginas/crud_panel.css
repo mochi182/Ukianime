@@ -1,0 +1,56 @@
+/* Para las páginas de panel de videos y panel de listas de reproducción */
+
+/* ---------- Panel de videos ---------- */
+
+#panel_flex_1 {
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#panel_flex_2 a {
+    margin: 0px 8px 0px 8px;
+}
+
+select {
+    width: 200px;
+    margin: 20px;
+    height: 30px;
+}
+
+.vista_previa {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.tabla_sin_bordes {
+    width: 100%;
+    text-align: center;
+}
+
+.tabla_sin_bordes tr:hover {
+    background-color: #343131;
+  }
+
+.tabla_sin_bordes td {
+    padding: 8px;
+}
+
+/* ---------- Administrar listas ---------- */
+
+#listas_flex_1 {
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#listas_flex_2 a {
+    margin: 0px 8px 0px 8px;
+}
+
+.imagen_lista {
+    width: 160px;
+    height: 220px;
+    object-fit: cover;
+}

@@ -1,0 +1,49 @@
+/* Menu oculto */
+
+.sidenav {
+    /* Texto */
+    font-size: 25px;
+    white-space: nowrap;
+  
+    /* Tamaño y posición */
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+  
+    /* Estética */
+    background-color: #222020; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  .sidenav a, li {
+    text-decoration: none;
+    color: lightgrey;
+    list-style-type: square;
+  }
+    
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s
+  }
+    
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover, .offcanvas a:focus {
+    color: white;
+  }
+    
+  /* Estilo de la X que cierra el menú */
+  .sidenav .closebtn2 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }

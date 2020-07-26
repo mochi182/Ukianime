@@ -1,0 +1,31 @@
+.menu_imagen {
+  margin: 5px 10px 5px 10px;
+  width: 200px;
+  height: 250px;
+  box-sizing: border-box;
+  object-fit: cover;
+  border-left: 15px solid rgb(10, 10, 10);
+  box-shadow: 5px 10px 10px rgb(36, 36, 36, 0.5);
+}
+
+.carousel-cell {
+  display: flex;
+  margin-right: 10px;
+  background: rgba(12, 12, 12, 0.6);
+  padding: 15px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.cada_anime {
+  text-align: center;
+}
+
+.carousel {
+  margin: 20px;
+}
+
+.menu_contenedores {
+  text-align: center;
+}
+
