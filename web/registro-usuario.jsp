@@ -91,7 +91,7 @@
                 <label><input type="radio" name="rol" value="expectador">Expectador</label>
 
 
-                <input type="submit" value="Registrarme" onclick="boton_loco()">  
+                <input type="submit" value="Registrarme">  
 
                 <a class="salir" onclick="pestana(event, 'Cuenta')"> Regresar </a>
                 <a href="login.html" class="salir">Salir</a>
@@ -101,11 +101,5 @@
     </form>
     
     <script src="js/script-registro.js"></script>
-    <script>
-        function boton_loco(){
-            window.location.href = 'menu.html';
-        }
-    </script>
-    <script src="js/formulario.js"></script>
 </body>
 </html>

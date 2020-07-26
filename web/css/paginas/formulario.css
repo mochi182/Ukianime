@@ -28,7 +28,6 @@
     font-weight: 700;
     text-align: center;
     align-items: center;
-    ali
 }
 
 input[type=button]
@@ -41,7 +40,6 @@ input[type=button]
     width: 20%;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     text-align: center;
-    position: block;
     margin: 0 auto;
     margin-left: 50%;
     transform: translateX(-50%);
