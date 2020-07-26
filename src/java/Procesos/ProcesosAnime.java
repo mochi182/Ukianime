@@ -39,8 +39,8 @@ public class ProcesosAnime {
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO anime(nombre, descripcion, url_imagen)";
-                    query += "VALUES('"+anime.getNombre()+"', '"+anime.getDescripcion()+"', '"+anime.getUrl_imagen()+"')";
+            String query = "INSERT INTO anime(nombre, descripcion, url_imagen, id_categoria)";
+                    query += "VALUES('"+anime.getNombre()+"', '"+anime.getDescripcion()+"', '"+anime.getUrl_imagen()+"', "+anime.getId_categoria()+")";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -59,6 +59,7 @@ public class ProcesosAnime {
             while(resultado.next()){
                 Anime anime = new Anime();
                 anime.setId_anime(resultado.getInt("id_anime"));
+                anime.setId_categoria(resultado.getInt("id_categoria"));
                 anime.setNombre(resultado.getString("nombre"));
                 anime.setDescripcion(resultado.getString("descripcion"));
                 anime.setUrl_imagen(resultado.getString("url_imagen"));
