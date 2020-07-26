@@ -38,6 +38,7 @@ input, textarea, select {
 
 #subir_video_flex_1 {
     display: flex;
+    justify-content: center;
 }
 
 #subir_video_flex_2 {
@@ -48,7 +49,7 @@ input, textarea, select {
 }
 
 #subir_video_flex_3 {
-    width: 100%;
+    flex-basis: 60%;
     padding: 20px;
     display: flex;
 }

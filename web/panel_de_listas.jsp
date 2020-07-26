@@ -20,33 +20,12 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="js/menu_desplegable.js"></script>
 
-        <!--Carga templates-->
-        <script>
-        $(function(){
-            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/header.html"); 
-        });
-        $(function(){
-            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/footer.html"); 
-        });
-        $(function(){
-            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/menu_oculto.html"); 
-        });
-        </script>
     </head>
 
     <body>
-        <header id="header"></header>
-        <div id="menu_oculto"></div>
+        <%@include file="componentes/header.html"%>
+        <%@include file="componentes/menu_oculto.html"%>
 
-        <section class="seccion_central">
-            <div id="listas_flex_1">
-                <h1 id="titulo_listas_de_reproduccion">Panel de listas de reproducción</h1>
-                <div id="listas_flex_2">
-                    <a href="crear_lista.jsp" type="button" class="boton hierba">Crear lista</a>
-                    <a href="panel_de_videos.html" type="button" class="boton chillin">Regresar</a>
-                </div>
-            </div>
-            
         <% ProcesosAnime panime = new ProcesosAnime(); 
             if(request.getParameter("nombre")==null){
             }else{
@@ -65,15 +44,26 @@
                 anime.setUrl_imagen(url_imagen);
                 int isSaved = panime.guardarAnime(anime);
         %>
-                <h2>
-                    <%
-                        if (isSaved > 0){
-                            out.print("¡Datos ingresados exitosamente!");
-                        } else{}
-                    %>
-                </h2>
+                <div class="alertaVerde">
+                    <h2>
+                        <%
+                            if (isSaved > 0){
+                                out.print("¡Datos ingresados exitosamente!");
+                            } else{}
+                        %>
+                    </h2>
+                </div>
             <%}%><!-- Fin del IF-ELSE -->
-                      
+
+        <section class="seccion_central">
+            <div id="listas_flex_1">
+                <h1 id="titulo_listas_de_reproduccion">Panel de listas de reproducción</h1>
+                <div id="listas_flex_2">
+                    <a href="crear_lista.jsp" type="button" class="boton hierba">Crear lista</a>
+                    <a href="panel_de_videos.jsp" type="button" class="boton chillin">Regresar</a>
+                </div>
+            </div>
+                                  
             <hr>
             <table class="tabla_sin_bordes">
                 <tr>
@@ -110,6 +100,6 @@
 
         </section>
 
-        <footer id="footer"></footer>
+        <%@include file="componentes/footer.html"%>
     </body>
 </html>

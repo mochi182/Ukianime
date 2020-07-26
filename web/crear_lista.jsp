@@ -17,22 +17,11 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="js/menu_desplegable.js"></script>
 
-        <!--Carga templates-->
-        <script>
-        $(function(){
-            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/web/componentes/header.html"); 
-        });
-        $(function(){
-            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/web/componentes/footer.html"); 
-        });
-        $(function(){
-            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/web/componentes/menu_oculto.html"); 
-        });
-        </script>
     </head>
 
     <body>
-        <header id="header"></header>
+        <%@include file="componentes/header.html"%>
+        <%@include file="componentes/menu_oculto.html"%>
         <div id="menu_oculto"></div>
 
         <section class="seccion_central">
@@ -40,19 +29,14 @@
             <hr>
             <form method="POST" action="panel_de_listas.jsp">
                 <div id="subir_video_flex_1">
-                    <div id="subir_video_flex_2">
-                        <p>
-                            Cartelón
-                        </p>
-                    </div>
                     <div id="subir_video_flex_3">
                         <div id="titulo_y_descripcion_listas">
                             <p>Información básica</p>
                             <hr>
                             <p>
-                                Nombre
+                                Nombre *
                                 <br>
-                                <input name="nombre" type="text">
+                                <input name="nombre" type="text" required>
                             </p>
                             <p>
                                 Descripción
@@ -60,23 +44,22 @@
                                 <textarea name="descripcion" rows="15"></textarea>
                             </p>
                             <p>
-                                Categoría
+                                Categoría *
                                 <br>
-                                <select name="id_categoria" id="play_list_categoria">
+                                <select name="id_categoria" id="play_list_categoria" required>
                                     <option value="1">Shonen</option>
                                     <option value="2">Seinen</option>
                                     <option value="3">Kodomo</option>
                                 </select>
                             </p>
                             <p>
-                                Cartelón
+                                Cartelón *
                                 <br>
-                                <input name="url_imagen" type="text">
+                                <input name="url_imagen" type="text" required>
                             </p>
                         </div>
                         <div id="subseccion_de_botones">
-                            <input type="submit" value="Listo" class="boton hierba"><br>
-                            <a href="panel_de_listas.jsp" type="button" class="boton hierba">Listo</a>
+                            <input type="submit" value="Listo" class="botonInput hierba"><br>
                             <a href="panel_de_listas.jsp" type="button" class="boton peligro">Cancelar</a>
                         </div>
                     </div>
@@ -86,6 +69,6 @@
             
         </section>
 
-        <footer id="footer"></footer>
+        <%@include file="componentes/footer.html"%>
     </body>
 </html>

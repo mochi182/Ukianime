@@ -20,23 +20,11 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="js/menu_desplegable.js"></script>
 
-        <!--Carga templates-->
-        <script>
-        $(function(){
-            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/header.html"); 
-        });
-        $(function(){
-            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/footer.html"); 
-        });
-        $(function(){
-            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/menu_oculto.html"); 
-        });
-        </script>
     </head>
 
     <body>
-        <header id="header"></header>
-        <div id="menu_oculto"></div>
+        <%@include file="componentes/header.html"%>
+        <%@include file="componentes/menu_oculto.html"%>
 
         <section class="seccion_central">
             
@@ -117,6 +105,6 @@
 
         </section>
 
-        <footer id="footer"></footer>
+        <%@include file="componentes/footer.html"%>
     </body>
 </html>

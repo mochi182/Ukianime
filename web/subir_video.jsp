@@ -18,49 +18,25 @@
         <script src="js/menu_desplegable.js"></script>
 
         <!--Carga templates-->
-        <script>
-        $(function(){
-            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/web/componentes/header.html"); 
-        });
-        $(function(){
-            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/web/componentes/footer.html"); 
-        });
-        $(function(){
-            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/web/componentes/menu_oculto.html"); 
-        });
-        </script>
     </head>
 
     <body>
-        <header id="header"></header>
-        <div id="menu_oculto"></div>
+        <%@include file="componentes/header.html"%>
+        <%@include file="componentes/menu_oculto.html"%>
 
         <section class="seccion_central">
             <h1>Subir video</h1>
             <hr>
             <form method="POST" action="panel_de_videos.jsp">
                 <div id="subir_video_flex_1">
-                    <div id="subir_video_flex_2">
-                        <p>
-                            Lista de reproducción
-                            <br>
-                            <select name="id_anime" id="playlist_subir_video">
-                                <option value="3">Beastars</option>
-                                <option value="2">Rurouni Kenshin</option>
-                                <option value="1">Haikyuu!!</option>
-                            </select>
-                        </p>
-                    </div>
                     <div id="subir_video_flex_3">
                         <div id="titulo_y_descripcion_videos">
-                            <div id="barra_de_cargar"></div>
-                            <h2>Cargando</h2>
                             <p>Información básica</p>
                             <hr>
                             <p>
-                                Episodio
+                                Episodio *
                                 <br>
-                                <input name="episodio" type="number">
+                                <input name="episodio" type="number" required>
                             </p>
                             <p>
                                 Título
@@ -73,9 +49,18 @@
                                 <textarea name="descripcion" rows="15"></textarea>
                             </p>
                             <p>
-                                Video
+                                URL del video *
                                 <br>
-                                <input name="url_video" type="text">
+                                <input name="url_video" type="text" required>
+                            </p>
+                            <p>
+                                Lista de reproducción *
+                                <br>
+                                <select name="id_anime" id="playlist_subir_video" required>
+                                    <option value="3">Beastars</option>
+                                    <option value="2">Rurouni Kenshin</option>
+                                    <option value="1">Haikyuu!!</option>
+                                </select>
                             </p>
                             <p>
                                 Etiquetas
@@ -84,15 +69,14 @@
                             </p>
                         </div>
                         <div id="subseccion_de_botones">
-                            <input type="submit" value="Listo" class="boton hierba"><br>
-                            <a href="panel_de_videos.html" type="button" class="boton hierba">Listo</a>
-                            <a href="panel_de_videos.html" type="button" class="boton peligro">Cancelar</a>
+                            <input type="submit" value="Listo" class="botonInput hierba"><br>
+                            <a href="panel_de_videos.jsp" type="button" class="boton peligro">Cancelar</a>
                         </div>
                     </div>
                 </div>
             </form>
         </section>
 
-        <footer id="footer"></footer>
+        <%@include file="componentes/footer.html"%>
     </body>
 </html>
