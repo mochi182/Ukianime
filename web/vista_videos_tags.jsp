@@ -1,10 +1,11 @@
-<%-- 
-    Document   : vista_videos_tags
-    Created on : 07/25/2020, 12:08:54 a. m.
-    Author     : Sammy Guergachi <sguergachi at gmail.com>
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Procesos.ProcesosUsuario"%>
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="Procesos.ProcesosVideo"%>
+<%@page import="Entidades.Video"%>
+<%@page import="Entidades.Comentario"%>
+<%@page import="Entidades.Usuario"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,26 +27,29 @@
         
 
         <!--Carga componentes-->
-        <script>
-        $(function(){
-            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/Fase%201/componentes/header.html"); 
-        });
-        $(function(){
-            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/Fase%201/componentes/footer.html"); 
-        });
-              $(function(){
-            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/Fase%201/componentes/menu_oculto.html"); 
-        });
-        </script>
+       
     </head>
 
     <body>
-        <header id="header"></header>
-        <div id="menu_oculto"></div>
+         <%
+                ProcesosVideo pVideo = new ProcesosVideo();
+                List<Video> videos = pVideo.consultarDatos();
 
-        <section>      
+            %>
+        <section>
+        <%@include file="componentes/header.html"%>
+        <%@include file="componentes/menu_oculto.html"%>
+        </section>
+        
+         
+        <section> 
+            
             <section class="primercontenedor">
-                <p class="tituloprincipal">Beastars - Episodio 1 : La luna y la bestia</p> 
+                <% for (Video video: videos){%>
+                <p class="tituloprincipal">
+                    <%= video.getNombre() %>
+                </p> 
+                <%}%>
                 <div class="contenedordelvideo">
                     <video controls>
                         <source src="media/MI VIDA.mp4" type="video/mp4">
@@ -53,7 +57,7 @@
                 </div>
             </section>
             <section class="segundocontenedor">
-                <p class="textoetiqueta">Etiquetas:</p>
+               
                 <div class="moverbotones">
                     <button class="compartir">Compartir</button>
                 </div>
@@ -62,74 +66,46 @@
                 </div>
             </section>
             <section class="tercercontenedor">
+                <% for (Video video: videos){%>
                 <div class="carousel" data-flickity='{ "wrapAround": true }'>
                     <div class="carousel-cell">
                         <div class="contenedortexmini">
-                            <p class="titulosanimesmini">Episodio 1</p><img class="productos3" src="https://vignette.wikia.nocookie.net/beastars/images/c/c6/Episodio_01.jpg/revision/latest/scale-to-width-down/200?cb=20191107030144&path-prefix=es" alt="">
+                            <p class="titulosanimesmini"><%= video.getNombre() %></p><img class="productos3" src="<%= video.getUrl_imagen()%>" alt="">
                         </div>
                     </div>
-                    <div class="carousel-cell">
-                        <div class="contenedortexmini">
-                            <p class="titulosanimesmini">Episodio 2</p><img class="productos3"  src="https://vignette.wikia.nocookie.net/beastars/images/9/90/Episodio_02.jpg/revision/latest/scale-to-width-down/200?cb=20191107030153&path-prefix=es" alt="">
-                        </div>
-                        
-                    </div>
-                    <div class="carousel-cell">
-                        <div class="contenedortexmini">
-                            <p class="titulosanimesmini">Episodio 3</p><img class="productos3"  src="https://vignette.wikia.nocookie.net/beastars/images/e/e8/Episodio_03.jpg/revision/latest/scale-to-width-down/200?cb=20191107030159&path-prefix=es" alt="">
-                        </div>
-                        
-                    </div>
-                    <div class="carousel-cell">
-                        <div class="contenedortexmini">
-                            <p class="titulosanimesmini">Episodio 4</p><img class="productos3"  src="https://vignette.wikia.nocookie.net/beastars/images/2/29/Episodio_04.jpg/revision/latest/scale-to-width-down/200?cb=20191107030203&path-prefix=es" alt="">
-                        </div>
-                        
-                    </div>
-                    <div class="carousel-cell">
-                        <div class="contenedortexmini">
-                            <p class="titulosanimesmini">Episodio 5</p><img class="productos3"  src="https://vignette.wikia.nocookie.net/beastars/images/b/bd/Episodio_05.jpg/revision/latest/scale-to-width-down/200?cb=20191107030203&path-prefix=es" alt="">
-                        </div>
-                        
-                    </div><div class="carousel-cell">
-                        <div class="contenedortexmini">
-                            <p class="titulosanimesmini">Episodio 6</p><img class="productos3"  src="https://vignette.wikia.nocookie.net/beastars/images/b/b4/Episodio_06.jpg/revision/latest/scale-to-width-down/200?cb=20191107031344&path-prefix=es" alt="">
-                        </div>
-                        
-                    </div>
-                    <div class="carousel-cell">
-                        <div class="contenedortexmini">
-                            <p class="titulosanimesmini">Episodio 7</p><img class="productos3"  src="https://vignette.wikia.nocookie.net/beastars/images/2/22/Episodio_07.jpg/revision/latest/scale-to-width-down/200?cb=20191122031413&path-prefix=es" alt="">
-                        </div>
-                        
-                    </div>
-                </div>
+                        <%}%>
+                </div>  
             </section>
                 <p class="tituloCseccion">Comentarios</p>  
             <section class="cuartocontenedor">
                 <div>
                     <hr class="lineadivisora">
                     <div class="notificacion">
-                        <div class="contenedorcajadecomts"><input type="text" placeholder="" class="caja-de-comentarios"></div>
-                        <div class="contenedordebtnenviar"><button class="btn-enviar">Agregar comentario</button></div>
+                        <form method="POST" action="vista_videos_tags.jsp">
+                        <div class="contenedorcajadecomts"><input name="cometario" type="text" placeholder="" class="caja-de-comentarios" required></div>
+                        <div class="contenedordebtnenviar" ><button class="btn-enviar" type="submit" required>Agregar comentario</button></div>
+                        </form>
                     </div>
-                        
+                    <%
+                        String vcomentario = request.getParameter("comentario");
+                        Cometario comentario = new Comentario();
+                        Comentario.setTexto(vcomentario);
+                        ProcesosUsuario pUsuario = new ProcesosUsuario();
+                        List<Usuario> usuarios = pUsuario.consultarDatos();
+                    %>
                 </div>
             </section>
             <br style="clear: both;">
             <section class="quintocontenedor">
                 <div class="ultimocontenedor">
                     <hr class="lineadivisorafinal">
+                    <% Cometario comentario = new Comentario();
+                        for (Comentario comentario: comentarios){%
+                        
                     <div class="comtsusuario">
-                        <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Avatar" style="width:90px">
-                        <p><span>ACastillo-bit</span> Ayer </p>
+                        
+                        <p><span>usuario.getNombre()</span> Ayer </p>
                         <p>Haru, porque eres asi...</p>
-                    </div>
-                    
-                    <div class="comtsusuario">
-                        <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Avatar" style="width:90px">
-                        <p><span>Mrs_Bushido</span> Hoy</p>
-                        <p>Por gordo xd</p>
                     </div>
                 </div>
             </section>
