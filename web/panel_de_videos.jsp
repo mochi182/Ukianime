@@ -85,7 +85,7 @@
                     for(Video video_get: videos){%>
                         <tr>
                             <td>
-                                <%= video_get.getUrl_video() %>
+                                <img class="previewYT" src="https://img.youtube.com/vi/<%= video_get.getUrl_video() %>/sddefault.jpg" alt="Preview">
                             </td>
                             <td class="texto_alineado_iz">
                                 <b>Episodio <%= video_get.getEpisodio() %>: <%= video_get.getNombre() %></b>

@@ -5,7 +5,6 @@
 <%@page import="Procesos.ProcesosCategoria"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -81,7 +80,7 @@
                             <p>
                                 Nombre *
                                 <br>
-                                <input name="nombre" type="text" required value=<%=anime_get.getNombre()%>>
+                                <input name="nombre" type="text" required value="<%=anime_get.getNombre()%>">
                             </p>
                             <p>
                                 Descripción
@@ -107,7 +106,7 @@
                             <p>
                                 Cartelón *
                                 <br>
-                                <input name="url_imagen" type="text" required value=<%=anime_get.getUrl_imagen()%>>
+                                <input name="url_imagen" type="text" required value="<%=anime_get.getUrl_imagen()%>">
                             </p>
                         </div>
                         <div id="subseccion_de_botones">

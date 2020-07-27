@@ -16,5 +16,10 @@
             <li><a href="panel_de_videos.jsp">Panel de videos</a></li>
             <li><a href="registro-usuario.jsp">Registrar usuario</a></li>
         </ul>
+        
+        <div class="player" id="M7lc1UVf-VE"></div>
+
+        <script id="embed" src="js/embed_script.js">
+        </script>
     </body>
 </html>
