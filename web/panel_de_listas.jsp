@@ -114,19 +114,19 @@
                         <td><%=pcomentario.consultarComentariosPorAnime(animes.get(i).getId_anime()) %></td>
                         <td>
                             <form method="POST" action="panel_de_videos.jsp">
-                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input class="input_escondido" type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%>>
                                 <input type="submit" value="Ver contenido" class="botonInput chillin"><br>
                             </form>
                         </td>
                         <td>
                             <form method="POST" action="editar_lista.jsp">
-                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input class="input_escondido" type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%>>
                                 <input type="submit" value="Editar" class="botonInput hierba"><br>
                             </form>
                         </td>
                         <td>
                             <form method="POST" action="panel_de_listas.jsp">
-                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input class="input_escondido" type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%>>
                                 <input type="submit" value="Eliminar" class="botonInput peligro"><br>
                             </form>
                         </td>

@@ -65,7 +65,7 @@
             <h1>Editar lista de reproducción</h1>
             <hr>
             <form method="POST" action="editar_lista.jsp">
-                <input type="text" name="id_anime" value=<%=anime_get.getId_anime()%> style="display:none;">
+                <input class="input_escondido" type="text" name="id_anime" value=<%=anime_get.getId_anime()%>>
                 <div id="subir_video_flex_1">
                     <div id="subir_video_flex_2">
                         <img id="preview_crear_lista" src=<%=anime_get.getUrl_imagen()%> alt="e1">

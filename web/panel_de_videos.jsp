@@ -1,3 +1,6 @@
+<%@page import="Entidades.Anime"%>
+<%@page import="Procesos.ProcesosAnime"%>
+<%@page import="Procesos.ProcesosComentario"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="Entidades.Video"%>
@@ -29,12 +32,25 @@
         <section class="seccion_central">
             
             <% ProcesosVideo pvideo = new ProcesosVideo();
-            List<Video> videos = new ArrayList<Video>();
+            
             String id_anime_string = request.getParameter("id_anime");
-            if(id_anime_string!=null){
-                videos = pvideo.consultarDatosPorID(id_anime_string);
-                
-            } else if(request.getParameter("nombre")!=null){
+            String id_video_string = request.getParameter("id_video");
+            
+            if((id_anime_string!=null)&(id_video_string==null)){}
+            
+            else if((id_anime_string!=null)&(id_video_string!=null)){
+                int isDeleted = pvideo.eliminarVideo(id_video_string);
+                %>
+                <div class="alertaRoja">
+                    <h4>
+                        <%
+                            if (isDeleted > 0){
+                                out.print("¡El registro ha sido eliminado!");
+                            } else{}
+                        %>
+                    </h4>
+                </div>
+            <%} else if(request.getParameter("nombre")!=null){
                     String nombre = request.getParameter("nombre");
                     String descripcion = request.getParameter("descripcion");
                     String url_video = request.getParameter("url_video");
@@ -63,27 +79,32 @@
                             %>
                         </h2>
                     </div>
-                <%}else{}%><!-- Fin del IF-ELSE -->
+                <%}else{}%>
             
             <div id="panel_flex_1">
                 <h1>Panel de videos</h1>
                 <div id="panel_flex_2">
-                    <select name="playlist" id="playlist_panel"></select>
                     <a href="subir_video.jsp" type="button" class="boton hierba">Subir video</a>
-                    <a href="panel_de_listas.jsp" type="button" class="boton chillin">Administrar listas</a>
+                    <a href="panel_de_listas.jsp" type="button" class="boton chillin">Regresar</a>
                 </div>
             </div>            
             <hr>
             <table class="tabla_sin_bordes">
                 <tr>
                     <th colspan="2"></th>
-                    <th>Fecha</th>
+                    <th>Creación</th>
+                    <th>Última modificación</th>
                     <th>Vistas</th>
                     <th>Comentarios</th>
                     <th colspan="2"></th>
                 </tr>
                 
-                <% for(Video video_get: videos){%>
+                <% 
+                    List<Video> videos = new ArrayList<Video>();
+                    videos = pvideo.consultarDatosPorID(id_anime_string);
+                    ProcesosComentario pcomentario = new ProcesosComentario();
+                    ProcesosAnime panime = new ProcesosAnime();
+                    for(Video video_get: videos){%>
                     <tr>
                         <td>
                             <img class="crud_preview" src="https://img.youtube.com/vi/<%= video_get.getUrl_video() %>/sddefault.jpg" alt="Preview">
@@ -91,16 +112,24 @@
                         <td class="texto_alineado_iz">
                             <b>Episodio <%= video_get.getEpisodio() %>: <%= video_get.getNombre() %></b>
                             <br>
-                            Playlist: <%= video_get.getId_anime() %>
+                            <%= panime.consultarDatosPorID(String.valueOf(video_get.getId_anime())).getNombre() %>
                         </td>
-                        <td>23/5/2018</td>
-                        <td>254</td>
-                        <td>0</td>
+                        <td><%=video_get.getCreated_at() %></td>
+                        <td><%=video_get.getUpdated_at() %></td>
+                        <td><%=video_get.getVista() %></td>
+                        <td><%=pcomentario.consultarComentariosPorVideo(video_get.getId_video()) %></td>
                         <td>
-                            <a href="editar_video.html" type="button" class="boton hierba">Editar</a>
+                            <form method="POST" action="editar_video.jsp">
+                                <input class="input_escondido" type="text" name="id_video" value=<%=video_get.getId_video()%>>
+                                <input type="submit" value="Editar" class="botonInput hierba"><br>
+                            </form>
                         </td>
                         <td>
-                            <a href="#" type="button" class="boton peligro">Eliminar</a>
+                            <form method="POST" action="panel_de_videos.jsp">
+                                <input class="input_escondido" type="text" name="id_video" value=<%=video_get.getId_video()%>>
+                                <input class="input_escondido" type="text" name="id_anime" value=<%=video_get.getId_anime()%>>
+                                <input type="submit" value="Eliminar" class="botonInput peligro"><br>
+                            </form>
                         </td>
                     </tr>
                 <%}%>

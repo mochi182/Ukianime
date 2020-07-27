@@ -124,6 +124,10 @@ hr {
     object-fit: cover;
 }
 
+.input_escondido {
+    display: none;
+}
+
 /* ---------- Colores ---------- */
 
 .peligro {

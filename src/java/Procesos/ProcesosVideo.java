@@ -50,6 +50,19 @@ public class ProcesosVideo {
         return 0;
     }
     
+    public int eliminarVideo(String id_video){
+        int resultado = 0;
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "DELETE FROM video WHERE id_video="+id_video;
+            resultado = stmt.executeUpdate(query);
+            return resultado;
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return 0;
+    }
+    
     public List<Video>  consultarDatos(){
         List<Video> videos = new ArrayList<Video>();
         try{
