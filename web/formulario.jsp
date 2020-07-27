@@ -1,11 +1,10 @@
-
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="Procesos.ProcesosRol"%>
 <%@page import="Entidades.Rol"%>
 <%@page import="Entidades.Info_de_pago"%>
 <%@page import="Procesos.ProcesosInfo_de_pago"%>
 <%@page import="Entidades.Usuario"%>
 <%@page import="Procesos.ProcesosUsuario"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
