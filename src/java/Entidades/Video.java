@@ -14,9 +14,25 @@ public class Video {
     private int id_video;
     private int id_anime;
     private String nombre;
+    private int episodio;
     private String descripcion;
-    private String url_imagen;
+    private String url_video;
 
+    /**
+     * @return the episodio
+     */
+    public int getEpisodio() {
+        return episodio;
+    }
+
+    /**
+     * @param episodio the episodio to set
+     */
+    public void setEpisodio(int episodio) {
+        this.episodio = episodio;
+    }
+    
+   
     /**
      * @return the id_video
      */
@@ -74,17 +90,17 @@ public class Video {
     }
 
     /**
-     * @return the url_imagen
+     * @return the url_video
      */
-    public String getUrl_imagen() {
-        return url_imagen;
+    public String getUrl_video() {
+        return url_video;
     }
 
     /**
-     * @param url_imagen the url_imagen to set
+     * @param url_video the url_video to set
      */
-    public void setUrl_imagen(String url_imagen) {
-        this.url_imagen = url_imagen;
+    public void setUrl_video(String url_video) {
+        this.url_video = url_video;
     }
     
     

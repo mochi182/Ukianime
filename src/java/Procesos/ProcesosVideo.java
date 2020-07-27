@@ -35,12 +35,12 @@ public class ProcesosVideo {
         }
     }
     
-    public int guardarAnime(Video video){
+    public int guardarVideo(Video video){
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO video(id_anime, nombre, descripcion, url_imagen)";
-                    query += "VALUES("+video.getId_anime()+",'"+video.getNombre()+"', '"+video.getDescripcion()+"', '"+video.getUrl_imagen()+"')";
+            String query = "INSERT INTO video(id_anime, nombre, descripcion, url_video, episodio)";
+                    query += "VALUES("+video.getId_anime()+",'"+video.getNombre()+"', '"+video.getDescripcion()+"', '"+video.getUrl_video()+"', "+video.getEpisodio()+")";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -62,7 +62,8 @@ public class ProcesosVideo {
                 video.setId_anime(resultado.getInt("id_anime"));
                 video.setNombre(resultado.getString("nombre"));
                 video.setDescripcion(resultado.getString("descripcion"));
-                video.setUrl_imagen(resultado.getString("url_imagen"));
+                video.setUrl_video(resultado.getString("url_video"));
+                video.setEpisodio(resultado.getInt("episodio"));
                 videos.add(video);
             }
             resultado.close();

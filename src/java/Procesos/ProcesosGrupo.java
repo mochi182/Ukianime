@@ -5,7 +5,7 @@
  */
 package Procesos;
 
-import Entidades.Tag;
+import Entidades.Grupo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -18,11 +18,11 @@ import java.util.List;
  *
  * @author galop
  */
-public class ProcesosTag {
+public class ProcesosGrupo {
     
     Connection conn;
     
-    public ProcesosTag() {
+    public ProcesosGrupo() {
         
         try{
             Class.forName("org.mariadb.jdbc.Driver");
@@ -35,12 +35,12 @@ public class ProcesosTag {
         }
     }
     
-    public int guardarTag(Tag tag){
+    public int guardarGrupo(Grupo grupo){
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO tag(nombre, tipo)";
-                    query += "VALUES('"+tag.getNombre()+"', '"+tag.getTipo()+"')";
+            String query = "INSERT INTO grupo(nombre, id_usuario_1, id_usuario_2, id_usuario_3)";
+                    query += "VALUES('"+grupo.getNombre()+"', '"+grupo.getId_usuario_1()+"', '"+grupo.getId_usuario_2()+"', '"+grupo.getId_usuario_3()+"')";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -50,18 +50,20 @@ public class ProcesosTag {
         return 0;
     }
     
-    public List<Tag>  consultarDatos(){
-        List<Tag> tags = new ArrayList<Tag>();
+    public List<Grupo>  consultarDatos(){
+        List<Grupo> grupos = new ArrayList<Grupo>();
         try{
             Statement stmt = conn.createStatement();
-            String query = "SELECT * FROM tag";
+            String query = "SELECT * FROM grupo";
             ResultSet resultado = stmt.executeQuery(query);
             while(resultado.next()){
-                Tag tag = new Tag();
-                tag.setId_tag(resultado.getInt("id_tag"));
-                tag.setNombre(resultado.getString("nombre"));
-                tag.setTipo(resultado.getString("tipo"));
-                tags.add(tag);
+                Grupo grupo = new Grupo();
+                grupo.setId_grupo(resultado.getInt("id_anime"));
+                grupo.setNombre(resultado.getString("nombre"));
+                grupo.setId_usuario_1(resultado.getInt("id_usuario_1"));
+                grupo.setId_usuario_2(resultado.getInt("id_usuario_2"));
+                grupo.setId_usuario_3(resultado.getInt("id_usuario_3"));
+                grupos.add(grupo);
             }
             resultado.close();
             stmt.close();
@@ -69,7 +71,7 @@ public class ProcesosTag {
         } catch(Exception e){
             System.out.println("Error: " + e);
         }
-        return tags;
+        return grupos;
     }
     
 }

@@ -5,7 +5,7 @@
  */
 package Procesos;
 
-import Entidades.Tag;
+import Entidades.Comentario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -18,11 +18,11 @@ import java.util.List;
  *
  * @author galop
  */
-public class ProcesosTag {
+public class ProcesosComentario {
     
     Connection conn;
     
-    public ProcesosTag() {
+    public ProcesosComentario() {
         
         try{
             Class.forName("org.mariadb.jdbc.Driver");
@@ -35,12 +35,12 @@ public class ProcesosTag {
         }
     }
     
-    public int guardarTag(Tag tag){
+    public int guardarComentario(Comentario comentario){
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO tag(nombre, tipo)";
-                    query += "VALUES('"+tag.getNombre()+"', '"+tag.getTipo()+"')";
+            String query = "INSERT INTO comentario(id_usuario, id_video,texto)";
+                    query += "VALUES("+comentario.getId_usuario()+", "+comentario.getId_video()+", '"+comentario.getTexto()+"')";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -50,18 +50,19 @@ public class ProcesosTag {
         return 0;
     }
     
-    public List<Tag>  consultarDatos(){
-        List<Tag> tags = new ArrayList<Tag>();
+    public List<Comentario>  consultarDatos(){
+        List<Comentario> comentarios = new ArrayList<Comentario>();
         try{
             Statement stmt = conn.createStatement();
-            String query = "SELECT * FROM tag";
+            String query = "SELECT * FROM comentario";
             ResultSet resultado = stmt.executeQuery(query);
             while(resultado.next()){
-                Tag tag = new Tag();
-                tag.setId_tag(resultado.getInt("id_tag"));
-                tag.setNombre(resultado.getString("nombre"));
-                tag.setTipo(resultado.getString("tipo"));
-                tags.add(tag);
+                Comentario comentario = new Comentario();
+                comentario.setId_comentario(resultado.getInt("id_comentario"));
+                comentario.setId_usuario(resultado.getInt("id_usuario"));
+                comentario.setId_video(resultado.getInt("id_video"));
+                comentario.setTexto(resultado.getString("texto"));
+                comentarios.add(comentario);
             }
             resultado.close();
             stmt.close();
@@ -69,7 +70,7 @@ public class ProcesosTag {
         } catch(Exception e){
             System.out.println("Error: " + e);
         }
-        return tags;
+        return comentarios;
     }
     
 }

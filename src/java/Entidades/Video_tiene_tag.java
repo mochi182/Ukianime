@@ -9,26 +9,25 @@ package Entidades;
  *
  * @author galop
  */
-public class Tag {
+public class Video_tiene_tag {
     
+    private int id_video;
     private int id_tag;
-    private String nombre;
-    private String tipo;
 
     /**
-     * @return the tipo
+     * @return the id_video
      */
-    public String getTipo() {
-        return tipo;
+    public int getId_video() {
+        return id_video;
     }
 
     /**
-     * @param tipo the tipo to set
+     * @param id_video the id_video to set
      */
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setId_video(int id_video) {
+        this.id_video = id_video;
     }
-    
+
     /**
      * @return the id_tag
      */
@@ -41,20 +40,6 @@ public class Tag {
      */
     public void setId_tag(int id_tag) {
         this.id_tag = id_tag;
-    }
-
-    /**
-     * @return the nombre
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * @param nombre the nombre to set
-     */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
     
     

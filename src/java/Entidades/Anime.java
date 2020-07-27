@@ -10,11 +10,27 @@ package Entidades;
  * @author galop
  */
 public class Anime {
-    
+
+   
     private int id_anime;
+    private int id_categoria;
     private String nombre;
     private String descripcion;
     private String url_imagen;
+    
+    /**
+     * @return the id_categoria
+     */
+    public int getId_categoria() {
+        return id_categoria;
+    }
+
+    /**
+     * @param id_categoria the id_categoria to set
+     */
+    public void setId_categoria(int id_categoria) {
+        this.id_categoria = id_categoria;
+    }
 
     /**
      * @return the id_anime

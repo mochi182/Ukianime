@@ -5,7 +5,7 @@
  */
 package Procesos;
 
-import Entidades.Anime_tiene_categoria;
+import Entidades.Video_tiene_tag;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -18,11 +18,11 @@ import java.util.List;
  *
  * @author galop
  */
-public class ProcesosAnime_tiene_categoria {
+public class ProcesosVideo_tiene_tag {
     
     Connection conn;
     
-    public ProcesosAnime_tiene_categoria() {
+    public ProcesosVideo_tiene_tag() {
         
         try{
             Class.forName("org.mariadb.jdbc.Driver");
@@ -35,12 +35,12 @@ public class ProcesosAnime_tiene_categoria {
         }
     }
     
-    public int guardarAnime_tiene_categoria(Anime_tiene_categoria anime_tiene_categoria){
+    public int guardarVideo_tiene_tag(Video_tiene_tag video_tiene_tag){
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
-            String query = "INSERT INTO anime_tiene_categoria(id_anime, id_categoria)";
-                    query += "VALUES("+anime_tiene_categoria.getId_anime()+", "+anime_tiene_categoria.getId_categoria()+")";
+            String query = "INSERT INTO video_tiene_tag(id_video, id_tag)";
+                    query += "VALUES("+video_tiene_tag.getId_video()+", "+video_tiene_tag.getId_tag()+")";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -50,17 +50,17 @@ public class ProcesosAnime_tiene_categoria {
         return 0;
     }
     
-    public List<Anime_tiene_categoria>  consultarDatos(){
-        List<Anime_tiene_categoria> animes_tienen_categorias = new ArrayList<Anime_tiene_categoria>();
+    public List<Video_tiene_tag>  consultarDatos(){
+        List<Video_tiene_tag> videos_tienen_tags = new ArrayList<Video_tiene_tag>();
         try{
             Statement stmt = conn.createStatement();
-            String query = "SELECT * FROM anime_tiene_categoria";
+            String query = "SELECT * FROM video_tiene_tag";
             ResultSet resultado = stmt.executeQuery(query);
             while(resultado.next()){
-                Anime_tiene_categoria anime_tiene_categoria = new Anime_tiene_categoria();
-                anime_tiene_categoria.setId_anime(resultado.getInt("id_anime"));
-                anime_tiene_categoria.setId_categoria(resultado.getInt("id_categoria"));
-                animes_tienen_categorias.add(anime_tiene_categoria);
+                Video_tiene_tag video_tiene_tag = new Video_tiene_tag();
+                video_tiene_tag.setId_video(resultado.getInt("id_video"));
+                video_tiene_tag.setId_tag(resultado.getInt("id_tag"));
+                videos_tienen_tags.add(video_tiene_tag);
             }
             resultado.close();
             stmt.close();
@@ -68,7 +68,7 @@ public class ProcesosAnime_tiene_categoria {
         } catch(Exception e){
             System.out.println("Error: " + e);
         }
-        return animes_tienen_categorias;
+        return videos_tienen_tags;
     }
     
 }
