@@ -28,15 +28,14 @@ CREATE TABLE IF NOT EXISTS `anime` (
   PRIMARY KEY (`id_anime`),
   KEY `FK_anime_categoria` (`id_categoria`),
   CONSTRAINT `FK_anime_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.anime: ~4 rows (approximately)
+-- Dumping data for table ukianime.anime: ~3 rows (approximately)
 /*!40000 ALTER TABLE `anime` DISABLE KEYS */;
 INSERT INTO `anime` (`id_anime`, `id_categoria`, `nombre`, `descripcion`, `url_imagen`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'Haikyuu!', 'Animé de Volleyball a otro nivel.', 'https://vignette.wikia.nocookie.net/haikyuu/images/a/a4/Haikyu_S4.jpg/revision/latest?cb=20200111012854', '2020-07-25 22:31:25', '2020-07-25 22:31:36'),
 	(2, 1, 'Rurouni Kenshin', 'Un vagabundo con una cicatriz en la mejilla es un samurai asesino.', 'https://vignette.wikia.nocookie.net/samuraix/images/d/d2/Samurai_x.jpg/revision/latest/scale-to-width-down/340?cb=20121126183437&path-prefix=es', '2020-07-25 22:32:15', '2020-07-25 22:33:07'),
-	(3, 1, 'Beastars', 'lalala', 'https://m.media-amazon.com/images/M/MV5BMGZmMjIxYjYtYWE5YS00OWYyLWE5YzUtOTI3YTkxNmQyZDkzXkEyXkFqcGdeQXVyNTY0NDkzNDc@._V1_UY1200_CR109,0,630,1200_AL_.jpg', '2020-07-25 23:20:42', '2020-07-25 23:20:42'),
-	(4, 1, 'Meh', 'rororo', 'https://img.taste.com.au/Z2m_6zIt/taste/2016/11/beef-tacos-98153-1.jpeg', '2020-07-26 09:48:18', '2020-07-26 09:48:18');
+	(3, 1, 'Beastars', 'lalala', 'https://m.media-amazon.com/images/M/MV5BMGZmMjIxYjYtYWE5YS00OWYyLWE5YzUtOTI3YTkxNmQyZDkzXkEyXkFqcGdeQXVyNTY0NDkzNDc@._V1_UY1200_CR109,0,630,1200_AL_.jpg', '2020-07-25 23:20:42', '2020-07-25 23:20:42');
 /*!40000 ALTER TABLE `anime` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.anime_tiene_tag
@@ -86,10 +85,13 @@ CREATE TABLE IF NOT EXISTS `comentario` (
   KEY `FK_comentario_id_video` (`id_video`),
   CONSTRAINT `FK_comentario_id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`),
   CONSTRAINT `FK_comentario_id_video` FOREIGN KEY (`id_video`) REFERENCES `video` (`id_video`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.comentario: ~0 rows (approximately)
+-- Dumping data for table ukianime.comentario: ~2 rows (approximately)
 /*!40000 ALTER TABLE `comentario` DISABLE KEYS */;
+INSERT INTO `comentario` (`id_comentario`, `id_usuario`, `id_video`, `texto`, `created_at`, `updated_at`) VALUES
+	(1, 1, 3, 'A otro', '2020-07-26 22:32:46', '2020-07-26 23:39:08'),
+	(2, 1, 4, 'Nivel', '2020-07-26 22:33:01', '2020-07-26 23:38:54');
 /*!40000 ALTER TABLE `comentario` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.grupo
@@ -161,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `tag` (
   PRIMARY KEY (`id_tag`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.tag: ~0 rows (approximately)
+-- Dumping data for table ukianime.tag: ~1 rows (approximately)
 /*!40000 ALTER TABLE `tag` DISABLE KEYS */;
 INSERT INTO `tag` (`id_tag`, `nombre`, `tipo`, `created_at`, `updated_at`) VALUES
 	(1, 'Español', '', '2020-07-26 11:31:46', '2020-07-26 11:32:47');
@@ -212,6 +214,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   `id_anime` int(11) DEFAULT NULL,
   `nombre` varchar(50) DEFAULT NULL,
   `episodio` int(11) DEFAULT NULL,
+  `vista` int(11) DEFAULT 0,
   `descripcion` text DEFAULT NULL,
   `url_video` varchar(256) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
@@ -223,9 +226,11 @@ CREATE TABLE IF NOT EXISTS `video` (
 
 -- Dumping data for table ukianime.video: ~2 rows (approximately)
 /*!40000 ALTER TABLE `video` DISABLE KEYS */;
-INSERT INTO `video` (`id_video`, `id_anime`, `nombre`, `episodio`, `descripcion`, `url_video`, `created_at`, `updated_at`) VALUES
-	(1, 2, 'El vagabundo no se qué', 1, 'Sushi.', 'https://youtu.be/4l0kMNKlQRA', '2020-07-26 08:06:34', '2020-07-26 08:09:45'),
-	(2, 2, 'Epidosss', 2, 'JAJAJA', 'https://www.youtube.com/watch?v=vauqRrZlT88', '2020-07-26 10:36:59', '2020-07-26 10:36:59');
+INSERT INTO `video` (`id_video`, `id_anime`, `nombre`, `episodio`, `vista`, `descripcion`, `url_video`, `created_at`, `updated_at`) VALUES
+	(1, 2, 'El vagabundo no se qué', 1, 2, 'Sushi.', 'https://youtu.be/4l0kMNKlQRA', '2020-07-26 08:06:34', '2020-07-26 23:11:48'),
+	(2, 2, 'Epidosss', 2, 3, 'JAJAJA', 'https://www.youtube.com/watch?v=vauqRrZlT88', '2020-07-26 10:36:59', '2020-07-26 23:11:46'),
+	(3, 1, 'Primer cap', 1, 10, 'haiiikiuy', 'https://www.youtube.com/watch?v=U19tpn5WUDc', '2020-07-26 23:12:59', '2020-07-26 23:13:50'),
+	(4, 1, 'Segundo cap', 2, 2, 'gool', 'https://www.youtube.com/watch?v=ihDPRK6D_MM', '2020-07-26 23:29:29', '2020-07-26 23:30:03');
 /*!40000 ALTER TABLE `video` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.video_tiene_tag

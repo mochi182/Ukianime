@@ -1,3 +1,6 @@
+<%@page import="Procesos.ProcesosComentario"%>
+<%@page import="Procesos.ProcesosVideo"%>
+<%@page import="java.sql.Timestamp"%>
 <%@page import="Entidades.Categoria"%>
 <%@page import="Procesos.ProcesosCategoria"%>
 <%@page import="java.util.List"%>
@@ -92,6 +95,8 @@
                 </tr>
                 <%
                     ProcesosCategoria pcategoria = new ProcesosCategoria();
+                    ProcesosVideo pvideo = new ProcesosVideo();
+                    ProcesosComentario pcomentario = new ProcesosComentario();
                     List<Anime> animes = panime.consultarDatos();
                     List<Categoria> categorias_por_id = pcategoria.consultarDatosPorID(animes);
                     for(int i = 0; i < animes.size(); i++){%>
@@ -104,10 +109,10 @@
                             <br>
                             <%=categorias_por_id.get(i).getNombre()%>
                         </td>
-                        <td>3/8/2018</td>
-                        <td>3/8/2018</td>
-                        <td>854</td>
-                        <td>12</td>
+                        <td><%=animes.get(i).getCreated_at() %></td>
+                        <td><%=animes.get(i).getUpdated_at() %></td>
+                        <td><%=pvideo.consultarVistasPorAnime(animes.get(i).getId_anime()) %></td>
+                        <td><%=pcomentario.consultarComentariosPorAnime(animes.get(i).getId_anime()) %></td>
                         <td>
                             <form method="POST" action="panel_de_videos.jsp">
                                 <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">

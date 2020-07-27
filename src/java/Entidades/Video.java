@@ -5,6 +5,8 @@
  */
 package Entidades;
 
+import java.sql.Timestamp;
+
 /**
  *
  * @author galop
@@ -17,7 +19,52 @@ public class Video {
     private int episodio;
     private String descripcion;
     private String url_video;
+    private int vista;
+    private Timestamp created_at;
+    private Timestamp updated_at;
 
+    /**
+     * @return the vista
+     */
+    public int getVista() {
+        return vista;
+    }
+
+    /**
+     * @param vista the vista to set
+     */
+    public void setVista(int vista) {
+        this.vista = vista;
+    }
+
+    /**
+     * @return the created_at
+     */
+    public Timestamp getCreated_at() {
+        return created_at;
+    }
+
+    /**
+     * @param created_at the created_at to set
+     */
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
+    }
+
+    /**
+     * @return the updated_at
+     */
+    public Timestamp getUpdated_at() {
+        return updated_at;
+    }
+
+    /**
+     * @param updated_at the updated_at to set
+     */
+    public void setUpdated_at(Timestamp updated_at) {
+        this.updated_at = updated_at;
+    }
+    
     /**
      * @return the episodio
      */

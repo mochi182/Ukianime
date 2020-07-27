@@ -49,6 +49,19 @@ public class ProcesosAnime {
         }
         return 0;
     }
+  
+    public int eliminarAnime(String id_anime){
+        int resultado = 0;
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "DELETE FROM anime WHERE id_anime="+id_anime;
+            resultado = stmt.executeUpdate(query);
+            return resultado;
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return 0;
+    }
     
     public List<Anime>  consultarDatos(){
         List<Anime> animes = new ArrayList<Anime>();
@@ -63,6 +76,8 @@ public class ProcesosAnime {
                 anime.setNombre(resultado.getString("nombre"));
                 anime.setDescripcion(resultado.getString("descripcion"));
                 anime.setUrl_imagen(resultado.getString("url_imagen"));
+                anime.setCreated_at(resultado.getTimestamp("created_at"));
+                anime.setUpdated_at(resultado.getTimestamp("updated_at"));
                 animes.add(anime);
             }
             resultado.close();
@@ -74,17 +89,5 @@ public class ProcesosAnime {
         return animes;
     }
     
-    public int eliminarAnime(String id_anime){
-        int resultado = 0;
-        try{
-            Statement stmt = conn.createStatement();
-            String query = "DELETE FROM anime WHERE id_anime="+id_anime;
-            resultado = stmt.executeUpdate(query);
-            return resultado;
-        } catch(Exception e){
-            System.out.println("Error: " + e);
-        }
-        return 0;
-    }
-    
+   
 }

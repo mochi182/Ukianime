@@ -64,6 +64,9 @@ public class ProcesosVideo {
                 video.setDescripcion(resultado.getString("descripcion"));
                 video.setUrl_video(resultado.getString("url_video"));
                 video.setEpisodio(resultado.getInt("episodio"));
+                video.setVista(resultado.getInt("vista"));
+                video.setCreated_at(resultado.getTimestamp("created_at"));
+                video.setUpdated_at(resultado.getTimestamp("updated_at"));
                 videos.add(video);
             }
             resultado.close();
@@ -73,6 +76,24 @@ public class ProcesosVideo {
             System.out.println("Error: " + e);
         }
         return videos;
+    }
+    
+    public int consultarVistasPorAnime(int id_anime){
+        int cantidad = 0;
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM video WHERE id_anime="+id_anime;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                cantidad += resultado.getInt("vista");
+            }
+            resultado.close();
+            stmt.close();
+            conn.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return cantidad;
     }
     
 }

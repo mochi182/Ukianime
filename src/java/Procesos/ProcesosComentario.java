@@ -73,4 +73,24 @@ public class ProcesosComentario {
         return comentarios;
     }
     
+    public int consultarComentariosPorAnime(int id_anime){
+        int cantidad = 0;
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT c.id_comentario FROM comentario AS c ";
+            query += "INNER JOIN video AS v ON c.id_video = v.id_video ";
+            query += "WHERE v.id_anime="+id_anime;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                cantidad += 1;
+            }
+            resultado.close();
+            stmt.close();
+            conn.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return cantidad;
+    }
+    
 }
