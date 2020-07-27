@@ -70,7 +70,7 @@
                 <div class="carousel" data-flickity='{ "wrapAround": true }'>
                     <div class="carousel-cell">
                         <div class="contenedortexmini">
-                            <p class="titulosanimesmini"><%= video.getNombre() %></p><img class="productos3" src="<%= video.getUrl_imagen()%>" alt="">
+                            <p class="titulosanimesmini"><%= video.getNombre() %></p><img class="productos3" src="<%= video.getUrl_video()%>" alt="">
                         </div>
                     </div>
                         <%}%>
@@ -88,8 +88,8 @@
                     </div>
                     <%
                         String vcomentario = request.getParameter("comentario");
-                        Cometario comentario = new Comentario();
-                        Comentario.setTexto(vcomentario);
+                        Comentario comentario = new Comentario();
+                        comentario.setTexto(vcomentario);
                         ProcesosUsuario pUsuario = new ProcesosUsuario();
                         List<Usuario> usuarios = pUsuario.consultarDatos();
                     %>
@@ -99,14 +99,14 @@
             <section class="quintocontenedor">
                 <div class="ultimocontenedor">
                     <hr class="lineadivisorafinal">
-                    <% Cometario comentario = new Comentario();
-                        for (Comentario comentario: comentarios){%
+                    <%for (Comentario comentario: comentarios){%>
                         
                     <div class="comtsusuario">
                         
                         <p><span>usuario.getNombre()</span> Ayer </p>
                         <p>Haru, porque eres asi...</p>
                     </div>
+                          <%}%>
                 </div>
             </section>
         </section>
