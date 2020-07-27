@@ -57,17 +57,26 @@ body {
     text-align: center;
 }
 
+.alertaRoja {
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    color: rgb(170, 43, 75);
+    border: 2px solid rgb(170, 43, 75);
+    background-color: rgb(202, 114, 114);
+    text-align: center;
+}
+
 .boton {
-    width: 124px;
-    height: 35px;
     border: 0px;
     color: #FFFCFC;
+    padding: 8px 12px 8px 12px;
     text-align: center;
     border-radius: 10px;
+    white-space: pre;
 }
 
 .botonInput {
-    width: 124px;
     height: 35px;
     border: 0px;
     color: #FFFCFC;

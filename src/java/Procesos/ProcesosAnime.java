@@ -74,4 +74,17 @@ public class ProcesosAnime {
         return animes;
     }
     
+    public int eliminarAnime(String id_anime){
+        int resultado = 0;
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "DELETE FROM anime WHERE id_anime="+id_anime;
+            resultado = stmt.executeUpdate(query);
+            return resultado;
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return 0;
+    }
+    
 }

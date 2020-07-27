@@ -28,9 +28,22 @@
         <%@include file="componentes/header.html"%>
         <%@include file="componentes/menu_oculto.html"%>
 
-        <% ProcesosAnime panime = new ProcesosAnime(); 
-            if(request.getParameter("nombre")==null){
-            }else{
+        <% ProcesosAnime panime = new ProcesosAnime();
+            String id_anime = request.getParameter("id_anime");
+            if(request.getParameter("id_anime")!=null){
+                int isDeleted = panime.eliminarAnime(id_anime);
+                %>
+                <div class="alertaRoja">
+                    <h2>
+                        <%
+                            if (isDeleted > 0){
+                                out.print("¡El registro ha sido eliminado!");
+                            } else{}
+                        %>
+                    </h2>
+                </div>
+            <%}else if(request.getParameter("nombre")!=null){
+                
                 String nombre = request.getParameter("nombre");
                 String descripcion = request.getParameter("descripcion");
                 String url_imagen = request.getParameter("url_imagen");
@@ -55,14 +68,15 @@
                         %>
                     </h2>
                 </div>
-            <%}%><!-- Fin del IF-ELSE -->
+            <%}else{}%><!-- Fin del IF-ELSE -->
+
 
         <section class="seccion_central">
             <div id="listas_flex_1">
                 <h1 id="titulo_listas_de_reproduccion">Panel de listas de reproducción</h1>
                 <div id="listas_flex_2">
                     <a href="crear_lista.jsp" type="button" class="boton hierba">Crear lista</a>
-                    <a href="panel_de_videos.jsp" type="button" class="boton chillin">Regresar</a>
+                    <a href="index.jsp" type="button" class="boton chillin">Regresar</a>
                 </div>
             </div>
                                   
@@ -70,10 +84,11 @@
             <table class="tabla_sin_bordes">
                 <tr>
                     <th colspan="2"></th>
-                    <th>Fecha</th>
+                    <th>Creación</th>
+                    <th>Última modificación</th>
                     <th>Vistas</th>
                     <th>Comentarios</th>
-                    <th colspan="2"></th>
+                    <th colspan="3"></th>
                 </tr>
                 <%
                     ProcesosCategoria pcategoria = new ProcesosCategoria();
@@ -90,14 +105,28 @@
                             <%=categorias_por_id.get(i).getNombre()%>
                         </td>
                         <td>3/8/2018</td>
+                        <td>3/8/2018</td>
                         <td>854</td>
                         <td>12</td>
                         <td>
-                            <a href="#" type="button" class="boton hierba">Editar</a>
+                            <form method="POST" action="panel_de_videos.jsp">
+                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input type="submit" value="Ver contenido" class="botonInput chillin"><br>
+                            </form>
                         </td>
                         <td>
-                            <a href="#" type="button" class="boton peligro">Eliminar</a>
+                            <form method="POST" action="editar_lista.jsp">
+                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input type="submit" value="Editar" class="botonInput hierba"><br>
+                            </form>
                         </td>
+                        <td>
+                            <form method="POST" action="panel_de_listas.jsp">
+                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input type="submit" value="Eliminar" class="botonInput peligro"><br>
+                            </form>
+                        </td>
+
                     </tr>
                 <%}%>
             </table>
