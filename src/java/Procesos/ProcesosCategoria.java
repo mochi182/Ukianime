@@ -5,6 +5,7 @@
  */
 package Procesos;
 
+import Entidades.Anime;
 import Entidades.Categoria;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -70,5 +71,29 @@ public class ProcesosCategoria {
         }
         return categorias;
     }
+    
+    public List<Categoria>  consultarDatosPorID(List<Anime> animes){
+        List<Categoria> categorias = new ArrayList<Categoria>();
+        try{
+            Statement stmt = conn.createStatement();
+            for(Anime anime_get: animes){
+                String query = "SELECT * FROM categoria WHERE id_categoria="+anime_get.getId_categoria();
+                ResultSet resultado = stmt.executeQuery(query);
+                while(resultado.next()){
+                    Categoria categoria = new Categoria();
+                    categoria.setId_categoria(resultado.getInt("id_categoria"));
+                    categoria.setNombre(resultado.getString("nombre"));
+                    categorias.add(categoria);
+                }
+                resultado.close();
+            }
+            stmt.close();
+            conn.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return categorias;
+    }
+    
     
 }

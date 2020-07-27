@@ -1,3 +1,5 @@
+<%@page import="Entidades.Categoria"%>
+<%@page import="Procesos.ProcesosCategoria"%>
 <%@page import="java.util.List"%>
 <%@page import="Entidades.Anime"%>
 <%@page import="Procesos.ProcesosAnime"%>
@@ -74,16 +76,18 @@
                     <th colspan="2"></th>
                 </tr>
                 <%
+                    ProcesosCategoria pcategoria = new ProcesosCategoria();
                     List<Anime> animes = panime.consultarDatos();
-                    for(Anime anime_get: animes){%>
+                    List<Categoria> categorias_por_id = pcategoria.consultarDatosPorID(animes);
+                    for(int i = 0; i < animes.size(); i++){%>
                     <tr>
                         <td>
-                            <img class="imagen_lista" src=<%= anime_get.getUrl_imagen()%> alt="l2">
+                            <img class="imagen_lista" src=<%= animes.get(i).getUrl_imagen()%> alt="l2">
                         </td>
                         <td class="texto_alineado_iz">
-                            <b><%=anime_get.getNombre() %></b>
+                            <b><%=animes.get(i).getNombre() %></b>
                             <br>
-                            <%= anime_get.getId_categoria() %>
+                            <%=categorias_por_id.get(i).getNombre()%>
                         </td>
                         <td>3/8/2018</td>
                         <td>854</td>

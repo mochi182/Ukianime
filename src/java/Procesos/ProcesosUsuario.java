@@ -58,7 +58,7 @@ public class ProcesosUsuario {
             ResultSet resultado = stmt.executeQuery(query);
             while(resultado.next()){
                 Usuario usuario = new Usuario();
-                usuario.setId_usuario(resultado.getInt("id_anime"));
+                usuario.setId_usuario(resultado.getInt("id_usuario"));
                 usuario.setId_rol(resultado.getInt("id_rol"));
                 usuario.setNombre(resultado.getString("nombre"));
                 usuario.setContrasena(resultado.getString("contrasena"));
