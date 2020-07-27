@@ -78,6 +78,32 @@ public class ProcesosVideo {
         return videos;
     }
     
+    public List<Video> consultarDatosPorID(String id_anime){
+        List<Video> videos = new ArrayList<Video>();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM video WHERE id_anime="+id_anime;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                Video video = new Video();
+                video.setId_video(resultado.getInt("id_video"));
+                video.setId_anime(resultado.getInt("id_anime"));
+                video.setNombre(resultado.getString("nombre"));
+                video.setDescripcion(resultado.getString("descripcion"));
+                video.setUrl_video(resultado.getString("url_video"));
+                video.setEpisodio(resultado.getInt("episodio"));
+                video.setVista(resultado.getInt("vista"));
+                video.setCreated_at(resultado.getTimestamp("created_at"));
+                video.setUpdated_at(resultado.getTimestamp("updated_at"));
+                videos.add(video);
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return videos;
+    }
+    
     public int consultarVistasPorAnime(int id_anime){
         int cantidad = 0;
         try{

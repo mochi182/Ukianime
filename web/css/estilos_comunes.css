@@ -118,6 +118,12 @@ hr {
     text-align: left;
 }
 
+.crud_preview {
+    width: 220px;
+    height: 124px;
+    object-fit: cover;
+}
+
 /* ---------- Colores ---------- */
 
 .peligro {
