@@ -5,18 +5,49 @@
  */
 package Entidades;
 
+import java.sql.Timestamp;
+
 /**
  *
  * @author galop
  */
 public class Anime {
-
-   
+    
     private int id_anime;
     private int id_categoria;
     private String nombre;
     private String descripcion;
     private String url_imagen;
+    private Timestamp created_at;
+    private Timestamp updated_at;
+
+    /**
+     * @return the created_at
+     */
+    public Timestamp getCreated_at() {
+        return created_at;
+    }
+
+    /**
+     * @param created_at the created_at to set
+     */
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
+    }
+
+    /**
+     * @return the updated_at
+     */
+    public Timestamp getUpdated_at() {
+        return updated_at;
+    }
+
+    /**
+     * @param updated_at the updated_at to set
+     */
+    public void setUpdated_at(Timestamp updated_at) {
+        this.updated_at = updated_at;
+    }
     
     /**
      * @return the id_categoria

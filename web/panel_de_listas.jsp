@@ -1,9 +1,13 @@
+<%@page import="Procesos.ProcesosComentario"%>
+<%@page import="Procesos.ProcesosVideo"%>
+<%@page import="java.sql.Timestamp"%>
+<%@page import="Entidades.Categoria"%>
+<%@page import="Procesos.ProcesosCategoria"%>
 <%@page import="java.util.List"%>
 <%@page import="Entidades.Anime"%>
 <%@page import="Procesos.ProcesosAnime"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -20,36 +24,28 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="js/menu_desplegable.js"></script>
 
-        <!--Carga templates-->
-        <script>
-        $(function(){
-            $("#header").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/header.html"); 
-        });
-        $(function(){
-            $("#footer").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/footer.html"); 
-        });
-        $(function(){
-            $("#menu_oculto").load("https://raw.githubusercontent.com/mochi182/Ukianime/master/componentes/menu_oculto.html"); 
-        });
-        </script>
     </head>
 
     <body>
-        <header id="header"></header>
-        <div id="menu_oculto"></div>
+        <%@include file="componentes/header.html"%>
+        <%@include file="componentes/menu_oculto.html"%>
 
-        <section class="seccion_central">
-            <div id="listas_flex_1">
-                <h1 id="titulo_listas_de_reproduccion">Panel de listas de reproducción</h1>
-                <div id="listas_flex_2">
-                    <a href="crear_lista.jsp" type="button" class="boton hierba">Crear lista</a>
-                    <a href="panel_de_videos.html" type="button" class="boton chillin">Regresar</a>
+        <% ProcesosAnime panime = new ProcesosAnime();
+            String id_anime = request.getParameter("id_anime");
+            if(request.getParameter("id_anime")!=null){
+                int isDeleted = panime.eliminarAnime(id_anime);
+                %>
+                <div class="alertaRoja">
+                    <h4>
+                        <%
+                            if (isDeleted > 0){
+                                out.print("¡El registro ha sido eliminado!");
+                            } else{}
+                        %>
+                    </h4>
                 </div>
-            </div>
-            
-        <% ProcesosAnime panime = new ProcesosAnime(); 
-            if(request.getParameter("nombre")==null){
-            }else{
+            <%}else if(request.getParameter("nombre")!=null){
+                
                 String nombre = request.getParameter("nombre");
                 String descripcion = request.getParameter("descripcion");
                 String url_imagen = request.getParameter("url_imagen");
@@ -65,51 +61,82 @@
                 anime.setUrl_imagen(url_imagen);
                 int isSaved = panime.guardarAnime(anime);
         %>
-                <h2>
-                    <%
-                        if (isSaved > 0){
-                            out.print("¡Datos ingresados exitosamente!");
-                        } else{}
-                    %>
-                </h2>
-            <%}%><!-- Fin del IF-ELSE -->
-                      
+                <div class="alertaVerde">
+                    <h4>
+                        <%
+                            if (isSaved > 0){
+                                out.print("¡Datos ingresados exitosamente!");
+                            } else{}
+                        %>
+                    </h4>
+                </div>
+            <%}else{}%><!-- Fin del IF-ELSE -->
+
+
+        <section class="seccion_central">
+            <div id="listas_flex_1">
+                <h1 id="titulo_listas_de_reproduccion">Panel de listas de reproducción</h1>
+                <div id="listas_flex_2">
+                    <a href="crear_lista.jsp" type="button" class="boton hierba">Crear lista</a>
+                    <a href="index.jsp" type="button" class="boton chillin">Regresar</a>
+                </div>
+            </div>
+                                  
             <hr>
             <table class="tabla_sin_bordes">
                 <tr>
                     <th colspan="2"></th>
-                    <th>Fecha</th>
+                    <th>Creación</th>
+                    <th>Última modificación</th>
                     <th>Vistas</th>
                     <th>Comentarios</th>
-                    <th colspan="2"></th>
+                    <th colspan="3"></th>
                 </tr>
                 <%
+                    ProcesosCategoria pcategoria = new ProcesosCategoria();
+                    ProcesosVideo pvideo = new ProcesosVideo();
+                    ProcesosComentario pcomentario = new ProcesosComentario();
                     List<Anime> animes = panime.consultarDatos();
-                    for(Anime anime_get: animes){%>
+                    List<Categoria> categorias_por_id = pcategoria.obtenerCategoriasDeAnimes(animes);
+                    for(int i = 0; i < animes.size(); i++){%>
                     <tr>
                         <td>
-                            <img class="imagen_lista" src=<%= anime_get.getUrl_imagen()%> alt="l2">
+                            <img class="imagen_lista" src=<%= animes.get(i).getUrl_imagen()%> alt="l2">
                         </td>
                         <td class="texto_alineado_iz">
-                            <b><%=anime_get.getNombre() %></b>
+                            <b><%=animes.get(i).getNombre() %></b>
                             <br>
-                            <%= anime_get.getId_categoria() %>
+                            <%=categorias_por_id.get(i).getNombre()%>
                         </td>
-                        <td>3/8/2018</td>
-                        <td>854</td>
-                        <td>12</td>
+                        <td><%=animes.get(i).getCreated_at() %></td>
+                        <td><%=animes.get(i).getUpdated_at() %></td>
+                        <td><%=pvideo.consultarVistasPorAnime(animes.get(i).getId_anime()) %></td>
+                        <td><%=pcomentario.consultarComentariosPorAnime(animes.get(i).getId_anime()) %></td>
                         <td>
-                            <a href="#" type="button" class="boton hierba">Editar</a>
+                            <form method="POST" action="panel_de_videos.jsp">
+                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input type="submit" value="Ver contenido" class="botonInput chillin"><br>
+                            </form>
                         </td>
                         <td>
-                            <a href="#" type="button" class="boton peligro">Eliminar</a>
+                            <form method="POST" action="editar_lista.jsp">
+                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input type="submit" value="Editar" class="botonInput hierba"><br>
+                            </form>
                         </td>
+                        <td>
+                            <form method="POST" action="panel_de_listas.jsp">
+                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input type="submit" value="Eliminar" class="botonInput peligro"><br>
+                            </form>
+                        </td>
+
                     </tr>
                 <%}%>
             </table>
 
         </section>
 
-        <footer id="footer"></footer>
+        <%@include file="componentes/footer.html"%>
     </body>
 </html>
