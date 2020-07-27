@@ -72,7 +72,7 @@ public class ProcesosCategoria {
         return categorias;
     }
     
-    public List<Categoria>  consultarDatosPorID(List<Anime> animes){
+    public List<Categoria>  obtenerCategoriasDeAnimes(List<Anime> animes){
         List<Categoria> categorias = new ArrayList<Categoria>();
         try{
             Statement stmt = conn.createStatement();
@@ -87,8 +87,6 @@ public class ProcesosCategoria {
                 }
                 resultado.close();
             }
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

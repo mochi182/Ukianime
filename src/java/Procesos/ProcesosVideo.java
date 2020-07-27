@@ -88,8 +88,6 @@ public class ProcesosVideo {
                 cantidad += resultado.getInt("vista");
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

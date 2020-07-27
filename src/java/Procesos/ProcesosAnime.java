@@ -49,6 +49,21 @@ public class ProcesosAnime {
         }
         return 0;
     }
+    
+    public int actualizarAnime(Anime anime, int id_anime){
+        int resultado = 0;
+        try{
+            Statement stmt2 = conn.createStatement();
+            String query = "UPDATE anime SET ";
+                    query += "nombre='"+anime.getNombre()+"', descripcion='"+anime.getDescripcion()+"', url_imagen='"+anime.getUrl_imagen()+"', id_categoria="+anime.getId_categoria();
+                    query += " WHERE id_anime="+id_anime;
+            resultado = stmt2.executeUpdate(query);
+            return resultado;
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return 0;
+    }
   
     public int eliminarAnime(String id_anime){
         int resultado = 0;
@@ -81,12 +96,32 @@ public class ProcesosAnime {
                 animes.add(anime);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }
         return animes;
+    }
+    
+    public Anime  consultarDatosPorID(String id_anime){
+        Anime anime = new Anime();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM anime WHERE id_anime="+id_anime;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                anime.setId_anime(resultado.getInt("id_anime"));
+                anime.setId_categoria(resultado.getInt("id_categoria"));
+                anime.setNombre(resultado.getString("nombre"));
+                anime.setDescripcion(resultado.getString("descripcion"));
+                anime.setUrl_imagen(resultado.getString("url_imagen"));
+                anime.setCreated_at(resultado.getTimestamp("created_at"));
+                anime.setUpdated_at(resultado.getTimestamp("updated_at"));
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return anime;
     }
     
    

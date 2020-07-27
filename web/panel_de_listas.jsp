@@ -37,13 +37,13 @@
                 int isDeleted = panime.eliminarAnime(id_anime);
                 %>
                 <div class="alertaRoja">
-                    <h2>
+                    <h4>
                         <%
                             if (isDeleted > 0){
                                 out.print("¡El registro ha sido eliminado!");
                             } else{}
                         %>
-                    </h2>
+                    </h4>
                 </div>
             <%}else if(request.getParameter("nombre")!=null){
                 
@@ -63,13 +63,13 @@
                 int isSaved = panime.guardarAnime(anime);
         %>
                 <div class="alertaVerde">
-                    <h2>
+                    <h4>
                         <%
                             if (isSaved > 0){
                                 out.print("¡Datos ingresados exitosamente!");
                             } else{}
                         %>
-                    </h2>
+                    </h4>
                 </div>
             <%}else{}%><!-- Fin del IF-ELSE -->
 
@@ -98,7 +98,7 @@
                     ProcesosVideo pvideo = new ProcesosVideo();
                     ProcesosComentario pcomentario = new ProcesosComentario();
                     List<Anime> animes = panime.consultarDatos();
-                    List<Categoria> categorias_por_id = pcategoria.consultarDatosPorID(animes);
+                    List<Categoria> categorias_por_id = pcategoria.obtenerCategoriasDeAnimes(animes);
                     for(int i = 0; i < animes.size(); i++){%>
                     <tr>
                         <td>

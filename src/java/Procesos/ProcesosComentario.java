@@ -85,8 +85,6 @@ public class ProcesosComentario {
                 cantidad += 1;
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

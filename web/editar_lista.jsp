@@ -1,3 +1,5 @@
+<%@page import="Entidades.Anime"%>
+<%@page import="Procesos.ProcesosAnime"%>
 <%@page import="Entidades.Categoria"%>
 <%@page import="java.util.List"%>
 <%@page import="Procesos.ProcesosCategoria"%>
@@ -25,12 +27,53 @@
     <body>
         <%@include file="componentes/header.html"%>
         <%@include file="componentes/menu_oculto.html"%>
-
+        
+        <%
+            ProcesosAnime panime = new ProcesosAnime();
+            Anime anime_get = new Anime();
+            String id_anime = request.getParameter("id_anime");
+            anime_get = panime.consultarDatosPorID(id_anime);
+            
+            if(request.getParameter("nombre")!=null){
+                String nombre = request.getParameter("nombre");
+                String descripcion = request.getParameter("descripcion");
+                String url_imagen = request.getParameter("url_imagen");
+                
+                String id_categoria_string = request.getParameter("id_categoria");
+                Integer id_categoria = new Integer(0);
+                id_categoria = Integer.parseInt(id_categoria_string);
+                
+                Anime anime = new Anime();
+                anime.setNombre(nombre);
+                anime.setId_categoria(id_categoria);
+                anime.setDescripcion(descripcion);
+                anime.setUrl_imagen(url_imagen);
+                int isUpdated = panime.actualizarAnime(anime, anime_get.getId_anime());
+                anime_get = panime.consultarDatosPorID(id_anime);
+        %>
+                <div class="alertaVerde">
+                    <h4>
+                        <%
+                            if (isUpdated > 0){
+                                out.print("¡Datos actualizados exitosamente!");
+                            } else{}
+                        %>
+                    </h4>
+                </div>
+            <%}else{}%><!-- Fin del IF-ELSE -->
+        
         <section class="seccion_central">
-            <h1>Crear lista de reproducción</h1>
+            <h1>Editar lista de reproducción</h1>
             <hr>
-            <form method="POST" action="panel_de_listas.jsp">
+            <form method="POST" action="editar_lista.jsp">
+                <input type="text" name="id_anime" value=<%=anime_get.getId_anime()%> style="display:none;">
                 <div id="subir_video_flex_1">
+                    <div id="subir_video_flex_2">
+                        <img id="preview_crear_lista" src=<%=anime_get.getUrl_imagen()%> alt="e1">
+                        <p>
+                            Cartelón
+                        </p>
+                    </div>
                     <div id="subir_video_flex_3">
                         <div id="titulo_y_descripcion_listas">
                             <p>Información básica</p>
@@ -38,12 +81,12 @@
                             <p>
                                 Nombre *
                                 <br>
-                                <input name="nombre" type="text" required>
+                                <input name="nombre" type="text" required value=<%=anime_get.getNombre()%>>
                             </p>
                             <p>
                                 Descripción
                                 <br>
-                                <textarea name="descripcion" rows="15"></textarea>
+                                <textarea name="descripcion" rows="15"><%=anime_get.getDescripcion()%></textarea>
                             </p>
                             <%
                                 ProcesosCategoria pcategoria = new ProcesosCategoria();
@@ -54,14 +97,17 @@
                                 <br>
                                 <select name="id_categoria" id="play_list_categoria" required>
                                     <% for(Categoria opcion_categoria: categorias){%>
-                                        <option value=<%= opcion_categoria.getId_categoria() %>><%= opcion_categoria.getNombre() %></option>
+                                        <option value=<%= opcion_categoria.getId_categoria() %> <%
+                                            if(opcion_categoria.getId_categoria()==anime_get.getId_categoria()){
+                                            %> selected <%}
+                                        %>><%= opcion_categoria.getNombre() %></option>
                                     <%}%>
                                 </select>
                             </p>
                             <p>
                                 Cartelón *
                                 <br>
-                                <input name="url_imagen" type="text" required>
+                                <input name="url_imagen" type="text" required value=<%=anime_get.getUrl_imagen()%>>
                             </p>
                         </div>
                         <div id="subseccion_de_botones">
