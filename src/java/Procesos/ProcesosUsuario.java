@@ -19,11 +19,11 @@ import java.util.List;
  * @author galop
  */
 public class ProcesosUsuario {
-    
+
     Connection conn;
-    
+
     public ProcesosUsuario() {
-        
+
         try{
             Class.forName("org.mariadb.jdbc.Driver");
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/ukianime", "root", "12345");
@@ -34,14 +34,14 @@ public class ProcesosUsuario {
             System.out.println("Error al registrar el driver de MySQL: " + ex);
         }
     }
-    
+
     public int guardarUsuario(Usuario usuario){
         int resultado = 0;
         try{
             Statement stmt = conn.createStatement();
             String query = "INSERT INTO usuario(nombre, contrasena, id_rol, usuario, apellido, email, fecha_nacimiento, telefono, region)";
-                    query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+usuario.getId_rol()+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getEmail()+"','"+usuario.getFecha_nacimiento()+"', "+usuario.getTelefono()+",'"+usuario.getRegion()+"')";
-        
+            query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+usuario.getId_rol()+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getEmail()+"','"+usuario.getFecha_nacimiento()+"', "+usuario.getTelefono()+",'"+usuario.getRegion()+"')";
+
             resultado = stmt.executeUpdate(query);
             return resultado;
         } catch(Exception w){
@@ -49,7 +49,7 @@ public class ProcesosUsuario {
         }
         return 0;
     }
-    
+
     public List<Usuario>  consultarDatos(){
         List<Usuario> usuarios = new ArrayList<Usuario>();
         try{
@@ -78,5 +78,27 @@ public class ProcesosUsuario {
         }
         return usuarios;
     }
-    
+    public Usuario consultarDatosPorIDSinLista(String id_usuario){
+        Usuario usuario = new Usuario();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM usuario WHERE id_usuario="+id_usuario;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                usuario.setId_usuario(resultado.getInt("id_usuario"));
+                usuario.setNombre(resultado.getString("nombre"));
+                usuario.setApellido(resultado.getString("apellido"));
+                usuario.setContrasena(resultado.getString("contrasena"));
+                usuario.setEmail(resultado.getString("email"));
+                usuario.setRegion(resultado.getString("region"));
+                usuario.setFecha_nacimiento(resultado.getString("fecha_nacimiento"));
+                usuario.setTelefono(resultado.getInt("telefono"));
+                usuario.setId_rol(resultado.getInt("id_rol"));
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return usuario;
+    }
 }
