@@ -29,20 +29,21 @@
     <body>
         <%@include file="componentes/header.html"%>
         <%@include file="componentes/menu_oculto.html"%>
-
+        
+        <section class="seccion_central">
         <% ProcesosAnime panime = new ProcesosAnime();
             String id_anime = request.getParameter("id_anime");
             if(request.getParameter("id_anime")!=null){
                 int isDeleted = panime.eliminarAnime(id_anime);
                 %>
                 <div class="alertaRoja">
-                    <h4>
+                    <h3>
                         <%
                             if (isDeleted > 0){
                                 out.print("¡El registro ha sido eliminado!");
                             } else{}
                         %>
-                    </h4>
+                    </h3>
                 </div>
             <%}else if(request.getParameter("nombre")!=null){
                 
@@ -62,18 +63,17 @@
                 int isSaved = panime.guardarAnime(anime);
         %>
                 <div class="alertaVerde">
-                    <h4>
+                    <h3>
                         <%
                             if (isSaved > 0){
                                 out.print("¡Datos ingresados exitosamente!");
                             } else{}
                         %>
-                    </h4>
+                    </h3>
                 </div>
             <%}else{}%><!-- Fin del IF-ELSE -->
 
 
-        <section class="seccion_central">
             <div id="listas_flex_1">
                 <h1 id="titulo_listas_de_reproduccion">Panel de listas de reproducción</h1>
                 <div id="listas_flex_2">
@@ -114,20 +114,20 @@
                         <td><%=pcomentario.consultarComentariosPorAnime(animes.get(i).getId_anime()) %></td>
                         <td>
                             <form method="POST" action="panel_de_videos.jsp">
-                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input class="input_escondido" type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%>>
                                 <input type="submit" value="Ver contenido" class="botonInput chillin"><br>
                             </form>
                         </td>
                         <td>
                             <form method="POST" action="editar_lista.jsp">
-                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
+                                <input class="input_escondido" type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%>>
                                 <input type="submit" value="Editar" class="botonInput hierba"><br>
                             </form>
                         </td>
                         <td>
                             <form method="POST" action="panel_de_listas.jsp">
-                                <input type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%> style="display:none;">
-                                <input type="submit" value="Eliminar" class="botonInput peligro"><br>
+                                <input class="input_escondido" type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%>>
+                                <input tabindex="-1" type="submit" value="Eliminar" class="botonInput peligro"><br>
                             </form>
                         </td>
 

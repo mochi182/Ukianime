@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #282828;
+    transition: margin-left .5s;
+}
+
+.principal {
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+.titulos {
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+.resul{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+}
+
+.paraspan{
+    font-size: 18px;
+    color: rgb(255, 102, 0);
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+}
+
+.botonaceptar{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background:    rgb(255, 94, 0);
+    border-radius: 2px;
+    padding:       15px 35px;
+    width: 20%;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    margin-top: 10px;
+}

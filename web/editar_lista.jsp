@@ -27,6 +27,7 @@
         <%@include file="componentes/header.html"%>
         <%@include file="componentes/menu_oculto.html"%>
         
+        <section class="seccion_central">
         <%
             ProcesosAnime panime = new ProcesosAnime();
             Anime anime_get = new Anime();
@@ -51,21 +52,20 @@
                 anime_get = panime.consultarDatosPorID(id_anime);
         %>
                 <div class="alertaVerde">
-                    <h4>
+                    <h3>
                         <%
                             if (isUpdated > 0){
                                 out.print("¡Datos actualizados exitosamente!");
                             } else{}
                         %>
-                    </h4>
+                    </h3>
                 </div>
             <%}else{}%><!-- Fin del IF-ELSE -->
         
-        <section class="seccion_central">
             <h1>Editar lista de reproducción</h1>
             <hr>
             <form method="POST" action="editar_lista.jsp">
-                <input type="text" name="id_anime" value=<%=anime_get.getId_anime()%> style="display:none;">
+                <input class="input_escondido" type="text" name="id_anime" value=<%=anime_get.getId_anime()%>>
                 <div id="subir_video_flex_1">
                     <div id="subir_video_flex_2">
                         <img id="preview_crear_lista" src=<%=anime_get.getUrl_imagen()%> alt="e1">
@@ -111,7 +111,7 @@
                         </div>
                         <div id="subseccion_de_botones">
                             <input type="submit" value="Listo" class="botonInput hierba"><br>
-                            <a href="panel_de_listas.jsp" type="button" class="boton peligro">Cancelar</a>
+                            <a href="panel_de_listas.jsp" type="button" class="boton peligro">Regresar</a>
                         </div>
                     </div>
                 </div>

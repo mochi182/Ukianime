@@ -1,16 +1,18 @@
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resgitro de usuario</title>
     <link rel="stylesheet" href="css/paginas/estilo-registro.css">
 </head>
 <body>    
     <div class="tab">
       <button class="tablinks" onclick="pestana(event, 'Personales')">1. Datos Personales</button>
       <button class="tablinks" onclick="pestana(event, 'Cuenta')">2. Datos de la cuenta</button>
-      <button class="tablinks" onclick="pestana(event, 'Pago')">3. M�todo de pago</button>
+      <button class="tablinks" onclick="pestana(event, 'Pago')">3. Mï¿½todo de pago</button>
     </div>
     <form id="formulario" class="formulario" method="POST" action="formulario.jsp">
 
@@ -20,7 +22,7 @@
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                         <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
                         <input type="date" name="fechanacimiento" id="Fechanacimiento" min="1920-04-08" max="2015-04-08" required>
-                        <input type="text" name="telefono" class="telefono" placeholder="Tel�fono" required>
+                        <input type="text" name="telefono" class="telefono" placeholder="Telï¿½fono" required>
                         <p>Seleccione su region: </p>
                         <label><input type="radio" id="region" name="region" value="Norteamerica"> Norteamerica</label> <br>
                         <label><input type="radio" id="region" name="region" value="Latinoamerica"> Latinoamerica</label> <br>
@@ -38,8 +40,9 @@
                 <h3>PASO 2 - DATOS DE LA CUENTA</h3>
                     <input type="email" id="email" name="email" placeholder="Correo Electronico" required>
                     <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
-                    <input type="password" id="password" name="password" placeholder="Contrase�a" required>
-                    <input type="password" id="password2" name="password2" placeholder="Repetir Contrase�a" required>
+                    <input type="password" id="password" name="password" placeholder="Contraseï¿½a" required>
+                    <input type="password" id="password2" name="password2" placeholder="Repetir Contraseï¿½a" required>
+                    <p class="textos">Su rol: Normal</p>
                 
                     <input type="button" value="siguiente"  onclick="pestana(event, 'Pago')">
                     <a class="salir" onclick="pestana(event, 'Personales')"> Regresar </a>
@@ -63,7 +66,7 @@
                 <input type="radio" id="metodo" class="metodo" name="metodo" value= "MasterCard" required>
                 <label for="MasterCard">MasterCard</label><br>
 
-                <p class="textos"">N�mero de tarjeta</p> <br>
+                <p class="textos"">Nï¿½mero de tarjeta</p> <br>
                 <input type="text" id="tarjeta" name="tarjeta1" class="tarke" placeholder="xxxx" maxlength="4" required>
                 <input type="text" id="tarjeta" name="tarjeta2" class="tarke" placeholder="xxxx" maxlength="4" required>
                 <input type="text" id="tarjeta" name="tarjeta3" class="tarke" placeholder="xxxx" maxlength="4" required>
@@ -72,26 +75,24 @@
                 
                 <input type="text" id="seguridad" name="seguridad" class="tarke1" placeholder="xxxxxx" maxlength="6" required>
 
-                <input type="text" id="fecha" name="fecha" class="tarkes" placeholder="d�a" maxlength="2" required>
+                <input type="text" id="fecha" name="fecha" class="tarkes" placeholder="dï¿½a" maxlength="2" required>
                 <span>/</span>
-                <input type="text" id="dia" name="dia" class="tarkes" placeholder="a�o" maxlength="2" required> <br>
+                <input type="text" id="dia" name="dia" class="tarkes" placeholder="aï¿½o" maxlength="2" required> <br>
 
                 <span class="textoag">Codigo de Seguridad </span>    
-                <span class="textoag">Fecha de Expiraci�n </span>
+                <span class="textoag">Fecha de Expiraciï¿½n </span>
                 <br>
 
                 <p class="textos">Forma de cobro</p>
                 <input type="radio" id="cobro" class="manual" name="cobro" value="Manual" required>
                 <label for="Manual">Manual</label><br>
                 <input type="radio" id="cobro" class="automatico" name="cobro" value= "Automatico" required>
-                <label for="Autom�tico">Autom�tico</label><br>
+                <label for="Automï¿½tico">Automï¿½tico</label><br>
 
-                <p class="textos">Seleccione su rol:</p>
-                <label><input type="radio" name="rol" value="administrador">Administrador</label> <br>
-                <label><input type="radio" name="rol" value="expectador">Expectador</label>
+                
 
 
-                <input type="submit" value="Registrarme" onclick="boton_loco()">  
+                <input type="submit" value="Registrarme">  
 
                 <a class="salir" onclick="pestana(event, 'Cuenta')"> Regresar </a>
                 <a href="login.html" class="salir">Salir</a>
@@ -101,11 +102,5 @@
     </form>
     
     <script src="js/script-registro.js"></script>
-    <script>
-        function boton_loco(){
-            window.location.href = 'menu.html';
-        }
-    </script>
-    <script src="js/formulario.js"></script>
 </body>
 </html>

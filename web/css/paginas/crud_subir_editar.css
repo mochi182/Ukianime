@@ -77,3 +77,9 @@ input, textarea, select {
     max-height: 360px;
     object-fit: cover;
 }
+
+#preview_editar_video {
+    max-width: 360px;
+    max-height: 202px;
+    object-fit: cover;
+}

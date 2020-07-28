@@ -91,4 +91,20 @@ public class ProcesosComentario {
         return cantidad;
     }
     
+    public int consultarComentariosPorVideo(int id_video){
+        int cantidad = 0;
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM comentario WHERE id_video="+id_video;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                cantidad += 1;
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return cantidad;
+    }
+    
 }

@@ -67,6 +67,13 @@ body {
     text-align: center;
 }
 
+.alertaBusqueda {
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
 .boton {
     border: 0px;
     color: #FFFCFC;
@@ -86,7 +93,21 @@ body {
     margin: 5px;
 }
 
+
+
 .botonInput:hover {
+    cursor: pointer;
+}
+
+.botoncerrar {
+    height: 35px;
+    border: 0px;
+    color: #FFFCFC;
+    background:    rgb(255, 94, 0);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 5px;
     cursor: pointer;
 }
   
@@ -116,6 +137,16 @@ hr {
 
 .texto_alineado_iz {
     text-align: left;
+}
+
+.crud_preview {
+    width: 220px;
+    height: 124px;
+    object-fit: cover;
+}
+
+.input_escondido {
+    display: none;
 }
 
 /* ---------- Colores ---------- */
