@@ -28,9 +28,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
 </head>
-<body class="fondo-uki">
+<body class="">
 
-    <%@include file="componentes/header.html"%>
+    <%@include file="componentes/header.jsp"%>
     <%@include file="componentes/menu_oculto.jsp"%>
     
     Links para probar las páginas...
@@ -64,7 +64,7 @@
 
                             <% for(Anime anime_get: animes){ %>
 
-                                <a class="cada_anime" href="descripcion.jsp?id_anime=<%= anime_get.getId_anime()%>">
+                                <a class="cada_anime" href="descripcion_prueba.jsp?id_anime=<%= anime_get.getId_anime()%>">
                                     <img class="menu_imagen" src="<%= anime_get.getUrl_imagen()%>" alt="UK">
                                     <br>
                                     <b><%= anime_get.getNombre()%></b>

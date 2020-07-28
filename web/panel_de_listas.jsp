@@ -27,8 +27,8 @@
     </head>
 
     <body>
-        <%@include file="componentes/header.html"%>
-        <%@include file="componentes/menu_oculto.html"%>
+        <%@include file="componentes/header.jsp"%>
+        <%@include file="componentes/menu_oculto.jsp"%>
         
         <section class="seccion_central">
         <% ProcesosAnime panime = new ProcesosAnime();

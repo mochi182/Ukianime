@@ -104,4 +104,29 @@ public class ProcesosUsuario {
         return usuario;
     }
     
+    public Usuario consultarPrimerUsuario(){
+        Usuario usuario = new Usuario();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM usuario WHERE id_usuario="+1;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                usuario.setId_usuario(resultado.getInt("id_usuario"));
+                usuario.setId_rol(resultado.getInt("id_rol"));
+                usuario.setNombre(resultado.getString("nombre"));
+                usuario.setContrasena(resultado.getString("contrasena"));
+                usuario.setUsuario(resultado.getString("usuario"));
+                usuario.setApellido(resultado.getString("apellido"));
+                usuario.setEmail(resultado.getString("email"));
+                usuario.setRegion(resultado.getString("region"));
+                usuario.setTelefono(resultado.getString("telefono"));
+                usuario.setFecha_nacimiento(resultado.getString("fecha_nacimiento"));
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return usuario;
+    }
+    
 }

@@ -7,12 +7,16 @@
 #contenido_de_header {
   white-space: nowrap;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #343131;
-  color: #b4b4ba;
+  background-color: #303030;
+  -webkit-box-shadow: 3px -1px 22px 3px rgba(39,39,39,1);
+  -moz-box-shadow: 3px -1px 22px 3px rgba(39,39,39,1);
+  box-shadow: 3px -1px 22px 3px rgba(39,39,39,1);
   height: 75px;
+  color: #b4b4ba;
 }
+
 
 #logo {
   height: 25px;
@@ -39,22 +43,47 @@ a {
   padding-left: 25px;
 }
 
+#menu_usuario {
+  position: absolute;
+  padding: 15px;
+  background-color: #222020;
+  border: 1px solid #585858;
+  border-radius: 5px;
+  right: 40px;
+  top: 40px;
+  -webkit-box-shadow: 3px -1px 22px 3px rgba(39,39,39,1);
+  -moz-box-shadow: 3px -1px 22px 3px rgba(39,39,39,1);
+  box-shadow: 3px -1px 22px 3px rgba(39,39,39,1);
+  display: none;
+}
+
+#menu_usuario a {
+  color: rgb(221, 221, 221);
+}
+
 /* Posicionamiento */
 
-#menu_burger {
-flex-basis: 6%;
+#tercio_1 {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
 }
-a.inicio {
-  flex-basis: 30%;
+
+#tercio_1 * {
+  margin: 0px 10px 0px 10px;
 }
-div.busqueda {
-  flex-basis: 48%;
+
+#tercio_3 {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  margin-right: 20px;
 }
-#mi_lista {
-  flex-basis: 8%;
-}
-#link_perfil {
-  flex-basis: 8%;
+
+#tercio_3 * {
+  margin: 0px 10px 0px 10px;
 }
 
 /* Barra de búsqueda */
@@ -65,7 +94,7 @@ div.busqueda {
   width: 400px;
   vertical-align: middle;
   white-space: nowrap;
-  background: linear-gradient(90deg, #222020 19%, #343131 19%);
+  background: linear-gradient(90deg, rgba(34, 32, 32,1) 19%, rgba(48, 48, 48,0) 19%);
   border-radius: 5px;
 }
 
