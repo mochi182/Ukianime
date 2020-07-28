@@ -50,7 +50,7 @@
 
 <h3 class="titulos">Datos personales: </h3> </br>
 
-<form method="POST" action="login.jsp"> 
+<form method="POST" action="confirmacion.jsp"> 
     
     <h1 class="resul">Nombre:<span  class="paraspan"><%= nombre %></span></h1> <br>
     <input type="text" name="nombre" class="input_escondido" value="<%= nombre %>">
@@ -61,10 +61,10 @@
     <h1 class="resul">Fecha de nacimineto: <span class="paraspan"><%= fechanacimiento %></span></h1><br>
     <input type="text" name="fechanacimiento" class="input_escondido" value="<%= fechanacimiento %>">
 
-    <h1 class="resul">Telefono:<span class="paraspan"><%= telefono %></span></h1><br>
+    <h1 class="resul">Teléfono:<span class="paraspan"><%= telefono %></span></h1><br>
     <input type="text" name="telefono" class="input_escondido" value="<%= telefono %>">
 
-    <h1 class="resul">Region: <span class="paraspan" > <%= region %></span></h1><br><br>
+    <h1 class="resul">Región: <span class="paraspan" > <%= region %></span></h1><br><br>
     <input type="text" name="region" class="input_escondido" value="<%= region %>">
 
     <h3 class="titulos">Datos de la cuenta: </h3> </br>
@@ -80,7 +80,7 @@
 
     <h1 class="resul">Su rol:<span class="paraspan"> <%= rol %></span></h1><br><br>
 
-    <h3 class="titulos">Cuenta y metodo de pago: </h3> </br>
+    <h3 class="titulos">Cuenta y método de pago: </h3> </br>
 
     <h1 class="resul">Tipo de cuenta:<span class="paraspan"><%= cuenta %></span></h1> <br>
     <input type="text" name="cuenta" class="input_escondido" value="<%= cuenta %>">
@@ -95,14 +95,14 @@
     <input type="text" name="seguridad" class="input_escondido" value="<%= seguridad %>">
 
 
-    <h1 class="resul">Expiración[Fecha/dia]:<span class="paraspan"> <%= expiracion %></span></h1> <br>
+    <h1 class="resul">Expiración[Mes/Año]:<span class="paraspan"> <%= expiracion %></span></h1> <br>
     <input type="text" name="expiracion" class="input_escondido" value="<%= expiracion %>">
 
     <h1 class="resul">Forma de pagar: <span class="paraspan"> <%= cobro %></span></h1> <br>
     <input type="text" name="cobro" class="input_escondido" value="<%= cobro %>">
 
 
-    <input type="submit" onclick="location.href='login.jsp'"  value="Confirmar" name="control" class="botonaceptar">
+    <input type="submit" onclick="location.href='confirmacion.jsp'"  value="Confirmar" name="control" class="botonconfirmar">
 </form>
 <br>
 <br>

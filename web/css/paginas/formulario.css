@@ -43,7 +43,7 @@ body {
     align-items: center;
 }
 
-.botonaceptar{
+.botonconfirmar{
     color: rgb(255, 255, 255);
     font-size: 20px;
     background:    rgb(255, 94, 0);
@@ -58,3 +58,28 @@ body {
     cursor: pointer;
     margin-top: 10px;
 }
+
+.botonaceptar{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background:    rgb(255, 94, 0);
+    border-radius: 2px;
+    padding:       15px 35px;
+    width: 20%;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    margin-top: 30%;
+}
+
+.centrarrrr {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
