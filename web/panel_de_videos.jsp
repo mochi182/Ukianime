@@ -36,7 +36,7 @@
             String id_anime_string = request.getParameter("id_anime");
             String id_video_string = request.getParameter("id_video");
             
-            if((id_anime_string!=null)&(id_video_string==null)){}
+            if((id_anime_string!=null)&(id_video_string==null)&(request.getParameter("nombre")==null)){}
             
             else if((id_anime_string!=null)&(id_video_string!=null)){
                 int isDeleted = pvideo.eliminarVideo(id_video_string);
