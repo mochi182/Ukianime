@@ -40,7 +40,7 @@ public class ProcesosUsuario {
         try{
             Statement stmt = conn.createStatement();
             String query = "INSERT INTO usuario(nombre, contrasena, id_rol, usuario, apellido, email, fecha_nacimiento, telefono, region)";
-                    query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+usuario.getId_rol()+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getEmail()+"','"+usuario.getFecha_nacimiento()+"', "+usuario.getTelefono()+",'"+usuario.getRegion()+"')";
+                    query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+2+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getEmail()+"','"+usuario.getFecha_nacimiento()+"', "+usuario.getTelefono()+",'"+usuario.getRegion()+"')";
         
             resultado = stmt.executeUpdate(query);
             return resultado;

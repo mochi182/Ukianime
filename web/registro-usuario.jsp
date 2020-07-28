@@ -1,10 +1,11 @@
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resgitro de usuario</title>
     <link rel="stylesheet" href="css/paginas/estilo-registro.css">
 </head>
 <body>    
@@ -41,6 +42,7 @@
                     <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
                     <input type="password" id="password" name="password" placeholder="Contraseï¿½a" required>
                     <input type="password" id="password2" name="password2" placeholder="Repetir Contraseï¿½a" required>
+                    <p class="textos">Su rol: Normal</p>
                 
                     <input type="button" value="siguiente"  onclick="pestana(event, 'Pago')">
                     <a class="salir" onclick="pestana(event, 'Personales')"> Regresar </a>
@@ -87,9 +89,7 @@
                 <input type="radio" id="cobro" class="automatico" name="cobro" value= "Automatico" required>
                 <label for="Automï¿½tico">Automï¿½tico</label><br>
 
-                <p class="textos">Seleccione su rol:</p>
-                <label><input type="radio" name="rol" value="administrador">Administrador</label> <br>
-                <label><input type="radio" name="rol" value="expectador">Expectador</label>
+                
 
 
                 <input type="submit" value="Registrarme">  
