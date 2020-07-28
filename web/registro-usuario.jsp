@@ -42,7 +42,6 @@
                     <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
                     <input type="password" id="password" name="password" placeholder="Contraseï¿½a" required>
                     <input type="password" id="password2" name="password2" placeholder="Repetir Contraseï¿½a" required>
-                    <p class="textos">Su rol: Normal</p>
                 
                     <input type="button" value="siguiente"  onclick="pestana(event, 'Pago')">
                     <a class="salir" onclick="pestana(event, 'Personales')"> Regresar </a>
@@ -92,7 +91,7 @@
                 
 
 
-                <input type="submit" value="Registrarme">  
+                <input type="submit" value="Confirmación">  
 
                 <a class="salir" onclick="pestana(event, 'Cuenta')"> Regresar </a>
                 <a href="login.html" class="salir">Salir</a>

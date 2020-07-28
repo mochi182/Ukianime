@@ -24,7 +24,7 @@
     String nombre = request.getParameter("nombre");
     String apellido = request.getParameter("apellido");
     String fechanacimiento = request.getParameter("fechanacimiento");
-    int telefono = Integer.parseInt(request.getParameter("telefono"));
+    String telefono = request.getParameter("telefono");   
     String region = request.getParameter("region");
     String email = request.getParameter("email");
     String usuariop = request.getParameter("usuario");
@@ -102,7 +102,7 @@
     <input type="text" name="cobro" class="input_escondido" value="<%= cobro %>">
 
 
-    <input type="submit" onclick="location.href='login.jsp'"  value="Confirmar" name="control" class="botonaceptar">
+    <input type="submit" value="Registrarme" name="control" class="botonaceptar">
 </form>
 <br>
 <br>
