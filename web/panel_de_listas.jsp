@@ -127,7 +127,7 @@
                         <td>
                             <form method="POST" action="panel_de_listas.jsp">
                                 <input class="input_escondido" type="text" name="id_anime" value=<%=animes.get(i).getId_anime()%>>
-                                <input type="submit" value="Eliminar" class="botonInput peligro"><br>
+                                <input tabindex="-1" type="submit" value="Eliminar" class="botonInput peligro"><br>
                             </form>
                         </td>
 

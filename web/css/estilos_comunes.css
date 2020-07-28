@@ -67,6 +67,13 @@ body {
     text-align: center;
 }
 
+.alertaBusqueda {
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
 .boton {
     border: 0px;
     color: #FFFCFC;

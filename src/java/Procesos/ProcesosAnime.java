@@ -130,7 +130,8 @@ public class ProcesosAnime {
             List<Anime> animes = new ArrayList<Anime>();
             try{
                 Statement stmt = conn.createStatement();
-                String query = "SELECT * FROM anime WHERE (categoria="+palabra+" OR nombre="+palabra+")";
+                String query = "SELECT * FROM anime WHERE nombre='"+palabra+"' OR id_categoria=";
+                        query += "(SELECT id_categoria FROM categoria WHERE nombre='"+palabra+"')";
                 ResultSet resultado = stmt.executeQuery(query);
                 while(resultado.next()){
                     Anime anime = new Anime();
