@@ -1,3 +1,6 @@
+<%@page import="Entidades.Anime"%>
+<%@page import="java.util.List"%>
+<%@page import="Procesos.ProcesosAnime"%>
 <%@page import="Entidades.Video"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 <%@page import="Procesos.ProcesosVideo"%>
@@ -24,81 +27,97 @@
         <%@include file="componentes/header.html"%>
         <%@include file="componentes/menu_oculto.html"%>
         
+        <section class="seccion_central">
         <%
             ProcesosVideo pvideo = new ProcesosVideo();
             Video video_get = new Video();
             String id_video = request.getParameter("id_video");
-            video_get = pvideo.consultarDatosPorID(id_video);
+            video_get = pvideo.consultarDatoPorID(id_video);
             
             if(request.getParameter("nombre")!=null){
                 String nombre = request.getParameter("nombre");
                 String descripcion = request.getParameter("descripcion");
-                String url_imagen = request.getParameter("url_imagen");
+                String url_video = request.getParameter("url_video");
                 
-                String id_categoria_string = request.getParameter("id_categoria");
-                Integer id_categoria = new Integer(0);
-                id_categoria = Integer.parseInt(id_categoria_string);
+                String id_anime_string = request.getParameter("id_anime");
+                Integer id_anime = new Integer(0);
+                id_anime = Integer.parseInt(id_anime_string);
                 
-                Anime anime = new Anime();
-                anime.setNombre(nombre);
-                anime.setId_categoria(id_categoria);
-                anime.setDescripcion(descripcion);
-                anime.setUrl_imagen(url_imagen);
-                int isUpdated = panime.actualizarAnime(anime, anime_get.getId_anime());
-                anime_get = panime.consultarDatosPorID(id_anime);
+                String episodio_string = request.getParameter("episodio");
+                Integer episodio = new Integer(0);
+                episodio = Integer.parseInt(episodio_string);
+                
+                Video video = new Video();
+                video.setNombre(nombre);
+                video.setEpisodio(episodio);
+                video.setId_anime(id_anime);
+                video.setDescripcion(descripcion);
+                video.setUrl_video(url_video);
+                int isUpdated = pvideo.actualizarVideo(video, video_get.getId_video());
+                video_get = pvideo.consultarDatoPorID(id_video);
         %>
                 <div class="alertaVerde">
-                    <h4>
+                    <h3>
                         <%
                             if (isUpdated > 0){
                                 out.print("¡Datos actualizados exitosamente!");
                             } else{}
                         %>
-                    </h4>
+                    </h3>
                 </div>
             <%}else{}%><!-- Fin del IF-ELSE -->
         
-
-        <section class="seccion_central">
-            <h1>Editar video</h1>
+            <h1>Subir video</h1>
             <hr>
-            <div id="subir_video_flex_1">
-                <div id="subir_video_flex_2">
-                    <img id="preview_subir_video" src="https://maroon-prod.s3.amazonaws.com/media/CACHE/images/photos/2020/04/19/beatars/ce09d947a4dc92f740c51383fc3a057b.jpg" alt="e1">
-                    <p>
-                        Lista de reproducciÃ³n
-                        <br>
-                        <select name="playlist" id="playlist_subir_video">
-                            <option value="beastars">Beastars</option>
-                            <option value="rurouni_kenshin">Rurouni Kenshin</option>
-                            <option value="neon_genesis_evangelion">Neon Genesis Evangelion</option>
-                        </select>
-                    </p>
-                    <p>
-                        Vista previa
-                        <br>
-                        <input type="file" class="file_input">
-                    </p>
-                    <p>
-                        SubtÃ­tulos
-                        <br>
-                        <input type="file" class="file_input">
-                    </p>
-
-                </div>
+            <form method="POST" action="editar_video.jsp">
+                <input class="input_escondido" type="text" name="id_video" value=<%=video_get.getId_video()%>>
+                <div id="subir_video_flex_1">
+                    <div id="subir_video_flex_2">
+                        <img id="preview_editar_video" src="https://img.youtube.com/vi/<%= video_get.getUrl_video() %>/sddefault.jpg" alt="e1">
+                        <p>
+                            Vista previa
+                        </p>
+                    </div>
                     <div id="subir_video_flex_3">
                         <div id="titulo_y_descripcion_videos">
-                            <p>InformaciÃ³n bÃ¡sica</p>
+                            <p>Información básica</p>
                             <hr>
                             <p>
-                                TÃ­tulo
+                                Episodio *
                                 <br>
-                                <input type="text">
+                                <input name="episodio" type="number" required value="<%=video_get.getEpisodio()%>">
                             </p>
                             <p>
-                                DescripciÃ³n
+                                Título
                                 <br>
-                                <textarea name="descripcion" rows="15"></textarea>
+                                <input name="nombre" type="text" value="<%=video_get.getNombre()%>">
+                            </p>
+                            <p>
+                                Descripción
+                                <br>
+                                <textarea name="descripcion" rows="15"><%=video_get.getDescripcion()%></textarea>
+                            </p>
+                            <p>
+                                URL del video *
+                                <br>
+                                <input name="url_video" type="text" required value="<%=video_get.getUrl_video()%>">
+                            </p>
+                            <%
+                                ProcesosAnime panime = new ProcesosAnime();
+                                List<Anime> animes = panime.consultarDatos();
+                            %>
+                            <p>
+                                Lista de reproducción *
+                                <br>
+                                <select name="id_anime" id="playlist_subir_video" required>
+                                    <% for(Anime opcion_anime: animes){%>                                      
+                                        <option value=<%= opcion_anime.getId_anime() %> <%
+                                            if(opcion_anime.getId_anime()==video_get.getId_anime()){
+                                            %> selected <%}
+                                        %>><%= opcion_anime.getNombre() %></option>
+                                        
+                                    <%}%>
+                                </select>
                             </p>
                             <p>
                                 Etiquetas
@@ -107,12 +126,13 @@
                             </p>
                         </div>
                         <div id="subseccion_de_botones">
-                            <a href="panel_de_videos.html" type="button" class="boton hierba">Listo</a>
-                            <a href="panel_de_videos.html" type="button" class="boton peligro">Cancelar</a>
+                            <input type="submit" value="Listo" class="botonInput hierba"><br>
+                            <a href="panel_de_videos.jsp" type="button" class="boton peligro">Regresar</a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </form>
+        </section>
 
         <%@include file="componentes/footer.html"%>
     </body>
