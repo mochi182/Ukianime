@@ -42,13 +42,13 @@
                 int isDeleted = pvideo.eliminarVideo(id_video_string);
                 %>
                 <div class="alertaRoja">
-                    <h4>
+                    <h3>
                         <%
                             if (isDeleted > 0){
                                 out.print("¡El registro ha sido eliminado!");
                             } else{}
                         %>
-                    </h4>
+                    </h3>
                 </div>
             <%} else if(request.getParameter("nombre")!=null){
                     String nombre = request.getParameter("nombre");
@@ -71,13 +71,13 @@
                     int isSaved = pvideo.guardarVideo(video);
                 %>
                     <div class="alertaVerde">
-                        <h2>
+                        <h3>
                             <%
                                 if (isSaved > 0){
                                     out.print("¡Datos ingresados exitosamente!");
                                 } else{}
                             %>
-                        </h2>
+                        </h3>
                     </div>
                 <%}else{}%>
             
