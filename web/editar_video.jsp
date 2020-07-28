@@ -26,7 +26,7 @@
     <body>
         <%@include file="componentes/header.html"%>
         <%@include file="componentes/menu_oculto.html"%>
-        
+               
         <section class="seccion_central">
         <%
             ProcesosVideo pvideo = new ProcesosVideo();
@@ -127,7 +127,7 @@
                         </div>
                         <div id="subseccion_de_botones">
                             <input type="submit" value="Listo" class="botonInput hierba"><br>
-                            <a href="panel_de_videos.jsp" type="button" class="boton peligro">Regresar</a>
+                            <a href="panel_de_videos.jsp?id_anime=<%=video_get.getId_anime()%>" type="button" class="boton peligro">Regresar</a>
                         </div>
                     </div>
                 </div>
