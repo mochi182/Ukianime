@@ -123,6 +123,57 @@ public class ProcesosAnime {
         }
         return anime;
     }
+    
+    
+    // Consultar animes por palabra.
+        public List<Anime> consultarDatosPorPalabra(String palabra){
+            List<Anime> animes = new ArrayList<Anime>();
+            try{
+                Statement stmt = conn.createStatement();
+                String query = "SELECT * FROM anime WHERE (categoria="+palabra+" OR nombre="+palabra+")";
+                ResultSet resultado = stmt.executeQuery(query);
+                while(resultado.next()){
+                    Anime anime = new Anime();
+                    anime.setId_anime(resultado.getInt("id_anime"));
+                    anime.setId_categoria(resultado.getInt("id_categoria"));
+                    anime.setNombre(resultado.getString("nombre"));
+                    anime.setDescripcion(resultado.getString("descripcion"));
+                    anime.setUrl_imagen(resultado.getString("url_imagen"));
+                    anime.setCreated_at(resultado.getTimestamp("created_at"));
+                    anime.setUpdated_at(resultado.getTimestamp("updated_at"));
+                    animes.add(anime);
+                }
+                resultado.close();
+            } catch(Exception e){
+                System.out.println("Error: " + e);
+            }
+            return animes;
+        }
+       
+    // Consultar animes por id de categoria.
+        public List<Anime> consultarDatosPorCategoria(int id_categoria){
+            List<Anime> animes = new ArrayList<Anime>();
+            try{
+                Statement stmt = conn.createStatement();
+                String query = "SELECT * FROM anime WHERE id_categoria="+id_categoria;
+                ResultSet resultado = stmt.executeQuery(query);
+                while(resultado.next()){
+                    Anime anime = new Anime();
+                    anime.setId_anime(resultado.getInt("id_anime"));
+                    anime.setId_categoria(resultado.getInt("id_categoria"));
+                    anime.setNombre(resultado.getString("nombre"));
+                    anime.setDescripcion(resultado.getString("descripcion"));
+                    anime.setUrl_imagen(resultado.getString("url_imagen"));
+                    anime.setCreated_at(resultado.getTimestamp("created_at"));
+                    anime.setUpdated_at(resultado.getTimestamp("updated_at"));
+                    animes.add(anime);
+                }
+                resultado.close();
+            } catch(Exception e){
+                System.out.println("Error: " + e);
+            }
+            return animes;
+        }
        
    
 }
