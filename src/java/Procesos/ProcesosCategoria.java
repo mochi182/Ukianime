@@ -27,7 +27,7 @@ public class ProcesosCategoria {
         
         try{
             Class.forName("org.mariadb.jdbc.Driver");
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/ukianime", "root", "12345");
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/ukianime", "root", "@K_lidad1050");
         }catch(SQLException e){
             System.out.println("Error al conectar: " + e);
         }
@@ -87,6 +87,23 @@ public class ProcesosCategoria {
                 }
                 resultado.close();
             }
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return categorias;
+    }
+    
+    public  Categoria  consultarDatosPorAnime1(String id_categoria){
+        Categoria categorias  = new Categoria();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM categoria WHERE id_categoria="+id_categoria;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                categorias.setId_categoria(resultado.getInt("id_categoria"));
+                categorias.setNombre(resultado.getString("nombre"));
+            }
+            resultado.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }
