@@ -75,6 +75,7 @@ body {
 }
 
 .boton {
+    width: fit-content;
     border: 0px;
     color: #FFFCFC;
     padding: 8px 12px 8px 12px;
@@ -85,32 +86,26 @@ body {
 
 .botonInput {
     height: 35px;
+    width: fit-content;
     border: 0px;
     color: #FFFCFC;
     text-align: center;
     border-radius: 10px;
     font-size: 16px;
     margin: 5px;
+    white-space: pre;
+    padding: 0px 13px 0px 13px;
 }
 
-
+.min_width_124px {
+    min-width: 124px;
+}
 
 .botonInput:hover {
     cursor: pointer;
 }
 
-.botoncerrar {
-    height: 35px;
-    border: 0px;
-    color: #FFFCFC;
-    background:    rgb(255, 94, 0);
-    text-align: center;
-    border-radius: 10px;
-    font-size: 16px;
-    margin: 5px;
-    cursor: pointer;
-}
-  
+ 
 .caja_de_comentarios{
     background-color: #D1CFCF;
 }
@@ -167,12 +162,16 @@ hr {
     background-color: rgb(48, 139, 48);
 }
 
+.naranjaUki {
+    background:    rgb(255, 94, 0);
+}
+
 /* ---------- Scrollbar ---------- */
 
 /* width */
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 9px;
+    height: 9px;
 }
 
 /* Track */

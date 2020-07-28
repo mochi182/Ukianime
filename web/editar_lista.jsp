@@ -110,7 +110,7 @@
                             </p>
                         </div>
                         <div id="subseccion_de_botones">
-                            <input type="submit" value="Listo" class="botonInput hierba"><br>
+                            <input type="submit" value="Listo" class="botonInput hierba min_width_124px"><br>
                             <a href="panel_de_listas.jsp" type="button" class="boton peligro">Regresar</a>
                         </div>
                     </div>

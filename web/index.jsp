@@ -31,7 +31,7 @@
 <body class="fondo-uki">
 
     <%@include file="componentes/header.html"%>
-    <%@include file="componentes/menu_oculto.html"%>
+    <%@include file="componentes/menu_oculto.jsp"%>
     
     Links para probar las páginas...
     <ul>
@@ -64,11 +64,11 @@
 
                             <% for(Anime anime_get: animes){ %>
 
-                                <div class="cada_anime">
+                                <a class="cada_anime" href="descripcion.jsp?id_anime=<%= anime_get.getId_anime()%>">
                                     <img class="menu_imagen" src="<%= anime_get.getUrl_imagen()%>" alt="UK">
                                     <br>
                                     <b><%= anime_get.getNombre()%></b>
-                                </div>
+                                </a>
                             <% } %>
                         </div>
 
