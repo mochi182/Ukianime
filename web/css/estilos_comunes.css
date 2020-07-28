@@ -93,7 +93,21 @@ body {
     margin: 5px;
 }
 
+
+
 .botonInput:hover {
+    cursor: pointer;
+}
+
+.botoncerrar {
+    height: 35px;
+    border: 0px;
+    color: #FFFCFC;
+    background:    rgb(255, 94, 0);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 5px;
     cursor: pointer;
 }
   
