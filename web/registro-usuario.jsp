@@ -1,10 +1,11 @@
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resgitro de usuario</title>
     <link rel="stylesheet" href="css/paginas/estilo-registro.css">
 </head>
 <body>    
@@ -87,12 +88,10 @@
                 <input type="radio" id="cobro" class="automatico" name="cobro" value= "Automatico" required>
                 <label for="Automï¿½tico">Automï¿½tico</label><br>
 
-                <p class="textos">Seleccione su rol:</p>
-                <label><input type="radio" name="rol" value="administrador">Administrador</label> <br>
-                <label><input type="radio" name="rol" value="expectador">Expectador</label>
+                
 
 
-                <input type="submit" value="Registrarme">  
+                <input type="submit" value="Confirmación">  
 
                 <a class="salir" onclick="pestana(event, 'Cuenta')"> Regresar </a>
                 <a href="login.html" class="salir">Salir</a>

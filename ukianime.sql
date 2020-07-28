@@ -28,12 +28,12 @@ CREATE TABLE IF NOT EXISTS `anime` (
   PRIMARY KEY (`id_anime`),
   KEY `FK_anime_categoria` (`id_categoria`),
   CONSTRAINT `FK_anime_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table ukianime.anime: ~3 rows (approximately)
 /*!40000 ALTER TABLE `anime` DISABLE KEYS */;
 INSERT INTO `anime` (`id_anime`, `id_categoria`, `nombre`, `descripcion`, `url_imagen`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'Haikyuu!!', 'Anime de volleyball a otro nivel.', 'https://vignette.wikia.nocookie.net/haikyuu/images/a/a4/Haikyu_S4.jpg/revision/latest?cb=20200111012854', '2020-07-25 22:31:25', '2020-07-27 02:05:31'),
+	(1, 1, 'Haikyuu!!', 'Anime de volleyball a otro nivel.', 'https://vignette.wikia.nocookie.net/haikyuu/images/a/a4/Haikyu_S4.jpg/revision/latest?cb=20200111012854', '2020-07-25 22:31:25', '2020-07-27 22:02:56'),
 	(2, 1, 'Rurouni Kenshin', 'Un vagabundo con una cicatriz en la mejilla es un samurai asesino.', 'https://vignette.wikia.nocookie.net/samuraix/images/d/d2/Samurai_x.jpg/revision/latest/scale-to-width-down/340?cb=20121126183437&path-prefix=es', '2020-07-25 22:32:15', '2020-07-25 22:33:07'),
 	(3, 1, 'Beastars', 'lalala', 'https://m.media-amazon.com/images/M/MV5BMGZmMjIxYjYtYWE5YS00OWYyLWE5YzUtOTI3YTkxNmQyZDkzXkEyXkFqcGdeQXVyNTY0NDkzNDc@._V1_UY1200_CR109,0,630,1200_AL_.jpg', '2020-07-25 23:20:42', '2020-07-25 23:20:42');
 /*!40000 ALTER TABLE `anime` ENABLE KEYS */;
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `comentario` (
   CONSTRAINT `FK_comentario_id_video` FOREIGN KEY (`id_video`) REFERENCES `video` (`id_video`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.comentario: ~2 rows (approximately)
+-- Dumping data for table ukianime.comentario: ~1 rows (approximately)
 /*!40000 ALTER TABLE `comentario` DISABLE KEYS */;
 INSERT INTO `comentario` (`id_comentario`, `id_usuario`, `id_video`, `texto`, `created_at`, `updated_at`) VALUES
 	(2, 1, 4, 'Nivel', '2020-07-26 22:33:01', '2020-07-26 23:38:54');
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `info_de_pago` (
   PRIMARY KEY (`id_info_de_pago`),
   KEY `FK__usuario` (`id_usuario`),
   CONSTRAINT `FK__usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table ukianime.info_de_pago: ~0 rows (approximately)
 /*!40000 ALTER TABLE `info_de_pago` DISABLE KEYS */;
@@ -178,16 +178,16 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `email` varchar(50) DEFAULT NULL,
   `region` varchar(50) DEFAULT NULL,
   `fecha_nacimiento` varchar(50) DEFAULT NULL,
-  `telefono` int(11) DEFAULT NULL,
+  `telefono` varchar(50) DEFAULT NULL,
   `id_rol` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id_usuario`),
   KEY `FK_usuario_rol` (`id_rol`),
   CONSTRAINT `FK_usuario_rol` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.usuario: ~1 rows (approximately)
+-- Dumping data for table ukianime.usuario: ~0 rows (approximately)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `usuario`, `contrasena`, `email`, `region`, `fecha_nacimiento`, `telefono`, `id_rol`, `created_at`, `updated_at`) VALUES
 	(1, 'Francisco', 'Pérez', 'Pixbae', NULL, NULL, NULL, NULL, NULL, NULL, '2020-07-26 08:05:46', '2020-07-26 08:05:46');
@@ -221,13 +221,13 @@ CREATE TABLE IF NOT EXISTS `video` (
   PRIMARY KEY (`id_video`),
   KEY `FK__anime` (`id_anime`),
   CONSTRAINT `FK__anime` FOREIGN KEY (`id_anime`) REFERENCES `anime` (`id_anime`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.video: ~3 rows (approximately)
+-- Dumping data for table ukianime.video: ~2 rows (approximately)
 /*!40000 ALTER TABLE `video` DISABLE KEYS */;
 INSERT INTO `video` (`id_video`, `id_anime`, `nombre`, `episodio`, `vista`, `descripcion`, `url_video`, `created_at`, `updated_at`) VALUES
-	(2, 2, 'Epidosss', 2, 3, 'JAJAJA', 'vauqRrZlT88', '2020-07-26 10:36:59', '2020-07-27 09:15:48'),
-	(4, 1, 'Segundo cap', 2, 2, 'gool', 'ihDPRK6D_MM', '2020-07-26 23:29:29', '2020-07-27 09:15:38');
+	(4, 1, 'Segundo cap', 23, 2, 'gool', 'ihDPRK6D_MM', '2020-07-26 23:29:29', '2020-07-27 22:06:34'),
+	(5, 1, 'Francisco', 44, 0, 'mniiu', 'cI9PZDX2EVY', '2020-07-27 23:05:25', '2020-07-27 23:05:25');
 /*!40000 ALTER TABLE `video` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.video_tiene_tag

@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #282828;
+    transition: margin-left .5s;
+}
+
 .principal {
     font-size: 30px;
     color: white;
@@ -30,8 +43,7 @@
     align-items: center;
 }
 
-input[type=button]
-{
+.botonaceptar{
     color: rgb(255, 255, 255);
     font-size: 20px;
     background:    rgb(255, 94, 0);

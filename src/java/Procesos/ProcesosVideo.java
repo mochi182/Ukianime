@@ -50,6 +50,21 @@ public class ProcesosVideo {
         return 0;
     }
     
+    public int actualizarVideo(Video video, int id_video){
+        int resultado = 0;
+        try{
+            Statement stmt2 = conn.createStatement();
+            String query = "UPDATE video SET ";
+                    query += "nombre='"+video.getNombre()+"', descripcion='"+video.getDescripcion()+"', url_video='"+video.getUrl_video()+"', id_anime="+video.getId_anime()+", episodio="+video.getEpisodio();
+                    query += " WHERE id_video="+id_video;
+            resultado = stmt2.executeUpdate(query);
+            return resultado;
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return 0;
+    }
+    
     public int eliminarVideo(String id_video){
         int resultado = 0;
         try{
@@ -83,8 +98,6 @@ public class ProcesosVideo {
                 videos.add(video);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }
@@ -115,6 +128,30 @@ public class ProcesosVideo {
             System.out.println("Error: " + e);
         }
         return videos;
+    }
+    
+    public Video  consultarDatoPorID(String id_video){
+        Video video = new Video();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM video WHERE id_video="+id_video;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                video.setId_video(resultado.getInt("id_video"));
+                video.setId_anime(resultado.getInt("id_anime"));
+                video.setNombre(resultado.getString("nombre"));
+                video.setDescripcion(resultado.getString("descripcion"));
+                video.setUrl_video(resultado.getString("url_video"));
+                video.setEpisodio(resultado.getInt("episodio"));
+                video.setVista(resultado.getInt("vista"));
+                video.setCreated_at(resultado.getTimestamp("created_at"));
+                video.setUpdated_at(resultado.getTimestamp("updated_at"));
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return video;
     }
     
     public int consultarVistasPorAnime(int id_anime){

@@ -40,7 +40,7 @@ public class ProcesosUsuario {
         try{
             Statement stmt = conn.createStatement();
             String query = "INSERT INTO usuario(nombre, contrasena, id_rol, usuario, apellido, email, fecha_nacimiento, telefono, region)";
-                    query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+usuario.getId_rol()+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getEmail()+"','"+usuario.getFecha_nacimiento()+"', "+usuario.getTelefono()+",'"+usuario.getRegion()+"')";
+                    query += "VALUES('"+usuario.getNombre()+"', '"+usuario.getContrasena()+"', "+2+",'"+usuario.getUsuario()+"','"+usuario.getApellido()+"','"+usuario.getEmail()+"','"+usuario.getFecha_nacimiento()+"', "+usuario.getTelefono()+",'"+usuario.getRegion()+"')";
         
             resultado = stmt.executeUpdate(query);
             return resultado;
@@ -66,7 +66,7 @@ public class ProcesosUsuario {
                 usuario.setApellido(resultado.getString("apellido"));
                 usuario.setEmail(resultado.getString("email"));
                 usuario.setRegion(resultado.getString("region"));
-                usuario.setTelefono(resultado.getInt("telefono"));
+                usuario.setTelefono(resultado.getString("telefono"));
                 usuario.setFecha_nacimiento(resultado.getString("fecha_nacimiento"));
                 usuarios.add(usuario);
             }
@@ -77,6 +77,31 @@ public class ProcesosUsuario {
             System.out.println("Error: " + e);
         }
         return usuarios;
+    }
+    
+    public Usuario consultarUsuarioPorUsuario(String p_usuario){
+        Usuario usuario = new Usuario();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM usuario WHERE usuario='"+p_usuario+"'";
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                usuario.setId_usuario(resultado.getInt("id_usuario"));
+                usuario.setId_rol(resultado.getInt("id_rol"));
+                usuario.setNombre(resultado.getString("nombre"));
+                usuario.setContrasena(resultado.getString("contrasena"));
+                usuario.setUsuario(resultado.getString("usuario"));
+                usuario.setApellido(resultado.getString("apellido"));
+                usuario.setEmail(resultado.getString("email"));
+                usuario.setRegion(resultado.getString("region"));
+                usuario.setTelefono(resultado.getString("telefono"));
+                usuario.setFecha_nacimiento(resultado.getString("fecha_nacimiento"));
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return usuario;
     }
     
 }

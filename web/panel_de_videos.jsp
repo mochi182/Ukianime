@@ -36,19 +36,19 @@
             String id_anime_string = request.getParameter("id_anime");
             String id_video_string = request.getParameter("id_video");
             
-            if((id_anime_string!=null)&(id_video_string==null)){}
+            if((id_anime_string!=null)&(id_video_string==null)&(request.getParameter("nombre")==null)){}
             
             else if((id_anime_string!=null)&(id_video_string!=null)){
                 int isDeleted = pvideo.eliminarVideo(id_video_string);
                 %>
                 <div class="alertaRoja">
-                    <h4>
+                    <h3>
                         <%
                             if (isDeleted > 0){
                                 out.print("¡El registro ha sido eliminado!");
                             } else{}
                         %>
-                    </h4>
+                    </h3>
                 </div>
             <%} else if(request.getParameter("nombre")!=null){
                     String nombre = request.getParameter("nombre");
@@ -71,13 +71,13 @@
                     int isSaved = pvideo.guardarVideo(video);
                 %>
                     <div class="alertaVerde">
-                        <h2>
+                        <h3>
                             <%
                                 if (isSaved > 0){
                                     out.print("¡Datos ingresados exitosamente!");
                                 } else{}
                             %>
-                        </h2>
+                        </h3>
                     </div>
                 <%}else{}%>
             
