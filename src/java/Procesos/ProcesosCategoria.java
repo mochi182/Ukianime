@@ -93,5 +93,20 @@ public class ProcesosCategoria {
         return categorias;
     }
     
-    
+   public  Categoria  consultarDatosPorAnime1(String id_categoria){
+        Categoria categorias  = new Categoria();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM categoria WHERE id_categoria="+id_categoria;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                categorias.setId_categoria(resultado.getInt("id_categoria"));
+                categorias.setNombre(resultado.getString("nombre"));
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return categorias;
+    } 
 }

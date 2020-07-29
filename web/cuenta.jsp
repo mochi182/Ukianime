@@ -1,5 +1,6 @@
 <%@page import="Procesos.ProcesosUsuario"%>
 <%@page import="Entidades.Usuario"%>
+
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -23,6 +24,7 @@
 <body>
 <%@include file="componentes/header.jsp"%>
 <%@include file="componentes/menu_oculto.jsp"%>
+
 <% ProcesosUsuario pusuario = new ProcesosUsuario();
     String id_usuario = "1";/* request.getParameter("id_usuario");  */
     Usuario usuario= pusuario.consultarDatosPorIDSinLista(id_usuario);
