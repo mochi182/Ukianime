@@ -79,6 +79,7 @@
         </p>
     </div>
 
+    <!--
     <h1>Perfiles del grupo</h1>
     <hr>
 
@@ -101,8 +102,8 @@
 
         <button class="boton cuidao">Editar Perfiles</button>
         <button class="boton cuidao">+ Agregar nuevo perfil</button>
-        <button class="boton cuidao">Eliminar perfil </button>
-    </div>
+        <button class="boton cuidao">Eliminar perfil </button> 
+    </div>-->
 </section>
 
 <%@include file="componentes/footer.html"%>

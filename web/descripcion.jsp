@@ -1,4 +1,6 @@
 
+<%@page import="Entidades.Usuario_agrega_anime"%>
+<%@page import="Procesos.ProcesosUsuario_agrega_anime"%>
 <%@page import="Entidades.Categoria"%>
 <%@page import="Procesos.ProcesosCategoria"%>
 <%@page import="java.util.List"%>
@@ -38,7 +40,22 @@
         
         <% ProcesosAnime panime = new ProcesosAnime();
             String id_animes =request.getParameter("id_anime");
-             Anime anime= panime.consultarDatosPorID(id_animes);
+            Integer id_anime_int = new Integer(0);
+            id_anime_int = Integer.parseInt(id_animes);
+            Anime anime= panime.consultarDatosPorID(id_animes);
+            ProcesosUsuario_agrega_anime pusuarioanime = new ProcesosUsuario_agrega_anime();
+            String agregar_favorito = request.getParameter("agregar_favorito");
+            String eliminar_favorito = request.getParameter("eliminar_favorito");
+            
+            if(agregar_favorito != null){
+                Usuario_agrega_anime usuarioanime = new Usuario_agrega_anime();
+                usuarioanime.setId_usuario(1);
+                usuarioanime.setId_anime(id_anime_int);
+                int isSaved = pusuarioanime.guardarUsuario_agrega_anime(usuarioanime);
+            } else if (eliminar_favorito != null){
+                int isDeleted = pusuarioanime.eliminarUsuario_agrega_anime(id_anime_int, 1);
+            }
+             
         %>
         <br>
         <br>
@@ -48,9 +65,27 @@
             </div>
             <div class="derecha1">
                 <div class="subcont1">
-                    <div class="izquierda2">
-                        <div><img src="https://icongr.am/entypo/star.svg?size=50&color=F1C40F "></div>
-                        <div><p>Favoritos</p></div>
+                    <div class="">
+                        <% 
+                            Usuario_agrega_anime usuarioanime2 = pusuarioanime.consultarDatoPorIDs(id_anime_int, 1);
+                            if(usuarioanime2.getId_anime()!=0){
+                                %>
+                                <form method="POST" action="descripcion.jsp" class="izquierda2">
+                                    <input class="input_escondido" type="text" name="eliminar_favorito" value="1">
+                                    <input class="input_escondido" type="text" name="id_anime" value='<%=id_animes%>'>
+                                    <input type="submit" value="★" class="estrella agregada input_favorito">
+                                </form>
+                                <%
+                            } else{
+                                %>
+                                <form method="POST" action="descripcion.jsp" class="izquierda2">
+                                    <input class="input_escondido" type="text" name="agregar_favorito" value="1">
+                                    <input class="input_escondido" type="text" name="id_anime" value='<%=id_animes%>'>
+                                    <input type="submit" value="★" class="estrella desagregada input_favorito">
+                                </form>
+                                <%
+                            }
+                        %>
                     </div>
             
                     
@@ -84,9 +119,6 @@
                         ProcesosTag ptag = new ProcesosTag();
                         List<Tag> tags = ptag.consultarDatos();
                         int cuenta = jvideo.contarVideosPorAnime(id_animes);
-                        
-                        Integer id_anime_int = new Integer(0);
-                        id_anime_int = Integer.parseInt(id_animes);                        
                      %>
                         <p class="p_sin_margen">
                             <span class="titulo_genero">Idiomas:</span>

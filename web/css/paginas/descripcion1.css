@@ -36,10 +36,14 @@
 }
 
 .izquierda2{
-    float: left;
+    display: flex;
+    justify-content: middle;
+    align-items: center;
     width: 30%;
     margin: none;
     padding: none;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .derecha2{
@@ -121,3 +125,22 @@
 }
 
 
+.estrella {
+    font-size: 80px;
+}
+
+.agregada {
+    color: yellow;
+}
+
+.desagregada {
+    color: grey;
+}
+
+.input_favorito {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}

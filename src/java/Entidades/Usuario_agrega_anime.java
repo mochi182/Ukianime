@@ -9,10 +9,10 @@ package Entidades;
  *
  * @author galop
  */
-public class Usuario_agrega_video {
+public class Usuario_agrega_anime {
     
     private int id_usuario;
-    private int id_video;
+    private int id_anime;
 
     /**
      * @return the id_usuario
@@ -29,17 +29,17 @@ public class Usuario_agrega_video {
     }
 
     /**
-     * @return the id_video
+     * @return the id_anime
      */
-    public int getId_video() {
-        return id_video;
+    public int getId_anime() {
+        return id_anime;
     }
 
     /**
-     * @param id_video the id_video to set
+     * @param id_anime the id_anime to set
      */
-    public void setId_video(int id_video) {
-        this.id_video = id_video;
+    public void setId_anime(int id_anime) {
+        this.id_anime = id_anime;
     }
     
     
