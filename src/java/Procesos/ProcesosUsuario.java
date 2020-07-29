@@ -142,7 +142,7 @@ public class ProcesosUsuario {
                 usuario.setEmail(resultado.getString("email"));
                 usuario.setRegion(resultado.getString("region"));
                 usuario.setFecha_nacimiento(resultado.getString("fecha_nacimiento"));
-                usuario.setTelefono(resultado.getInt("telefono"));
+                usuario.setTelefono(resultado.getString("telefono"));
                 usuario.setId_rol(resultado.getInt("id_rol"));
             }
             resultado.close();

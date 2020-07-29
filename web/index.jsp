@@ -32,13 +32,7 @@
 
     <%@include file="componentes/header.jsp"%>
     <%@include file="componentes/menu_oculto.jsp"%>
-    
-    Links para probar las páginas...
-    <ul>
-        <li><a href="panel_de_listas.jsp">Panel de listas</a></li>
-        <li><a href="registro-usuario.jsp">Registrar usuario</a></li>
-    </ul>
-
+   
     <section class="seccion_central">
         <%
             
