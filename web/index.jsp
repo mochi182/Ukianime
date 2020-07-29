@@ -28,10 +28,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
 </head>
-<body class="fondo-uki">
+<body class="">
 
-    <%@include file="componentes/header.html"%>
-    <%@include file="componentes/menu_oculto.html"%>
+    <%@include file="componentes/header.jsp"%>
+    <%@include file="componentes/menu_oculto.jsp"%>
     
     Links para probar las páginas...
     <ul>
@@ -51,6 +51,18 @@
             List<Anime> animes = new ArrayList<Anime>(); 
             ProcesosAnime panime = new ProcesosAnime();
             int categoria = 1;
+            String gradiente_a1="linear-gradient(0deg, rgba(68,68,68,1) 0%, rgba(199,138,157,1) 24%, rgba(101,130,226,1) 87%)";
+            String gradiente_a2="linear-gradient(0deg, rgba(68,68,68,1) 0%, rgba(199,138,157,1) 24%, rgba(129,101,226,1) 87%)";
+            String gradiente_a3="linear-gradient(0deg, rgba(68,68,68,1) 0%, rgba(199,138,157,1) 24%, rgba(208,101,226,1) 87%)";
+            String gradiente_a4="linear-gradient(0deg, rgba(68,68,68,1) 0%, rgba(199,138,157,1) 24%, rgba(226,101,134,1) 87%)";
+            String gradiente_a5="linear-gradient(0deg, rgba(68,68,68,1) 0%, rgba(199,138,157,1) 24%, rgba(101,226,210,1) 87%)";
+            List<String> colores = new ArrayList<String>();
+            colores.add(gradiente_a1);
+            colores.add(gradiente_a2);
+            colores.add(gradiente_a3);
+            colores.add(gradiente_a4);
+            colores.add(gradiente_a5);
+            String gradiente_b="linear-gradient(0deg, rgba(49,49,49,1) 0%, rgba(49,49,49,0.8932949888939951) 10%, rgba(49,49,49,0.6019784622833508) 23%, rgba(49,49,49,0) 100%)";
             
             if (busqueda == null){ %>
                 <div class="menu_contenedores">
@@ -58,17 +70,15 @@
 
                     animes = panime.consultarDatosPorCategoria(categoria_get.getId_categoria());%>
                     
-                    <h1><%= categoria_get.getNombre()%></h1>
-                    <section class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false}'>
+                    <h1 class='titulo_categoria'><%= categoria_get.getNombre()%></h1>
+                    <section class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false, "prevNextButtons": false}'>
                         <div class="carousel-cell">
 
                             <% for(Anime anime_get: animes){ %>
 
-                                <div class="cada_anime">
-                                    <img class="menu_imagen" src="<%= anime_get.getUrl_imagen()%>" alt="UK">
-                                    <br>
-                                    <b><%= anime_get.getNombre()%></b>
-                                </div>
+                                <a class="cada_anime" href="descripcion_prueba.jsp?id_anime=<%= anime_get.getId_anime()%>">
+                                    <div class="menu_imagen" alt="UK" style='background-image: <%=colores.get((int)(Math.random()*5)) %>, url("<%=anime_get.getUrl_imagen()%>"), <%= gradiente_b %>; background-blend-mode: overlay, saturation;'><h3><%= anime_get.getNombre()%></h3></div>
+                                </a>
                             <% } %>
                         </div>
 
@@ -85,7 +95,7 @@
                         <% for(Anime anime_get: animes){ %>
 
                             <div class="cada_anime">
-                                <img class="menu_imagen" src="<%= anime_get.getUrl_imagen()%>" alt="UK">
+                                <div class="menu_imagen" alt="UK" style='background-image: url("<%=anime_get.getUrl_imagen()%>"), linear-gradient(0deg, rgba(205,94,130,1) 24%, rgba(232,182,71,1) 87%); background-blend-mode: overlay;'>m</div>
                                 <br>
                                 <b><%= anime_get.getNombre()%></b>
                             </div>

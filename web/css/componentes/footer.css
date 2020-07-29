@@ -1,7 +1,10 @@
 /* ----- Footer ----- */
 
 #contenido_del_footer{
-  background-color:#343131;
+  background-color:#303030;
+  -webkit-box-shadow: 3px -1px 22px 3px rgba(39,39,39,1);
+  -moz-box-shadow: 3px -1px 22px 3px rgba(39,39,39,1);
+  box-shadow: 3px -1px 22px 3px rgba(39,39,39,1);
   color: #b4b4ba;
   width: auto;
   text-align: center;
