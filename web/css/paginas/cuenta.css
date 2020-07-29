@@ -43,3 +43,15 @@
 .cuenta_div_flex_3 span {
   margin-left: 15px;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px 15px 5px 5px;
+}
+
+tr:hover {
+    background-color: #303030;
+}

@@ -27,8 +27,8 @@
     
     <%
         Usuario usuario_actual = new Usuario();
-        ProcesosUsuario pusuario = new ProcesosUsuario();
-        usuario_actual = pusuario.consultarPrimerUsuario();
+        ProcesosUsuario pusuario_header = new ProcesosUsuario();
+        usuario_actual = pusuario_header.consultarPrimerUsuario();
     
     %>
     <div id="tercio_3">
@@ -37,8 +37,12 @@
     </div>
     
     <div id="menu_usuario">
-        <a href="cuenta.jsp">Cuenta</a><br>
-        <a href="vista_videos_tag.jsp">Mi lista</a><br>
+        <a href="cuenta.jsp">Cuenta</a>
+        <p>
+            <a href="vista_videos_tags.jsp">Mi lista</a>
+        </p>
+        <hr>
+        <a href="panel_de_listas.jsp">Administrar sitio</a><br>
         <hr>
         <a href="login.jsp">Cerrar sesión</a>
     </div>

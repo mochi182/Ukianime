@@ -32,13 +32,7 @@
 
     <%@include file="componentes/header.jsp"%>
     <%@include file="componentes/menu_oculto.jsp"%>
-    
-    Links para probar las páginas...
-    <ul>
-        <li><a href="panel_de_listas.jsp">Panel de listas</a></li>
-        <li><a href="registro-usuario.jsp">Registrar usuario</a></li>
-    </ul>
-
+   
     <section class="seccion_central">
         <%
             
@@ -95,9 +89,7 @@
                         <% for(Anime anime_get: animes){ %>
 
                             <div class="cada_anime">
-                                <div class="menu_imagen" alt="UK" style='background-image: url("<%=anime_get.getUrl_imagen()%>"), linear-gradient(0deg, rgba(205,94,130,1) 24%, rgba(232,182,71,1) 87%); background-blend-mode: overlay;'>m</div>
-                                <br>
-                                <b><%= anime_get.getNombre()%></b>
+                                <div class="menu_imagen" alt="UK" style='background-image: <%=colores.get((int)(Math.random()*5)) %>, url("<%=anime_get.getUrl_imagen()%>"), <%= gradiente_b %>; background-blend-mode: overlay, saturation;'><h3><%= anime_get.getNombre()%></h3></div>
                             </div>
                         <% } %>
                     </div>
