@@ -62,6 +62,8 @@ public class ProcesosComentario {
                 comentario.setId_usuario(resultado.getInt("id_usuario"));
                 comentario.setId_video(resultado.getInt("id_video"));
                 comentario.setTexto(resultado.getString("texto"));
+                comentario.setCreated_at(resultado.getTimestamp("created_at"));
+                comentario.setUpdated_at(resultado.getTimestamp("updated_at"));
                 comentarios.add(comentario);
             }
             resultado.close();
@@ -105,6 +107,52 @@ public class ProcesosComentario {
             System.out.println("Error: " + e);
         }
         return cantidad;
+    }
+    
+    public Comentario  consultarDatoPorID(int id_usuario){
+        Comentario comentario = new Comentario();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM comentario WHERE id_usuario="+id_usuario;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                comentario.setId_comentario(resultado.getInt("id_comentario"));
+                comentario.setId_usuario(resultado.getInt("id_usuario"));
+                comentario.setId_video(resultado.getInt("id_video"));
+                comentario.setTexto(resultado.getString("texto"));
+                comentario.setCreated_at(resultado.getTimestamp("created_at"));
+                comentario.setUpdated_at(resultado.getTimestamp("updated_at"));
+            }
+            resultado.close();
+            stmt.close();
+            conn.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return comentario;
+    }
+    
+    public List<Comentario> consultarComentarioPorIDVideo(int id_video){
+        List<Comentario> comentarios = new ArrayList<Comentario>();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM comentario WHERE id_video="+id_video;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                Comentario comentario = new Comentario();
+                comentario.setId_comentario(resultado.getInt("id_comentario"));
+                comentario.setId_usuario(resultado.getInt("id_usuario"));
+                comentario.setId_video(resultado.getInt("id_video"));
+                comentario.setTexto(resultado.getString("texto"));
+                comentario.setCreated_at(resultado.getTimestamp("created_at"));
+                comentario.setUpdated_at(resultado.getTimestamp("updated_at"));
+                comentarios.add(comentario);
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return comentarios;
     }
     
 }

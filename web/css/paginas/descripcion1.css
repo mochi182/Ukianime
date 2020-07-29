@@ -64,6 +64,7 @@
 }
 
 .genero_color{
+    padding: 5px;
     margin-left: 10px;
     background-color:#967B36;
 }
@@ -112,7 +113,7 @@
 }
 .numero_rating{
     margin: 0%;
-    color: #E0E287;
+    color: #e29c87;
     font-size: 19px;
 }
 .spam-div{

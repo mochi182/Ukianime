@@ -3,6 +3,12 @@
   width:auto;
   height: auto;
   }
+  
+iframe{
+    width: 1200px;
+    height: 675px;
+}
+  
 .tituloprincipal{
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   font-size: 30px;
@@ -23,6 +29,10 @@ video{
 .primercontenedor{
   background-color: rgb(27, 27, 27);
   width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 .segundocontenedor{
   background-color: rgb(27, 27, 27);

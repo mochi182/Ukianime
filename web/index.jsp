@@ -70,7 +70,7 @@
 
                             <% for(Anime anime_get: animes){ %>
 
-                                <a class="cada_anime" href="descripcion_prueba.jsp?id_anime=<%= anime_get.getId_anime()%>">
+                                <a class="cada_anime" href="descripcion.jsp?id_anime=<%= anime_get.getId_anime()%>&id_categoria=<%= anime_get.getId_categoria()%>">
                                     <div class="menu_imagen" alt="UK" style='background-image: <%=colores.get((int)(Math.random()*5)) %>, url("<%=anime_get.getUrl_imagen()%>"), <%= gradiente_b %>; background-blend-mode: overlay, saturation;'><h3><%= anime_get.getNombre()%></h3></div>
                                 </a>
                             <% } %>

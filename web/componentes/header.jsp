@@ -26,23 +26,21 @@
     </div>
     
     <%
-        Usuario usuario_actual = new Usuario();
+        Usuario usuario_header = new Usuario();
         ProcesosUsuario pusuario_header = new ProcesosUsuario();
-        usuario_actual = pusuario_header.consultarPrimerUsuario();
+        usuario_header = pusuario_header.consultarPrimerUsuario();
     
     %>
     <div id="tercio_3">
-        <h4 id="mi_lista"><%= usuario_actual.getUsuario() %></h4> 
+        <h4 id="mi_lista"><%= usuario_header.getUsuario() %></h4> 
             <img src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" id="icono_perfil" onclick="clic_perfil()">
     </div>
     
     <div id="menu_usuario">
         <a href="cuenta.jsp">Cuenta</a>
         <p>
-            <a href="vista_videos_tags.jsp">Mi lista</a>
+            <a href="panel_de_listas.jsp">Administrar sitio</a>
         </p>
-        <hr>
-        <a href="panel_de_listas.jsp">Administrar sitio</a><br>
         <hr>
         <a href="login.jsp">Cerrar sesión</a>
     </div>

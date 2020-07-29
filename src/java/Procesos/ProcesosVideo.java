@@ -192,4 +192,21 @@ public class ProcesosVideo {
         }
         return video;
     }
+    
+    public int contarVideosPorAnime(String id_anime){
+        int cantidad = 0;
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT episodio FROM video WHERE id_anime="+id_anime;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                cantidad += 1;
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return cantidad;
+    }
+    
 }

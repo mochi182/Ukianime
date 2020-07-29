@@ -1,7 +1,4 @@
 
-
-
-<%@include file="componentes/header.jsp"%>
 <%@page import="Entidades.Categoria"%>
 <%@page import="Procesos.ProcesosCategoria"%>
 <%@page import="java.util.List"%>
@@ -65,12 +62,12 @@
                 </div>
                 <br>
                 <div>
-                    <h2>Géneros</h2>
+                    <h2>Categoría</h2>
                      <%
                         ProcesosCategoria pcategoria = new ProcesosCategoria();
                         String id_categoria = request.getParameter("id_categoria");
                         Categoria categorias= pcategoria.consultarDatosPorAnime1(id_categoria);
-                        %>
+                    %>
                     <p class="p_sin_margen">
                        
                          
@@ -82,9 +79,14 @@
                     <div class="izquierda_informacion">
                         <h2>Información General</h2>
                     <%
+                        ProcesosVideo jvideo = new ProcesosVideo(); 
+                        List<Video> videos= jvideo.consultarDatosPorID(id_animes);
                         ProcesosTag ptag = new ProcesosTag();
                         List<Tag> tags = ptag.consultarDatos();
+                        int cuenta = jvideo.contarVideosPorAnime(id_animes);
                         
+                        Integer id_anime_int = new Integer(0);
+                        id_anime_int = Integer.parseInt(id_animes);                        
                      %>
                         <p class="p_sin_margen">
                             <span class="titulo_genero">Idiomas:</span>
@@ -96,12 +98,12 @@
 
                         <p class="p_sin_margen">
                             <span class="titulo_genero">Episodios:</span>
-                            <span class="genero_color"></span>
+                            <span class="genero_color"><%=cuenta %></span>
                         </p>
                          
                         <p class="p_sin_margen">
                             <span class="titulo_genero">Visitas:</span>
-                            <span class="genero_color"></span>
+                            <span class="genero_color"><%= jvideo.consultarVistasPorAnime(id_anime_int)%></span>
                         </p>
                     </div>
                     <div class="derecha_votos">
@@ -116,16 +118,11 @@
         <section class="lista">
             <p >
                 <span class="spam-div"><img src="https://icongr.am/clarity/menu.svg?size=27&color=9b9b9b"></span>
-                <span class="listati" >Listado de Espisodios</span>
+                <span class="listati" >Listado de episodios</span>
             </p>
             <hr>
-            
-            <%    ProcesosVideo jvideo = new ProcesosVideo(); 
-            String id_animess= request.getParameter("id_animess");
-            List<Video> videos= jvideo.consultarDatosPorID(id_animess);
-               %>
             <% for (Video video: videos){%>
-            <a href="vista_videos_tags.jsp"><p><span class="titulo_genero">Episodio <%=video.getEpisodio()%></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=video.getNombre()%></span></p></a>
+                <a href="vista_videos_tags.jsp?id_video=<%=video.getId_video()%>&id_anime=<%=video.getId_anime()%>"><p><span class="titulo_genero">Episodio <%=video.getEpisodio()%></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=video.getNombre()%></span></p></a>
             <%}%>      
         </section>
         <br>

@@ -137,6 +137,7 @@ public class ProcesosUsuario {
             while(resultado.next()){
                 usuario.setId_usuario(resultado.getInt("id_usuario"));
                 usuario.setNombre(resultado.getString("nombre"));
+                usuario.setUsuario(resultado.getString("usuario"));
                 usuario.setApellido(resultado.getString("apellido"));
                 usuario.setContrasena(resultado.getString("contrasena"));
                 usuario.setEmail(resultado.getString("email"));
@@ -151,4 +152,8 @@ public class ProcesosUsuario {
         }
         return usuario;
     }
+       
+    
+       
+       
 }
