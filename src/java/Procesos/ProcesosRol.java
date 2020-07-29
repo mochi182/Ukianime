@@ -26,7 +26,7 @@ public class ProcesosRol {
         
         try{
             Class.forName("org.mariadb.jdbc.Driver");
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/ukianime", "root", "12345");
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/ukianime", "root", "programacion2");
         }catch(SQLException e){
             System.out.println("Error al conectar: " + e);
         }
