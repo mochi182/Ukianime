@@ -37,8 +37,11 @@
     <body>
         <%@include file="componentes/header.jsp"%>
         <%@include file="componentes/menu_oculto.jsp"%>
-        
-        <% ProcesosAnime panime = new ProcesosAnime();
+        <% 
+            ProcesosCategoria pcategoria = new ProcesosCategoria();
+            String id_categoria = request.getParameter("id_categoria");
+            Categoria categorias= pcategoria.consultarDatosPorAnime1(id_categoria);
+            ProcesosAnime panime = new ProcesosAnime();
             String id_animes =request.getParameter("id_anime");
             Integer id_anime_int = new Integer(0);
             id_anime_int = Integer.parseInt(id_animes);
@@ -73,6 +76,7 @@
                                 <form method="POST" action="descripcion.jsp" class="izquierda2">
                                     <input class="input_escondido" type="text" name="eliminar_favorito" value="1">
                                     <input class="input_escondido" type="text" name="id_anime" value='<%=id_animes%>'>
+                                    <input class="input_escondido" type="text" name="id_categoria" value='<%=id_categoria%>'>
                                     <input type="submit" value="★" class="estrella agregada input_favorito">
                                 </form>
                                 <%
@@ -81,6 +85,7 @@
                                 <form method="POST" action="descripcion.jsp" class="izquierda2">
                                     <input class="input_escondido" type="text" name="agregar_favorito" value="1">
                                     <input class="input_escondido" type="text" name="id_anime" value='<%=id_animes%>'>
+                                    <input class="input_escondido" type="text" name="id_categoria" value='<%=id_categoria%>'>
                                     <input type="submit" value="★" class="estrella desagregada input_favorito">
                                 </form>
                                 <%
@@ -98,11 +103,6 @@
                 <br>
                 <div>
                     <h2>Categoría</h2>
-                     <%
-                        ProcesosCategoria pcategoria = new ProcesosCategoria();
-                        String id_categoria = request.getParameter("id_categoria");
-                        Categoria categorias= pcategoria.consultarDatosPorAnime1(id_categoria);
-                    %>
                     <p class="p_sin_margen">
                        
                          
