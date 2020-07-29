@@ -45,7 +45,7 @@
                 
                     <input type="button" value="Siguiente"  onclick="pestana(event, 'Pago')">
                     <a class="salir" onclick="pestana(event, 'Personales')"> Regresar </a>
-                    <a href="login.html" class="salir" >Salir</a>
+                    <a href="login.jsp" class="salir" >Salir</a>
             </div>
         </section>
     
