@@ -13,13 +13,15 @@
   flex-wrap: wrap-reverse;
 }
 
-.carousel-cell {
-  display: flex;
+.carousel-bg {
   margin-right: 10px;
   background: rgba(12, 12, 12, 0.6);
-  padding: 20px;
+  padding: 0px 5px 5px 5px;
   border-radius: 5px;
-  counter-increment: carousel-cell;
+}
+
+.carousel-cell {
+    counter-increment: carousel-cell;
 }
 
 .cada_anime {

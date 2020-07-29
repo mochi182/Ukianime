@@ -65,18 +65,18 @@
                     animes = panime.consultarDatosPorCategoria(categoria_get.getId_categoria());%>
                     
                     <h1 class='titulo_categoria'><%= categoria_get.getNombre()%></h1>
-                    <section class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false, "prevNextButtons": false, "groupCells": true}'>
-                        <div class="carousel-cell">
+                    <div class="carousel-bg">
+                        <section class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false, "prevNextButtons": false, "groupCells": true}'>
 
-                            <% for(Anime anime_get: animes){ %>
+                                <% for(Anime anime_get: animes){ %>
 
-                                <a class="cada_anime" href="descripcion.jsp?id_anime=<%= anime_get.getId_anime()%>&id_categoria=<%= anime_get.getId_categoria()%>">
-                                    <div class="menu_imagen" alt="UK" style='background-image: <%=colores.get((int)(Math.random()*5)) %>, url("<%=anime_get.getUrl_imagen()%>"), <%= gradiente_b %>; background-blend-mode: overlay, saturation;'><h3><%= anime_get.getNombre()%></h3></div>
-                                </a>
-                            <% } %>
-                        </div>
+                                    <a class="cada_anime carousel-cell" href="descripcion.jsp?id_anime=<%= anime_get.getId_anime()%>&id_categoria=<%= anime_get.getId_categoria()%>">
+                                        <div class="menu_imagen" alt="UK" style='background-image: <%=colores.get((int)(Math.random()*5)) %>, url("<%=anime_get.getUrl_imagen()%>"), <%= gradiente_b %>; background-blend-mode: overlay, saturation;'><h3><%= anime_get.getNombre()%></h3></div>
+                                    </a>
+                                <% } %>
 
-                    </section>
+                        </section>
+                    </div>
                     <%}%>
                 </div>
             <%} else{
