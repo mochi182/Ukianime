@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `comentario` (
   CONSTRAINT `FK_comentario_id_video` FOREIGN KEY (`id_video`) REFERENCES `video` (`id_video`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.comentario: ~0 rows (approximately)
+-- Dumping data for table ukianime.comentario: ~1 rows (approximately)
 /*!40000 ALTER TABLE `comentario` DISABLE KEYS */;
 INSERT INTO `comentario` (`id_comentario`, `id_usuario`, `id_video`, `texto`, `created_at`, `updated_at`) VALUES
 	(2, 1, 4, 'Nivel', '2020-07-26 22:33:01', '2020-07-26 23:38:54');
@@ -180,6 +180,8 @@ CREATE TABLE IF NOT EXISTS `info_de_pago` (
 
 -- Dumping data for table ukianime.info_de_pago: ~0 rows (approximately)
 /*!40000 ALTER TABLE `info_de_pago` DISABLE KEYS */;
+INSERT INTO `info_de_pago` (`id_info_de_pago`, `id_usuario`, `tipo_de_cuenta`, `metodo_de_pago`, `tarjeta`, `codigo_de_seguridad`, `fecha_de_expiracion`, `forma_de_cobro`, `created_at`, `updated_at`) VALUES
+	(15, 10, 'basica', 'MasterCard', '1233333333333333', 2133, '6/12', 'Manual', '2020-07-29 13:37:14', '2020-07-29 13:37:14');
 /*!40000 ALTER TABLE `info_de_pago` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.rol
@@ -236,10 +238,11 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   CONSTRAINT `FK_usuario_rol` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.usuario: ~0 rows (approximately)
+-- Dumping data for table ukianime.usuario: ~1 rows (approximately)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `usuario`, `contrasena`, `email`, `region`, `fecha_nacimiento`, `telefono`, `id_rol`, `created_at`, `updated_at`) VALUES
-	(1, 'Francisco', 'Pérez', 'Pixbae', NULL, NULL, NULL, NULL, NULL, NULL, '2020-07-26 08:05:46', '2020-07-26 08:05:46');
+	(1, 'Francisco', 'Pérez', 'Pixbae', '12345', 'iamfranciscoperez@gmail.com', 'Latinoamerica', '1990-11-24', '2222222', 1, '2020-07-26 08:05:46', '2020-07-29 13:38:18'),
+	(10, 'Alfredo', 'Castillo', 'ACastillo', '12345', 'alfredo@gmail.com', 'Latinoamerica', '2000-5-7', '1234567', 2, '2020-07-29 13:37:14', '2020-07-29 13:39:05');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.usuario_agrega_anime
@@ -252,7 +255,7 @@ CREATE TABLE IF NOT EXISTS `usuario_agrega_anime` (
   CONSTRAINT `FK_usuario_anime_id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.usuario_agrega_anime: ~0 rows (approximately)
+-- Dumping data for table ukianime.usuario_agrega_anime: ~2 rows (approximately)
 /*!40000 ALTER TABLE `usuario_agrega_anime` DISABLE KEYS */;
 INSERT INTO `usuario_agrega_anime` (`id_usuario`, `id_anime`) VALUES
 	(1, 3),
