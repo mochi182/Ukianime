@@ -28,16 +28,15 @@ CREATE TABLE IF NOT EXISTS `anime` (
   PRIMARY KEY (`id_anime`),
   KEY `FK_anime_categoria` (`id_categoria`),
   CONSTRAINT `FK_anime_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table ukianime.anime: ~49 rows (approximately)
 /*!40000 ALTER TABLE `anime` DISABLE KEYS */;
 INSERT INTO `anime` (`id_anime`, `id_categoria`, `nombre`, `descripcion`, `url_imagen`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'Haikyuu!!', 'La historia da comienzo cuando Sh?y? Hinata, aun siendo un estudiante de primaria, ve un partido de voleibol por la televisión, en el cual jugaba un jugador al que él se refiere como "Pequeño Gigante". Desde entonces, pretende convertirse en alguien como el "Pequeño Gigante" debido a que ambos son bajos de estatura y comienza a aficionarse por este deporte.', 'https://vignette.wikia.nocookie.net/haikyuu/images/a/a4/Haikyu_S4.jpg/revision/latest?cb=20200111012854', '2020-07-25 22:31:25', '2020-07-29 02:20:44'),
+	(1, 5, 'Haikyuu! ANIME', 'La historia volleyball.', 'https://vignette.wikia.nocookie.net/haikyuu/images/a/a4/Haikyu_S4.jpg/revision/latest?cb=20200111012854', '2020-07-25 22:31:25', '2020-07-29 16:13:42'),
 	(2, 1, 'Rurouni Kenshin', 'Un vagabundo con una cicatriz en la mejilla es un samurai asesino.', 'https://vignette.wikia.nocookie.net/samuraix/images/d/d2/Samurai_x.jpg/revision/latest/scale-to-width-down/340?cb=20121126183437&path-prefix=es', '2020-07-25 22:32:15', '2020-07-25 22:33:07'),
 	(3, 1, 'Beastars', 'lalala', 'https://m.media-amazon.com/images/M/MV5BMGZmMjIxYjYtYWE5YS00OWYyLWE5YzUtOTI3YTkxNmQyZDkzXkEyXkFqcGdeQXVyNTY0NDkzNDc@._V1_UY1200_CR109,0,630,1200_AL_.jpg', '2020-07-25 23:20:42', '2020-07-25 23:20:42'),
-	(4, 1, 'One Piece', 'One Piece es una serie de aventuras de acciÃ³n que sigue la historia de Monkey D. Luffy, un chico que posee el \r\npoder de la elasticidad con la que consigue dar puÃ±etazos y patadas tremendos. Esta serie cuenta con mÃ¡s de 600 \r\nepisodios y es uno de los animes mÃ¡s populares jamÃ¡s creados. Basado en el manga del mismo tÃ­tulo, One Piece se \r\nha ganado el reconocimiento por su humor, la acciÃ³n y los personajes tan completos que tiene.', 'https://www.animefagos.com/wp-content/uploads/2019/03/onepiecereverie01.jpg', '2020-07-29 02:13:23', '2020-07-29 02:14:15'),
-	(5, 1, 'Naruto ', 'Otra serie de enorme popularidad en todo el mundo, Naruto tiene excelentes secuencias de acciÃ³n y una historia \r\nconvincente. Cuando un poderoso zorro de nueve colas ataca la aldea ninja de Konoha, su lÃ­der se ve obligado a \r\ncapturar y sellar este espÃ­ritu dentro de su hijo reciÃ©n nacido Naruto. La serie sigue las aventuras del \r\npersonaje principal, asÃ­ como el hecho de que no entiende quiÃ©n es realmente y lo que es capaz de hacer.', 'http://omegacenter.es/blog/wp-content/uploads/2016/08/narutoanime.jpg', '2020-07-29 02:16:19', '2020-07-29 02:16:58'),
+	(4, 1, 'One Piece', 'One Piece.', 'https://www.animefagos.com/wp-content/uploads/2019/03/onepiecereverie01.jpg', '2020-07-29 02:13:23', '2020-07-29 18:32:27'),
 	(6, 1, 'Bleach', 'Con tan sÃ³lo quince aÃ±os Ichigo Kurosaki es un tÃ­pico adolescente con habilidades de combate, dos hermanas \r\nque cuidar y un rasgo especial: puede ver fantasmas. Sin embargo, cuando Ichigo y su familia se encuentran \r\nbajo el ataque de una enorme bestia, el chaval descubre que hay mucho mÃ¡s en el mundo sobrenatural que en \r\nel real. EspÃ­ritus vengativos conocidos como Huecos recorren el mundo en busca de almas que devorar.', 'http://omegacenter.es/blog/wp-content/uploads/2016/08/bleachanime.jpg', '2020-07-29 02:18:48', '2020-07-29 02:27:46'),
 	(7, 2, 'Neon Genesis Evangelion', 'El mundo del anime estÃ¡ lleno de historias protagonizadas por mechas pero ninguna serie se acerca a \r\nlo que Neon Genesis Evangelion consiguiÃ³ cuando llegÃ³ a la pantalla por primera vez. Lo que comienza \r\ncomo una serie de acciÃ³n y robots se convierte en una mezcla trascendental de religiÃ³n, filosofÃ­a y psicologÃ­a.', 'http://omegacenter.es/blog/wp-content/uploads/2016/08/evangelionanime.jpg', '2020-07-29 02:24:33', '2020-07-29 02:27:49'),
 	(8, 4, 'Samurai Champloo', 'Es uno de los animes mejor diseÃ±ados, con un protagonista basado en el funky y el hip-hop que vive\r\n una historia divertida y que engancha.', 'https://i.pinimg.com/564x/07/b3/01/07b3010b74aa5ab9723b8823bd5de7f8.jpg', '2020-07-29 02:39:38', '2020-07-29 02:50:11'),
@@ -81,7 +80,8 @@ INSERT INTO `anime` (`id_anime`, `id_categoria`, `nombre`, `descripcion`, `url_i
 	(46, 5, 'Great Teacher Onizuka', '2sdfbsdbfsb', 'https://images-na.ssl-images-amazon.com/images/I/513q6Rc6eXL._AC_SY879_.jpg', '2020-07-29 04:11:19', '2020-07-29 04:11:19'),
 	(47, 5, 'Hajime no Ippo', 'as3bberwebr', 'https://vignette.wikia.nocookie.net/ippo/images/1/1a/Hajime_No_Ippo_-_The_Glorius_Stage.png/revision/latest?cb=20190807024546', '2020-07-29 04:11:55', '2020-07-29 04:11:55'),
 	(48, 6, 'Deadman Wonderland', '12ve1advas', 'https://m.media-amazon.com/images/M/MV5BNWExOTUxYjQtYmNhOS00OGViLWI3N2ItMzBhMWY5NGJkYjlmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg', '2020-07-29 04:12:45', '2020-07-29 04:12:45'),
-	(49, 6, 'Ao no Exorcist', 'hfghrntr', 'https://i.pinimg.com/originals/98/64/71/98647101c911c8926d66a416baeba958.jpg', '2020-07-29 04:12:50', '2020-07-29 04:13:07');
+	(49, 6, 'Ao no Exorcist', 'hfghrntr', 'https://i.pinimg.com/originals/98/64/71/98647101c911c8926d66a416baeba958.jpg', '2020-07-29 04:12:50', '2020-07-29 04:13:07'),
+	(50, 4, 'Francisco', 'efedfw', 'https://img.taste.com.au/Z2m_6zIt/taste/2016/11/beef-tacos-98153-1.jpeg', '2020-07-29 16:16:42', '2020-07-29 16:16:42');
 /*!40000 ALTER TABLE `anime` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.anime_tiene_tag
@@ -131,12 +131,13 @@ CREATE TABLE IF NOT EXISTS `comentario` (
   KEY `FK_comentario_id_video` (`id_video`),
   CONSTRAINT `FK_comentario_id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE,
   CONSTRAINT `FK_comentario_id_video` FOREIGN KEY (`id_video`) REFERENCES `video` (`id_video`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.comentario: ~1 rows (approximately)
+-- Dumping data for table ukianime.comentario: ~0 rows (approximately)
 /*!40000 ALTER TABLE `comentario` DISABLE KEYS */;
 INSERT INTO `comentario` (`id_comentario`, `id_usuario`, `id_video`, `texto`, `created_at`, `updated_at`) VALUES
-	(2, 1, 4, 'Nivel', '2020-07-26 22:33:01', '2020-07-26 23:38:54');
+	(2, 1, 4, 'Nivel', '2020-07-26 22:33:01', '2020-07-26 23:38:54'),
+	(3, 1, 11, 'Comentario weojnwefiunweiwnefiwjnfiwejfewikjefw.', '2020-07-29 16:20:44', '2020-07-29 16:20:44');
 /*!40000 ALTER TABLE `comentario` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.grupo
@@ -176,12 +177,13 @@ CREATE TABLE IF NOT EXISTS `info_de_pago` (
   PRIMARY KEY (`id_info_de_pago`),
   KEY `FK__usuario` (`id_usuario`),
   CONSTRAINT `FK__usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.info_de_pago: ~0 rows (approximately)
+-- Dumping data for table ukianime.info_de_pago: ~1 rows (approximately)
 /*!40000 ALTER TABLE `info_de_pago` DISABLE KEYS */;
 INSERT INTO `info_de_pago` (`id_info_de_pago`, `id_usuario`, `tipo_de_cuenta`, `metodo_de_pago`, `tarjeta`, `codigo_de_seguridad`, `fecha_de_expiracion`, `forma_de_cobro`, `created_at`, `updated_at`) VALUES
-	(15, 10, 'basica', 'MasterCard', '1233333333333333', 2133, '6/12', 'Manual', '2020-07-29 13:37:14', '2020-07-29 13:37:14');
+	(15, 10, 'basica', 'MasterCard', '1233333333333333', 2133, '6/12', 'Manual', '2020-07-29 13:37:14', '2020-07-29 13:37:14'),
+	(16, 11, 'basica', 'Visa', '1233444433333333', 2133, '6/12', 'Manual', '2020-07-29 16:07:51', '2020-07-29 16:07:51');
 /*!40000 ALTER TABLE `info_de_pago` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.rol
@@ -236,13 +238,14 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`id_usuario`),
   KEY `FK_usuario_rol` (`id_rol`),
   CONSTRAINT `FK_usuario_rol` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ukianime.usuario: ~1 rows (approximately)
+-- Dumping data for table ukianime.usuario: ~3 rows (approximately)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `usuario`, `contrasena`, `email`, `region`, `fecha_nacimiento`, `telefono`, `id_rol`, `created_at`, `updated_at`) VALUES
 	(1, 'Francisco', 'Pérez', 'Pixbae', '12345', 'iamfranciscoperez@gmail.com', 'Latinoamerica', '1990-11-24', '2222222', 1, '2020-07-26 08:05:46', '2020-07-29 13:38:18'),
-	(10, 'Alfredo', 'Castillo', 'ACastillo', '12345', 'alfredo@gmail.com', 'Latinoamerica', '2000-5-7', '1234567', 2, '2020-07-29 13:37:14', '2020-07-29 13:39:05');
+	(10, 'Alfredo', 'Castillo', 'ACastillo', '12345', 'alfredo@gmail.com', 'Latinoamerica', '2000-5-7', '1234567', 2, '2020-07-29 13:37:14', '2020-07-29 13:39:05'),
+	(11, 'Juan', 'Zamora', 'juanz', '12345', 'juanzamora@gmail.com', 'Latinoamerica', '2015-04-03', '9516898890', 2, '2020-07-29 16:07:51', '2020-07-29 16:07:51');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Dumping structure for table ukianime.usuario_agrega_anime
@@ -276,7 +279,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   PRIMARY KEY (`id_video`),
   KEY `FK__anime` (`id_anime`),
   CONSTRAINT `FK__anime` FOREIGN KEY (`id_anime`) REFERENCES `anime` (`id_anime`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table ukianime.video: ~16 rows (approximately)
 /*!40000 ALTER TABLE `video` DISABLE KEYS */;
@@ -290,7 +293,6 @@ INSERT INTO `video` (`id_video`, `id_anime`, `nombre`, `episodio`, `vista`, `des
 	(7, 4, 'Robin', 5, 0, 'Robin', 'MTH-FmNZdz4', '2020-07-29 04:29:40', '2020-07-29 04:29:57'),
 	(8, 4, 'Zoro', 6, 0, 'Zoro', 'jJHDDYd6PrM', '2020-07-29 04:36:00', '2020-07-29 04:36:00'),
 	(9, 4, 'Chopper', 7, 0, 'Chopper', 't7xHamn5inQ', '2020-07-29 04:37:02', '2020-07-29 04:37:32'),
-	(10, 2, 'Rurouni', 1, 0, 'Rurouni', '5_l2TY-tCj4', '2020-07-29 04:38:07', '2020-07-29 04:39:36'),
 	(11, 2, 'X', 2, 0, 'x', '3TrEVbPfiLo', '2020-07-29 04:40:36', '2020-07-29 04:41:05'),
 	(12, 2, 'Kenshin', 3, 0, 'kenshin', '_Hjf-ZFouxI', '2020-07-29 04:41:53', '2020-07-29 04:41:59'),
 	(13, 2, 'Ruken', 4, 0, 'Ruken', '23og6wl6C3c', '2020-07-29 04:42:26', '2020-07-29 04:42:44'),
