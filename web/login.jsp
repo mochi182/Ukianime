@@ -89,14 +89,24 @@
     %>
 
     <div class="contenedor-form">
+        <div class="player" id="lMFJZQYSHY0"></div>
+        <br>
+        <br>
+        <br>
         <img src="https://i.imgur.com/bYacHHK.png" alt="" class="logo">
         <h1 class="titulo">Ukianime</h1>
-        <br>
         <br>
         <p>Si aún no tienes cuenta</p>
         <input type="button" value="Regístrate" class="botonr" onclick="location.href='registro-usuario.jsp'">
     </div>
     <div class="contenedor-form2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <br>
         <br>
@@ -112,6 +122,6 @@
             </form>
         </div>
     </div>
-    
+<script id="embed" src="js/embed_script.js"></script>
 </body>
 </html>

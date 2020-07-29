@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+iframe {
+    width:400px;
+    height: 225px;
+}
+
 * {
     margin: 0;
     padding: 0;
