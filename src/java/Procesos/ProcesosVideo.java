@@ -169,5 +169,27 @@ public class ProcesosVideo {
         }
         return cantidad;
     }
-    
+    public Video  consultarDatosPorIDSinLista(String id_video){
+        Video video = new Video();
+        try{
+            Statement stmt = conn.createStatement();
+            String query = "SELECT * FROM video WHERE id_video="+id_video;
+            ResultSet resultado = stmt.executeQuery(query);
+            while(resultado.next()){
+                video.setId_video(resultado.getInt("id_video"));
+                video.setId_anime(resultado.getInt("id_anime"));
+                video.setNombre(resultado.getString("nombre"));
+                video.setEpisodio(resultado.getInt("episodio"));
+                video.setVista(resultado.getInt("vista"));
+                video.setDescripcion(resultado.getString("descripcion"));
+                video.setUrl_video(resultado.getString("Url_video"));
+                video.setCreated_at(resultado.getTimestamp("created_at"));
+                video.setUpdated_at(resultado.getTimestamp("updated_at"));
+            }
+            resultado.close();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+        return video;
+    }
 }
