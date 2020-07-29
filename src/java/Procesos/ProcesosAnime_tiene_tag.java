@@ -63,8 +63,6 @@ public class ProcesosAnime_tiene_tag {
                 animes_tienen_tags.add(anime_tiene_tag);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

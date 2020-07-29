@@ -65,7 +65,7 @@
                     animes = panime.consultarDatosPorCategoria(categoria_get.getId_categoria());%>
                     
                     <h1 class='titulo_categoria'><%= categoria_get.getNombre()%></h1>
-                    <section class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false, "prevNextButtons": false}'>
+                    <section class="carousel" data-flickity='{ "wrapAround": true, "pageDots": false, "prevNextButtons": false, "groupCells": true}'>
                         <div class="carousel-cell">
 
                             <% for(Anime anime_get: animes){ %>

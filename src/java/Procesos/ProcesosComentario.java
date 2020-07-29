@@ -67,8 +67,6 @@ public class ProcesosComentario {
                 comentarios.add(comentario);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

@@ -71,8 +71,6 @@ public class ProcesosUsuario {
                 usuarios.add(usuario);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

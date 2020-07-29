@@ -66,8 +66,6 @@ public class ProcesosGrupo {
                 grupos.add(grupo);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

@@ -64,8 +64,6 @@ public class ProcesosTag {
                 tags.add(tag);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

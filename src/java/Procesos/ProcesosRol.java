@@ -63,8 +63,6 @@ public class ProcesosRol {
                 rols.add(rol);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

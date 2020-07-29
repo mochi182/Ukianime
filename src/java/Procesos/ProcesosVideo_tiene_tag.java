@@ -63,8 +63,6 @@ public class ProcesosVideo_tiene_tag {
                 videos_tienen_tags.add(video_tiene_tag);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }

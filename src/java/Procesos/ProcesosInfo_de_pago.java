@@ -69,8 +69,6 @@ public class ProcesosInfo_de_pago {
                 infos_de_pago.add(info_de_pago);
             }
             resultado.close();
-            stmt.close();
-            conn.close();
         } catch(Exception e){
             System.out.println("Error: " + e);
         }
