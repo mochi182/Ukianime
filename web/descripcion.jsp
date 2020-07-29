@@ -1,4 +1,7 @@
-<%@page import="java.sql.Timestamp"%>
+
+
+
+<%@include file="componentes/header.jsp"%>
 <%@page import="Entidades.Categoria"%>
 <%@page import="Procesos.ProcesosCategoria"%>
 <%@page import="java.util.List"%>
@@ -29,23 +32,23 @@
 
         <!--Carga librerÃ­as y archivos de JS-->
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="js/menu_desplegable.js"></script>
+        <script src="js/menu_desplegable.jsp"></script>
 
     </head>
 
     <body>
-        <%@include file="componentes/header.html"%>
-        <%@include file="componentes/menu_oculto.html"%>
+        <%@include file="componentes/header.jsp"%>
+        <%@include file="componentes/menu_oculto.jsp"%>
         
         <% ProcesosAnime panime = new ProcesosAnime();
-            String id_anime = "1"  ;       /*request.getParameter("id_anime");*/
-             Anime anime= panime.consultarDatosPorID(id_anime);
+            String id_animes = "1"  ;       /*request.getParameter("id_anime");*/
+             Anime anime= panime.consultarDatosPorID(id_animes);
         %>
         <br>
         <br>
         <section class="cont1">
             <div class="izquierda1">
-                <img  class="portada" src="https://nosomosnonos.com/wp-content/uploads/2020/03/Beastars-key-promo-e1568699647589.jpg">
+                <img  class="portada" src="<%=anime.getUrl_imagen() %>">
             </div>
             <div class="derecha1">
                 <div class="subcont1">
@@ -66,7 +69,7 @@
                     <h2>Géneros</h2>
                      <%
                         ProcesosCategoria pcategoria = new ProcesosCategoria();
-                        String id_categoria = "2"  ;       /*request.getParameter("id_categoria");*/
+                        String id_categoria = "1"  ;       /*request.getParameter("id_categoria");*/
                         Categoria categorias= pcategoria.consultarDatosPorAnime1(id_categoria);
                         %>
                     <p class="p_sin_margen">
@@ -90,14 +93,20 @@
                        <%}%>
                         </p>
                         
+                        
+                        <%  ProcesosVideo jvideo = new ProcesosVideo();
+                        String id_animess= "1";
+                       
+                        %>
+                        
                         <p class="p_sin_margen">
                             <span class="titulo_genero">Episodios:</span>
-                            <span class="genero_color">12</span>
+                            <span class="genero_color"></span>
                         </p>
-
+                         
                         <p class="p_sin_margen">
                             <span class="titulo_genero">Visitas:</span>
-                            <span class="genero_color">2523</span>
+                            <span class="genero_color"></span>
                         </p>
                     </div>
                     <div class="derecha_votos">
@@ -117,11 +126,8 @@
             </p>
             <hr>
             
-           <%  ProcesosVideo jvideo = new ProcesosVideo();
-             String id_animes= "1";
-             List<Video> videos= jvideo.consultarDatosPorID(id_animes);
-            %>
-            
+            <%     List<Video> videos= jvideo.consultarDatosPorID(id_animess);
+               %>
             <% for (Video video: videos){%>
             <a href="vista_videos_tags.jsp"><p><span class="titulo_genero">Episodio <%=video.getEpisodio()%></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=video.getNombre()%></span></p></a>
             <%}%>      
@@ -130,6 +136,6 @@
         <%@include file="componentes/footer.html"%>
     </body>
 </html>
-
+ 
 
 

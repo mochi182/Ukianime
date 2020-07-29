@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 /**
  *
@@ -130,7 +131,7 @@ public class ProcesosVideo {
         return videos;
     }
     
-    public Video  consultarDatoPorID(String id_video){
+    public Video  consultarDatoPorID1(String id_video){
         Video video = new Video();
         try{
             Statement stmt = conn.createStatement();
@@ -153,21 +154,6 @@ public class ProcesosVideo {
         }
         return video;
     }
-    
-    public int consultarVistasPorAnime(int id_anime){
-        int cantidad = 0;
-        try{
-            Statement stmt = conn.createStatement();
-            String query = "SELECT * FROM video WHERE id_anime="+id_anime;
-            ResultSet resultado = stmt.executeQuery(query);
-            while(resultado.next()){
-                cantidad += resultado.getInt("vista");
-            }
-            resultado.close();
-        } catch(Exception e){
-            System.out.println("Error: " + e);
-        }
-        return cantidad;
-    }
-    
 }
+    
+    
